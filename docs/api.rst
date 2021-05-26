@@ -3,7 +3,7 @@
 Digest API
 ===================
 
-* Digets API is a service that allows nodes to search blockchain data.
+* Digest API is a service that allows nodes to search blockchain data.
 * Digest API service can be used in applications such as wallet and blockchain explorer.
 * API is provided through HTTP/2 network protocol.
 * Response message follows `HAL <https://tools.ietf.org/html/draft-kelly-json-hal-08>`_ and is delivered in json format.

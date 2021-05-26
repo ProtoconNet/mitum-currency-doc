@@ -71,17 +71,17 @@ Depending on the configuration of the node, it is necessary to configure the nod
 
     nodes:
         - address: n0-010a:0.0.1
-        publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
-        url: quic://127.0.0.1:54330?insecure=true
+          publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
+          url: quic://127.0.0.1:54330?insecure=true
         - address: n1-010a:0.0.1
-        publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
-        url: quic://127.0.0.1:54331?insecure=true
+          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
+          url: quic://127.0.0.1:54331?insecure=true
         - address: n2-010a:0.0.1
-        publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd-0113:0.0.1
-        url: quic://127.0.0.1:54332?insecure=true
+          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd-0113:0.0.1
+          url: quic://127.0.0.1:54332?insecure=true
         - address: n3-010a:0.0.1
-        publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
-        url: quic://127.0.0.1:54333?insecure=true
+          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
+          url: quic://127.0.0.1:54333?insecure=true
 
 
 yml full configuration of all nodes.(example)
@@ -92,15 +92,14 @@ yml full configuration of all nodes.(example)
     address: n0-010a:0.0.1
     genesis-operations:
         - account-keys:
-            keys:
-                - privatekey: L5GTSKkRs9NPsXwYgACZdodNUJqCAWjz2BccuR4cAgxJumEZWjok-0112:0.0.1
-                publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
-                weight: 100
-            threshold: 100
-        currencies:
-            - balance: "99999999999999999999"
-            currency: MCC
-        type: genesis-currencies
+              keys:
+                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
+                    weight: 100
+              threshold: 100
+          currencies:
+              - balance: "99999999999999999999"
+                currency: MCC
+          type: genesis-currencies
     network:
         bind: quic://0.0.0.0:54330
         url: quic://127.0.0.1:54330
@@ -122,14 +121,14 @@ yml full configuration of all nodes.(example)
             - n3-010a:0.0.1
     nodes:
         - address: n1-010a:0.0.1
-        publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
-        url: quic://127.0.0.1:54331?insecure=true
+          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
+          url: quic://127.0.0.1:54331?insecure=true
         - address: n2-010a:0.0.1
-        publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd-0113:0.0.1
-        url: quic://127.0.0.1:54332?insecure=true
+          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd-0113:0.0.1
+          url: quic://127.0.0.1:54332?insecure=true
         - address: n3-010a:0.0.1
-        publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
-        url: quic://127.0.0.1:54333?insecure=true
+          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
+          url: quic://127.0.0.1:54333?insecure=true
 
 .. code-block:: yml
 
@@ -137,15 +136,15 @@ yml full configuration of all nodes.(example)
     address: n1-010a:0.0.1
     genesis-operations:
         - account-keys:
-            keys:
-                - privatekey: L5GTSKkRs9NPsXwYgACZdodNUJqCAWjz2BccuR4cAgxJumEZWjok-0112:0.0.1
-                publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
-                weight: 100
-            threshold: 100
-        currencies:
-            - balance: "99999999999999999999"
-            currency: MCC
-        type: genesis-currencies
+              keys:
+                  - privatekey: L5GTSKkRs9NPsXwYgACZdodNUJqCAWjz2BccuR4cAgxJumEZWjok-0112:0.0.1
+                    publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
+                    weight: 100
+              threshold: 100
+          currencies:
+              - balance: "99999999999999999999"
+                currency: MCC
+          type: genesis-currencies
     network:
         bind: quic://0.0.0.0:54331
         url: quic://127.0.0.1:54331
@@ -167,14 +166,14 @@ yml full configuration of all nodes.(example)
             - n3-010a:0.0.1
     nodes:
         - address: n0-010a:0.0.1
-        publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
-        url: quic://127.0.0.1:54330?insecure=true
+          publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
+          url: quic://127.0.0.1:54330?insecure=true
         - address: n2-010a:0.0.1
-        publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd-0113:0.0.1
-        url: quic://127.0.0.1:54332?insecure=true
+          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd-0113:0.0.1
+          url: quic://127.0.0.1:54332?insecure=true
         - address: n3-010a:0.0.1
-        publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
-        url: quic://127.0.0.1:54333?insecure=true
+          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
+          url: quic://127.0.0.1:54333?insecure=true
 
 .. code-block:: yml
 
@@ -182,15 +181,14 @@ yml full configuration of all nodes.(example)
     address: n2-010a:0.0.1
     genesis-operations:
         - account-keys:
-            keys:
-                - privatekey: L5GTSKkRs9NPsXwYgACZdodNUJqCAWjz2BccuR4cAgxJumEZWjok-0112:0.0.1
-                    publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
+              keys:
+                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
                     weight: 100
-            threshold: 100
-            currencies:
-            - balance: "99999999999999999999"
+              threshold: 100
+          currencies:
+              - balance: "99999999999999999999"
                 currency: MCC
-            type: genesis-currencies
+          type: genesis-currencies
     network:
         bind: quic://0.0.0.0:54332
         url: quic://127.0.0.1:54332
@@ -212,14 +210,14 @@ yml full configuration of all nodes.(example)
             - n3-010a:0.0.1
     nodes:
         - address: n0-010a:0.0.1
-            publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
-            url: quic://127.0.0.1:54330?insecure=true
+          publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
+          url: quic://127.0.0.1:54330?insecure=true
         - address: n1-010a:0.0.1
-            publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
-            url: quic://127.0.0.1:54331?insecure=true
+          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
+          url: quic://127.0.0.1:54331?insecure=true
         - address: n3-010a:0.0.1
-            publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
-            url: quic://127.0.0.1:54333?insecure=true
+          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
+          url: quic://127.0.0.1:54333?insecure=true
 
 .. code-block:: yml
 
@@ -227,15 +225,14 @@ yml full configuration of all nodes.(example)
     address: n3-010a:0.0.1
     genesis-operations:
         - account-keys:
-            keys:
-                - privatekey: L5GTSKkRs9NPsXwYgACZdodNUJqCAWjz2BccuR4cAgxJumEZWjok-0112:0.0.1
-                    publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
+              keys:
+                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
                     weight: 100
-            threshold: 100
-            currencies:
-            - balance: "99999999999999999999"
+              threshold: 100
+          currencies:
+              - balance: "99999999999999999999"
                 currency: MCC
-            type: genesis-currencies
+          type: genesis-currencies
     network:
         bind: quic://0.0.0.0:54333
         url: quic://127.0.0.1:54333
@@ -257,14 +254,14 @@ yml full configuration of all nodes.(example)
             - n3-010a:0.0.1
     nodes:
         - address: n0-010a:0.0.1
-            publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
-            url: quic://127.0.0.1:54330?insecure=true
+          publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
+          url: quic://127.0.0.1:54330?insecure=true
         - address: n1-010a:0.0.1
-            publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
-            url: quic://127.0.0.1:54331?insecure=true
+          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
+          url: quic://127.0.0.1:54331?insecure=true
         - address: n2-010a:0.0.1
-            publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd-0113:0.0.1
-            url: quic://127.0.0.1:54332?insecure=true
+          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd-0113:0.0.1
+          url: quic://127.0.0.1:54332?insecure=true
 
 
 4 Suffrage nodes + 1 Sync node
@@ -292,17 +289,17 @@ Only ``suffrage`` and ``nodes`` part of configuration of suffrage nodes(n0, n1, 
 
     nodes:
         - address: n0-010a:0.0.1
-        publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
-        url: quic://127.0.0.1:54330?insecure=true
+          publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
+          url: quic://127.0.0.1:54330?insecure=true
         - address: n1-010a:0.0.1
-        publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
-        url: quic://127.0.0.1:54331?insecure=true
+          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
+          url: quic://127.0.0.1:54331?insecure=true
         - address: n2-010a:0.0.1
-        publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd-0113:0.0.1
-        url: quic://127.0.0.1:54332?insecure=true
+          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd-0113:0.0.1
+          url: quic://127.0.0.1:54332?insecure=true
         - address: n3-010a:0.0.1
-        publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
-        url: quic://127.0.0.1:54333?insecure=true
+          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
+          url: quic://127.0.0.1:54333?insecure=true
 
 Only ``suffrage`` and ``nodes`` part of configuration of sync node(n4).
 
@@ -317,11 +314,11 @@ Only ``suffrage`` and ``nodes`` part of configuration of sync node(n4).
 
     nodes:
         - address: n1-010a:0.0.1
-        publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
-        url: quic://127.0.0.1:54331?insecure=true
+          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
+          url: quic://127.0.0.1:54331?insecure=true
         - address: n3-010a:0.0.1
-        publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
-        url: quic://127.0.0.1:54333?insecure=true
+          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
+          url: quic://127.0.0.1:54333?insecure=true
 
 
 yml full configuration of all nodes.(example)
@@ -332,15 +329,14 @@ yml full configuration of all nodes.(example)
     address: n0-010a:0.0.1
     genesis-operations:
         - account-keys:
-            keys:
-                - privatekey: L5GTSKkRs9NPsXwYgACZdodNUJqCAWjz2BccuR4cAgxJumEZWjok-0112:0.0.1
-                publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
-                weight: 100
-            threshold: 100
-        currencies:
-            - balance: "99999999999999999999"
-            currency: MCC
-        type: genesis-currencies
+              keys:
+                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
+                    weight: 100
+              threshold: 100
+          currencies:
+              - balance: "99999999999999999999"
+                currency: MCC
+          type: genesis-currencies
     network:
         bind: quic://0.0.0.0:54330
         url: quic://127.0.0.1:54330
@@ -362,14 +358,14 @@ yml full configuration of all nodes.(example)
             - n3-010a:0.0.1
     nodes:
         - address: n1-010a:0.0.1
-        publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
-        url: quic://127.0.0.1:54331?insecure=true
+          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
+          url: quic://127.0.0.1:54331?insecure=true
         - address: n2-010a:0.0.1
-        publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd-0113:0.0.1
-        url: quic://127.0.0.1:54332?insecure=true
+          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd-0113:0.0.1
+          url: quic://127.0.0.1:54332?insecure=true
         - address: n3-010a:0.0.1
-        publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
-        url: quic://127.0.0.1:54333?insecure=true
+          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
+          url: quic://127.0.0.1:54333?insecure=true
 
 .. code-block:: yml
 
@@ -377,15 +373,14 @@ yml full configuration of all nodes.(example)
     address: n1-010a:0.0.1
     genesis-operations:
         - account-keys:
-            keys:
-                - privatekey: L5GTSKkRs9NPsXwYgACZdodNUJqCAWjz2BccuR4cAgxJumEZWjok-0112:0.0.1
-                publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
-                weight: 100
-            threshold: 100
-        currencies:
-            - balance: "99999999999999999999"
-            currency: MCC
-        type: genesis-currencies
+              keys:
+                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
+                    weight: 100
+              threshold: 100
+          currencies:
+              - balance: "99999999999999999999"
+                currency: MCC
+          type: genesis-currencies
     network:
         bind: quic://0.0.0.0:54331
         url: quic://127.0.0.1:54331
@@ -407,14 +402,14 @@ yml full configuration of all nodes.(example)
             - n3-010a:0.0.1
     nodes:
         - address: n0-010a:0.0.1
-        publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
-        url: quic://127.0.0.1:54330?insecure=true
+          publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
+          url: quic://127.0.0.1:54330?insecure=true
         - address: n2-010a:0.0.1
-        publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd-0113:0.0.1
-        url: quic://127.0.0.1:54332?insecure=true
+          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd-0113:0.0.1
+          url: quic://127.0.0.1:54332?insecure=true
         - address: n3-010a:0.0.1
-        publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
-        url: quic://127.0.0.1:54333?insecure=true
+          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
+          url: quic://127.0.0.1:54333?insecure=true
 
 .. code-block:: yml
 
@@ -422,15 +417,14 @@ yml full configuration of all nodes.(example)
     address: n2-010a:0.0.1
     genesis-operations:
         - account-keys:
-            keys:
-                - privatekey: L5GTSKkRs9NPsXwYgACZdodNUJqCAWjz2BccuR4cAgxJumEZWjok-0112:0.0.1
-                    publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
+              keys:
+                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
                     weight: 100
-            threshold: 100
-            currencies:
-            - balance: "99999999999999999999"
+              threshold: 100
+          currencies:
+              - balance: "99999999999999999999"
                 currency: MCC
-            type: genesis-currencies
+          type: genesis-currencies
     network:
         bind: quic://0.0.0.0:54332
         url: quic://127.0.0.1:54332
@@ -452,14 +446,14 @@ yml full configuration of all nodes.(example)
             - n3-010a:0.0.1
     nodes:
         - address: n0-010a:0.0.1
-            publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
-            url: quic://127.0.0.1:54330?insecure=true
+          publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
+          url: quic://127.0.0.1:54330?insecure=true
         - address: n1-010a:0.0.1
-            publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
-            url: quic://127.0.0.1:54331?insecure=true
+          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
+          url: quic://127.0.0.1:54331?insecure=true
         - address: n3-010a:0.0.1
-            publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
-            url: quic://127.0.0.1:54333?insecure=true
+          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
+          url: quic://127.0.0.1:54333?insecure=true
 
 .. code-block:: yml
 
@@ -467,15 +461,14 @@ yml full configuration of all nodes.(example)
     address: n3-010a:0.0.1
     genesis-operations:
         - account-keys:
-            keys:
-                - privatekey: L5GTSKkRs9NPsXwYgACZdodNUJqCAWjz2BccuR4cAgxJumEZWjok-0112:0.0.1
-                    publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
+              keys:
+                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
                     weight: 100
-            threshold: 100
-            currencies:
-            - balance: "99999999999999999999"
+              threshold: 100
+          currencies:
+              - balance: "99999999999999999999"
                 currency: MCC
-            type: genesis-currencies
+          type: genesis-currencies
     network:
         bind: quic://0.0.0.0:54333
         url: quic://127.0.0.1:54333
@@ -497,14 +490,14 @@ yml full configuration of all nodes.(example)
             - n3-010a:0.0.1
     nodes:
         - address: n0-010a:0.0.1
-            publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
-            url: quic://127.0.0.1:54330?insecure=true
+          publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
+          url: quic://127.0.0.1:54330?insecure=true
         - address: n1-010a:0.0.1
-            publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
-            url: quic://127.0.0.1:54331?insecure=true
+          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
+          url: quic://127.0.0.1:54331?insecure=true
         - address: n2-010a:0.0.1
-            publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd-0113:0.0.1
-            url: quic://127.0.0.1:54332?insecure=true
+          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd-0113:0.0.1
+          url: quic://127.0.0.1:54332?insecure=true
 
 .. code-block:: yml
 
@@ -512,15 +505,14 @@ yml full configuration of all nodes.(example)
     address: n4-010a:0.0.1
     genesis-operations:
         - account-keys:
-            keys:
-                - privatekey: L5GTSKkRs9NPsXwYgACZdodNUJqCAWjz2BccuR4cAgxJumEZWjok-0112:0.0.1
-                    publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
+              keys:
+                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
                     weight: 100
-            threshold: 100
-            currencies:
-            - balance: "99999999999999999999"
+              threshold: 100
+          currencies:
+              - balance: "99999999999999999999"
                 currency: MCC
-            type: genesis-currencies
+          type: genesis-currencies
     network:
         bind: quic://0.0.0.0:54334
         url: quic://127.0.0.1:54334
@@ -540,8 +532,8 @@ yml full configuration of all nodes.(example)
             - n3-010a:0.0.1
     nodes:
         - address: n1-010a:0.0.1
-            publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
-            url: quic://127.0.0.1:54331?insecure=true
+          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
+          url: quic://127.0.0.1:54331?insecure=true
         - address: n3-010a:0.0.1
-            publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
-            url: quic://127.0.0.1:54333?insecure=true
+          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
+          url: quic://127.0.0.1:54333?insecure=true

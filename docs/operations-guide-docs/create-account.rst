@@ -1,3 +1,5 @@
+.. _create-account:
+
 Create Account
 ==================================
 
@@ -70,7 +72,7 @@ create-account Operation
       ]
     }
 
-* The operation to create ㅁccount ``ac1`` is as follows.
+* The operation to create account ``ac1`` is as follows.
 
 .. code-block:: sh
 

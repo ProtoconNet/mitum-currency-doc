@@ -15,7 +15,7 @@ Operation Guide
    operations-guide-docs/check-account
 
 .. note::
-   * mitum provides only basic network interface (API) such as sending and receiving block and voting messages
-   * The transaction history or status of the account is not provided by mitum as a separate API.
+   * Mitum provides only basic network interface (API) such as sending and receiving block and voting messages
+   * The transaction history or status of the account is not provided by Mitum as a separate API.
    * These additional APIs are provided through a separate API service (**planned**)
    * To check the result of account creation, transmission, and key update in this document, you need to search mongodb directly.

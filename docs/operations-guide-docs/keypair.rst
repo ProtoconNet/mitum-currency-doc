@@ -1,10 +1,10 @@
-.. _create keypair:
-
 Keypair
 ===============
 
 * Private key and public key are created through keypair generation.
 * The generated keypair is used to create an account, register a keypair of a node, and create a signature of operation and seal.
+
+.. _create keypair:
 
 Create Keypair 
 --------------------
@@ -41,7 +41,7 @@ Multi Sig Account
    "keys", "{key: rd89Gx..., weight: 50}, {key: skRdC6..., weight: 50}"
    "balance", "{currency: MCC, amount: 10000}, {currency: MCC2, amount: 20000}"
 
-* Set the threshold value in Account. 1 <thresohold <= 100.
+* Set the threshold value in Account. 1 < threshold <= 100.
 * The sum of the weights of the keys should be 100.
 * 
 .. csv-table:: "case with only one key"
@@ -55,6 +55,8 @@ Multi Sig Account
     "keys", "{key: rd89Gx..., weight: 40}, {key: skRdC6..., weight: 30}, {key: mymMwq..., weight: 30}"
 
 * Even in the same *publickey* combination, *address* will have different values if *weight* or *threshold* are different.
+
+.. _check address:
 
 Check Address
 ---------------

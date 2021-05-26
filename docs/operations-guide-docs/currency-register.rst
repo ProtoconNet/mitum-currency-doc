@@ -1,3 +1,5 @@
+.. _register currency:
+
 Register Currency
 ===================
 
@@ -18,7 +20,7 @@ currency-register Operation
 * If the fee policy is ratio, then --feeer-ratio-receiver=<fee receiver account address> and --feeer-ratio-ratio=<fee ratio, multifly by operation amount>, --feeer-ratio-min= <minimum fee>, --feeer-ratio-max=<maximum fee> must be set.
 * When registering a new currency, the signature of the suffrage nodes participating in consensus exceeds the consensus threshold (67%) to be executed.
 
-currency-register Opearation example
+currency-register Operation example
 --------------------------------------
 
 * genesis-account : ac1

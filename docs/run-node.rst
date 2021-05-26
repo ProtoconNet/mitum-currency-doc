@@ -19,6 +19,8 @@ Setting up Node
 Running the standalone node
 ----------------------------------
 
+.. _node initialization:
+
 Node init
 ..............
 
@@ -45,6 +47,8 @@ Node init
     * To reset the error and ignore it, run it by adding the ``--force`` option.
     * ``$ ./bin/mc --log-level info init ./tutorial.yml --force``
 
+.. _make node run:
+
 Node run
 ..............
 
@@ -53,7 +57,7 @@ Node run
 
 .. code-block:: sh
 
-    $ ./bin/mc node run --log-level info ./tutorial.yml
+    $ ./bin/mc node run --log-level info ./tutorial.yml 
     2021-03-29T09:17:38.942065Z INF dryrun? dryrun=false module=command-run
     2021-03-29T09:17:38.94577Z INF prepare to run module=command-run
     2021-03-29T09:17:38.945824Z INF prepared module=command-run
@@ -76,7 +80,7 @@ Node run
     2021-05-06T17:43:36.072520781Z DBG workspace/mitum/src/network/http.go:61 > request content-length=1647 content-type= duration=6.326587 headers={"X-Mitum-Encoder-Hint":["0101:0.0.1"]} host=127.0.0.1:54321 ip=127.0.0.1 method=POST module=network-quic-primitive-server proto=HTTP/3 remote=127.0.0.1:60614 req_id=c2a2li0m57f5lqgar0dg size=0 status=200 url=/seal?showme=1 user_agent="quic-go HTTP/3"
 
 
-* `--network-log` command line option can collect these requests messsage to the specific files.
+* `--network-log` command line option can collect these requests message to the specific files.
 
 .. code-block:: sh
 
@@ -89,7 +93,7 @@ Node run
 
 * Multiple file can be set to `--network-log` and `--log`.
 * In mitum-currency, `--network-log` option will also collect the requests log from digest API(http2) 
-* `--network-log` option is only available in `node run` commnad.
+* `--network-log` option is only available in `node run` command.
 
 Lookup genesis account
 ...........................

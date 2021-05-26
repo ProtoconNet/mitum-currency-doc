@@ -26,10 +26,10 @@ genesis-operations
 
     genesis-operations:
         - account-keys:
-            keys:
-                - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
-                  weight: 100
-            threshold: 100
+              keys:
+                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
+                    weight: 100
+              threshold: 100
           currencies:
               - balance: "99999999999999999999"
                 currency: MCC
@@ -55,7 +55,7 @@ network
 network > rate-limit 
 ----------------------
 
-* Basially API interface of internet service allows to connect from client without restriction.
+* Basically API interface of internet service allows to connect from client without restriction.
 * but too many requests to service does harm to the performance of service
 * To maintain the service to be stable, rate limit can be applied to the API service.
 * See `Rate limiting <https://en.wikipedia.org/wiki/Rate_limiting>`_
@@ -91,7 +91,7 @@ network > rate-limit
 
 * preset: pre defined rate limit settings. 
   
-    * For mitum, ``suffrage`` and ``world`` presets are already defined. See `launch/config/ratelimit.go <https://github.com/spikeekips/mitum/blob/master/launch/config/ratelimit.go>`_ in the `source code <https://github.com/spikeekips/mitum>`_.
+    * For Mitum, ``suffrage`` and ``world`` presets are already defined. See `launch/config/ratelimit.go <https://github.com/spikeekips/mitum/blob/master/launch/config/ratelimit.go>`_ in the `source code <https://github.com/spikeekips/mitum>`_.
     * You can make your own rate limit setting like ``bad-nodes``.
 
 * Rules:
@@ -114,9 +114,9 @@ network > rate-limit
 
 * detailed limit:
 
-    * The name of the API interface for mitum, such as ``new-seal``, used to set the limit can be found in ``RateLimitHandleMap`` (`launch/config/ratelimit.go <https://github.com/spikeekips/mitum/blob/master/launch/config/ratelimit.go>`_).
+    * The name of the API interface for Mitum, such as ``new-seal``, used to set the limit can be found in ``RateLimitHandleMap`` (`launch/config/ratelimit.go <https://github.com/spikeekips/mitum/blob/master/launch/config/ratelimit.go>`_).
 
-    * The name of the API interface for mitum-currency can be found in ``RateLimitHandlerMap`` (`digest/handler.go <https://github.com/spikeekips/mitum-currency/blob/master/digest/handler.go>`_).
+    * The name of the API interface for Mitum-currency can be found in ``RateLimitHandlerMap`` (`digest/handler.go <https://github.com/spikeekips/mitum-currency/blob/master/digest/handler.go>`_).
 
     * ``new-seal: 3/2m`` means ``new-seal`` interface allows 3 requests per 2 minutes to the specified IP or IP range.
 
@@ -260,15 +260,15 @@ config example (standalone node)
     address: n0-010a:0.0.1
     genesis-operations:
         - account-keys:
-            keys:
-                - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
-                weight: 100
-            threshold: 100
-        currencies:
-            - balance: "99999999999999999999"
-            currency: MCC
-            new-account-min-balance: "33"
-        type: genesis-currencies
+              keys:
+                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
+                    weight: 100
+              threshold: 100
+          currencies:
+              - balance: "99999999999999999999"
+                currency: MCC
+                new-account-min-balance: "33"
+          type: genesis-currencies
     network:
         bind: quic://0.0.0.0:54330
         url: quic://127.0.0.1:54330

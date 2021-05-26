@@ -1,4 +1,6 @@
-Updatae Currency policy
+.. _currency policy update:
+
+Update Currency policy
 =============================
 
 currency-policy-updater Operation

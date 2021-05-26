@@ -28,5 +28,5 @@ Mitum currency feature
 Digest Service
 -----------------------
 
-* Digest service is an internal service that stores block data stored by mitum separately to serve as HTTP-based API.
+* Digest service is an internal service that stores block data stored by Mitum separately to serve as HTTP-based API.
 * For more information on the Digest service, please refer to :ref:`api`.

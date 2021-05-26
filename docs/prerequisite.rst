@@ -9,7 +9,7 @@ Database
 * MongoDB
     - Installation
         - `Manual Installation Guide <https://docs.mongodb.com/manual/installation/>`_
-        - Usign `docker container <https://hub.docker.com/_/mongo>`_
+        - Using `docker container <https://hub.docker.com/_/mongo>`_
         - ``$ docker run --name mc-test-mongo-27017 -it -p 27017:27017 -d mongo``
     - Setup
         * For more information on db setup, see :ref:`node configure` .

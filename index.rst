@@ -32,7 +32,12 @@ Welcome to Mitum currency's documentation!
    :maxdepth: 1
    :caption: Using Mitum currency
 
+   docs/send-seal
+   docs/cli
+   docs/node
    docs/seal
+   docs/key
+   docs/storage
    docs/operations-guide
 
 .. toctree::

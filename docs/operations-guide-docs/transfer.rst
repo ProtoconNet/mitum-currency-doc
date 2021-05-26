@@ -1,10 +1,12 @@
-Transfer coin
+.. _transfer token:
+
+Transfer token
 ==================
 
 transfers Operation
 ----------------------
 
-* Transfers Opearation is used to transfer coins between created accounts.
+* Transfers Operation is used to transfer coins between created accounts.
 
 .. code-block:: sh
 
