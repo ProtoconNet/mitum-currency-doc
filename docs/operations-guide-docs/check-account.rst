@@ -15,11 +15,11 @@ Prerequisite
 Genesis account lookup
 --------------------------------------------------------------------------------
 
-* You can lookup genesis account from local blockfs.
+* You can lookup genesis account from local blockdata.
 
 .. code-block:: sh
 
-    $ find blockfs -name "*-states-*" -print | xargs -n 1 zcat | jq '. | select(.key == "7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:balance") | [ "height: "+(.height|tostring), "state_key: " + .key, "balance: " + .value.value.amount]'
+    $ find blockdata -name "*-states-*" -print | xargs -n 1 zcat | jq '. | select(.key == "7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:balance") | [ "height: "+(.height|tostring), "state_key: " + .key, "balance: " + .value.value.amount]'
     [
       "height: 0",
       "state_key: 7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:balance",
@@ -86,11 +86,11 @@ Genesis account lookup
 ``ac0``
 --------------------------------------------------------------------------------
 
-* If you create account ac0, you can lookup account from local blockfs.
+* If you create account ac0, you can lookup account from local blockdata.
 
 .. code-block:: sh
 
-    $ find blockfs -name "*-states-*" -print | xargs -n 1 zcat | jq '. | select(.key == "HP6M74XVsZ8UDC7btAV2kbgQNzoDwwj1omcjfusGwK5T-a000:balance") | [ "height: "+(.height|tostring), "state_key: " + .key, "balance: " + .value.value.amount]'
+    $ find blockdata -name "*-states-*" -print | xargs -n 1 zcat | jq '. | select(.key == "HP6M74XVsZ8UDC7btAV2kbgQNzoDwwj1omcjfusGwK5T-a000:balance") | [ "height: "+(.height|tostring), "state_key: " + .key, "balance: " + .value.value.amount]'
     [
       "height: 5",
       "state_key: HP6M74XVsZ8UDC7btAV2kbgQNzoDwwj1omcjfusGwK5T-a000:balance",

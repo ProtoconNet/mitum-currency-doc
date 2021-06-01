@@ -8,7 +8,7 @@
 
     .. code-block:: sh
 
-        $ mitum-currency storage download --tls-insecure --node=quic://127.0.0.1:54330 all 550 --save=data
+        $ ./mc storage download --tls-insecure --node=quic://127.0.0.1:54330 all 550 --save=data
     
         2021-05-26T08:56:22.485304Z INF saved file=data/000/000/000/000/000/000/550/550-manifest-0f5aaa2753d799336a84e7e1a3379a562faf3294f2a906e7109ef46703b64b23.jsonld.gz height=550 module=command-block-download
         2021-05-26T08:56:22.515033Z INF saved file=data/000/000/000/000/000/000/550/550-operations-0fedf0c3ccb08aea5694e04a382ca04fb1338dfc9c2c408fe6296c93c0931124.jsonld.gz height=550 module=command-block-download
@@ -24,7 +24,7 @@
 
     .. code-block:: sh
 
-        $ mitum-currency storage verify-blockdata blockfs --network-id=mitum --verbose
+        $ ./mc storage verify-blockdata blockfs --network-id=mitum --verbose
 
         2021-05-26T08:45:15.74861211Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/cmd.go:79 > maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined module=command-blockdata-verify
         2021-05-26T08:45:15.748770007Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/cmd.go:88 > flags parsed flags={"CPUProf":"mitum-cpu.pprof","EnableProfiling":false,"LogColor":false,"LogFile":null,"LogFormat":"terminal","LogLevel":"info","MemProf":"mitum-mem.pprof","NetworkID":"bWl0dW0=","Path":"/mitum/db/n0_data/blockfs","TraceProf":"mitum-trace.pprof","Verbose":true} module=command-blockdata-verify
@@ -50,7 +50,7 @@
 
     .. code-block:: sh
 
-        $ mitum-currency storage verify-database mongodb://172.31.10.67:27017/n0_mc blockfs --network-id=mitum --verbose
+        $ ./mc storage verify-database mongodb://172.31.10.67:27017/n0_mc blockfs --network-id=mitum --verbose
 
         2021-05-26T08:42:20.619634723Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/cmd.go:79 > maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined module=command-database-verify
         2021-05-26T08:42:20.619795909Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/cmd.go:88 > flags parsed flags={"CPUProf":"mitum-cpu.pprof","EnableProfiling":false,"LogColor":false,"LogFile":null,"LogFormat":"terminal","LogLevel":"info","MemProf":"mitum-mem.pprof","NetworkID":"bWl0dW0=","Path":"/mitum/db/n0_data/blockfs","TraceProf":"mitum-trace.pprof","URI":"mongodb://172.31.10.67:27017/n0_mc","Verbose":true} module=command-database-verify
@@ -82,6 +82,6 @@
 
     .. code-block:: sh
 
-        $ mitum-currency storage clean node.yml
+        $ ./mc storage clean node.yml
 
     * ``restore`` : Restore the entire database from the downloaded blockdata.

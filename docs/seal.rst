@@ -85,7 +85,7 @@
     .. code-block:: sh
 
         $ SIGNER_PRV=L5GTSKkRs9NPsXwYgACZdodNUJqCAWjz2BccuR4cAgxJumEZWjok-0112:0.0.1
-        $ mitum-currency seal sign --seal=data.json  --network-id=mitum $SIGNER_PRV | jq
+        $ ./mc seal sign --seal=data.json  --network-id=mitum $SIGNER_PRV | jq
         {
             "_hint": "0151:0.0.1",
             "hash": "3qhmaLHPSFeFEBTwV4Uow23WRsGRA3B1wCWburFTLPvS",
@@ -202,7 +202,7 @@
         $ SIGNER2_PUB_KEY=sdjgo1jJ2kxAxMyBj6qZDb8okZpwzHYE8ZACgePYW4eT-0113:0.0.1
         $ SIGNER2_PRV_KEY=L5AAoEqwnHCp7WfkPcUmtUX61ppZQww345rEDCwB33jVPud4hzKJ-0112:0.0.1
         $ NETWORK_ID=mitum
-        $ mitum-currency seal sign-fact $SIGNER2_PRV_KEY --seal data.json --network-id=$NETWORK_ID | jq
+        $ ./mc seal sign-fact $SIGNER2_PRV_KEY --seal data.json --network-id=$NETWORK_ID | jq
 
         {
             "_hint": "0151:0.0.1",

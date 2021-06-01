@@ -6,25 +6,25 @@ Create Account
 create-account Operation
 --------------------------   
 
-* ``create-account`` is a operation which create new account.
+* ``create-account`` is an operation which creates new account.
 * Register publickey as the key of a new account. The sum of the weights of the keys should be ``100``.
 
 .. code-block:: sh
 
-    $ mitum-currency seal create-account --network-id=NETWORK-ID-FLAG <privatekey> <sender> <currency> <big>
+    $ ./mc seal create-account --network-id=NETWORK-ID-FLAG <privatekey> <sender> <currency> <big>
 
 * We will proceed with the process of creating two accounts, ac0 and ac1 as an example.
 * When registering one key per account, two public keys are required.
 * For how to create a keypair, please refer to :ref:`create keypair` .
-* The operation that creates account ac0 are as follows.
+* The operation that creates account ac0 is as follows.
 
 .. code-block:: sh
 
-    $ NETWORK_ID="mc; Tue 08 Dec 2020 07:22:18 AM KST"
+    $ NETWORK_ID="mitum"
     $ GENESIS_PRV=c741259e1444ce46e08c2489f3112fb8f0b9f85cb11c84ced9d948cef259ce74-0114:0.0.1
     $ GENESIS_ADDR=7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:0.0.1
     $ AC0_PUB=042f828efb3b75de4fd7d38eab7800ab212528599a3c47f3dd18658da6d8a216969f8be772c9374834b93599b1e9632f7eda536f5c6eaec582ece8d6a730b0476a-0115:0.0.1
-    $ ./bin/mc seal create-account --network-id=$NETWORK_ID $GENESIS_PRV $GENESIS_ADDR XXX 50 --key=$AC0_PUB,100 | jq
+    $ ./mc seal create-account --network-id=$NETWORK_ID $GENESIS_PRV $GENESIS_ADDR XXX 50 --key=$AC0_PUB,100 | jq
     {
       "_hint": "0151:0.0.1",
       "hash": "6HfMCxykmvJtpYTEeJF9RvF7UbYaVp7UtjcXd8C1MMbt",
@@ -76,11 +76,11 @@ create-account Operation
 
 .. code-block:: sh
 
-    $ NETWORK_ID="mc; Tue 08 Dec 2020 07:22:18 AM KST"
+    $ NETWORK_ID="mitum"
     $ GENESIS_PRV=c741259e1444ce46e08c2489f3112fb8f0b9f85cb11c84ced9d948cef259ce74-0114:0.0.1
     $ GENESIS_ADDR=7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:0.0.1
     $ AC1_PUB=04a80bf7516f8b01385b680793d9d1eb3e69b8375a4ffc24a8413b13d7b5211f1aed315eec8851c391d6043fff0272b98484e5a5efa6c8815026a30029dba6c31c-0115:0.0.1
-    $ ./bin/mc seal create-account --network-id=$NETWORK_ID $GENESIS_PRV $GENESIS_ADDR XXX 50 --key=$AC1_PUB,100 | jq
+    $ ./mc seal create-account --network-id=$NETWORK_ID $GENESIS_PRV $GENESIS_ADDR XXX 50 --key=$AC1_PUB,100 | jq
     {
       "_hint": "0151:0.0.1",
       "hash": "mgvCR9cfGJ6Qdsj2AVciq9tVKTmL6VBda3dDvuWsSmF",
@@ -137,21 +137,21 @@ create-account Operation
 
 .. code-block:: sh
 
-    $ NETWORK_ID="mc; Tue 08 Dec 2020 07:22:18 AM KST"
+    $ NETWORK_ID="mitum"
     $ GENESIS_PRV=c741259e1444ce46e08c2489f3112fb8f0b9f85cb11c84ced9d948cef259ce74-0114:0.0.1
     $ GENESIS_ADDR=7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:0.0.1
     $ CURRENCY_ID=MCC
     $ AC0_PUB=042f828efb3b75de4fd7d38eab7800ab212528599a3c47f3dd18658da6d8a216969f8be772c9374834b93599b1e9632f7eda536f5c6eaec582ece8d6a730b0476a-0115:0.0.1
     $ AC1_PUB=04a80bf7516f8b01385b680793d9d1eb3e69b8375a4ffc24a8413b13d7b5211f1aed315eec8851c391d6043fff0272b98484e5a5efa6c8815026a30029dba6c31c-0115:0.0.1
-    $ ./bin/mc seal create-account --network-id=$NETWORK_ID \
+    $ ./mc seal create-account --network-id=$NETWORK_ID \
       $GENESIS_PRV $GENESIS_ADDR $CURRENCY_ID 50 \
       --key=$AC0_PUB,100" |
-    ./bin/mc seal create-account --network-id="mc; Thu 10 Sep 2020 03:23:31 PM UTC" \
+    ./mc seal create-account --network-id="mc; Thu 10 Sep 2020 03:23:31 PM UTC" \
       "c741259e1444ce46e08c2489f3112fb8f0b9f85cb11c84ced9d948cef259ce74-0114:0.0.1" \
       "7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:0.0.1" \
       XXX 50 \
       --key="04a80bf7516f8b01385b680793d9d1eb3e69b8375a4ffc24a8413b13d7b5211f1aed315eec8851c391d6043fff0272b98484e5a5efa6c8815026a30029dba6c31c-0115:0.0.1,100" --seal=- | \
-    ./bin/mc seal send --network-id="mc; Thu 10 Sep 2020 03:23:31 PM UTC" \
+    ./mc seal send --network-id="mc; Thu 10 Sep 2020 03:23:31 PM UTC" \
         "c741259e1444ce46e08c2489f3112fb8f0b9f85cb11c84ced9d948cef259ce74-0114:0.0.1" \
         --seal=- --node=quic://127.0.0.1:54321
     $ echo $?
@@ -163,7 +163,7 @@ create-account Operation
 
     $ FACT_HASH=3YZZ1kNxdt7Aof7cuwfiNGFNXB85nFypMcdsqux1ezHT
     $ DIGEST_API="https://localhost:54322"
-    $ curl --insecure -v $DIGEST_API/operation/$FACT_HASH | jq
+    $ curl --insecure -v $DIGEST_API/block/operation/$FACT_HASH | jq
     {
       "_hint": "a016:0.0.1",
       "hint": {

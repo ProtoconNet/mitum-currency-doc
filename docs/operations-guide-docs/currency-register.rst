@@ -8,7 +8,7 @@ currency-register Operation
 
 .. code-block:: sh
 
-    $ mitum-currency seal currency-register --network-id=NETWORK-ID-FLAG --feeer=STRING --policy-new-account-min-balance=BIG <node privatekey> <currency-id> <genesis-amount> <genesis-account>
+    $ ./mc seal currency-register --network-id=NETWORK-ID-FLAG --feeer=STRING --policy-new-account-min-balance=BIG <node privatekey> <currency-id> <genesis-amount> <genesis-account>
 
 * When registering a new currency, the items that need to be set are as follows.
 * genesis account: account where the issued token will be registered with new currency registration
@@ -34,16 +34,16 @@ currency-register Operation example
 
 .. code-block:: sh
 
-    $ NETWORK_ID="mc; Thu 10 Sep 2020 03:23:31 PM UTC"
+    $ NETWORK_ID="mitum"
     $ AC1_ADDR="HWXPq5mBSneSsQis6BbrNT6nvpkafuBqE6F2vgaTYfAC-a000:0.0.1"
     $ AC1_PRV="792c971c801a8e45745938946a85b1089e61c1cdc310cf61370568bf260a29be-0114:0.0.1"
     $ N0_PRV=<n0 private key>
     $ N1_PRV=<n1 private key>
     $ N2_PRV=<n2 private key>
     $ N3_PRV=<n3 private key>
-    $ ./bin/mc seal currency-register --network-id=$NETWORK_ID --feeer="fixed" --feeer-fixed-receiver=$AC1_ADDR \ 
+    $ ./mc seal currency-register --network-id=$NETWORK_ID --feeer="fixed" --feeer-fixed-receiver=$AC1_ADDR \ 
       --feeer-fixed-amount=3 --policy-new-account-min-balance=10 $N0_PRV MCC2 9999999999999 $AC1_ADDR \
-      | ./bin/mc seal sign-fact $N1_PRV --network-id=$NETWORK_ID --seal=- \
-      | ./bin/mc seal sign-fact $N2_PRV --network-id=$NETWORK_ID --seal=- \
-      | ./bin/mc seal sign-fact $N3_PRV --network-id=$NETWORK_ID --seal=- \
-      | ./bin/mc seal send --network-id=$NETWORK_ID $AC1_PRV --seal=-
+      | ./mc seal sign-fact $N1_PRV --network-id=$NETWORK_ID --seal=- \
+      | ./mc seal sign-fact $N2_PRV --network-id=$NETWORK_ID --seal=- \
+      | ./mc seal sign-fact $N3_PRV --network-id=$NETWORK_ID --seal=- \
+      | ./mc seal send --network-id=$NETWORK_ID $AC1_PRV --seal=-

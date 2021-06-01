@@ -22,7 +22,7 @@ Mitum currency feature
 * Multiple keys can be registered when creating an account, and related keys can be replaced through key update operation.
 * Mitum currency can issue new currency and related policy can be customized.
 * Currency-related policy can be updated at any time as needed.
-* Mitum currency has no compensation for block generation and theres is also no inflation.
+* Mitum currency has no compensation for block generation and there is also no inflation.
 * The node configuration for the Mitum currency network follows the node operation policy of the Mitum blockchain, and details can be found at :ref:`test nodes`.
 
 Digest Service

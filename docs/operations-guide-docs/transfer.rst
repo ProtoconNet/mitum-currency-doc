@@ -10,7 +10,7 @@ transfers Operation
 
 .. code-block:: sh
 
-    $ mitum-currency seal transfer --network-id=NETWORK-ID-FLAG <privatekey> <sender> <receiver> <currency> <big>
+    $ ./mc seal transfer --network-id=NETWORK-ID-FLAG <privatekey> <sender> <receiver> <currency> <big>
 
 * This is an example of transferring the currency ``MCC`` amount, ``3`` from ``ac0`` to ``ac1``
 
@@ -20,8 +20,8 @@ transfers Operation
     $ AC0_ADDR=HP6M74XVsZ8UDC7btAV2kbgQNzoDwwj1omcjfusGwK5T-a000:0.0.1
     $ AC1_ADDR=HWXPq5mBSneSsQis6BbrNT6nvpkafuBqE6F2vgaTYfAC-a000:0.0.1
     $ CURRENCY_ID=MCC
-    $ NETWORK_ID="mc; Tue 08 Dec 2020 07:22:18 AM KST"
-    $ ./bin/mc seal transfer --network-id=$NETWORK_ID $AC0_PRV $AC0_ADDR $AC1_ADDR $CURRENCY_ID 3 | jq
+    $ NETWORK_ID="mitum"
+    $ ./mc seal transfer --network-id=$NETWORK_ID $AC0_PRV $AC0_ADDR $AC1_ADDR $CURRENCY_ID 3 | jq
     {
       "_hint": "0151:0.0.1",
       "hash": "ACSP5cdJRTz4YFg72sAxsTzgECwNsJ9J2J3DtY7a2uYe",
@@ -58,8 +58,8 @@ transfers Operation
       ]
     }
 
-    $ ./bin/mc seal transfer --network-id=$NETWORK_ID $AC0_PRV $AC0_ADDR $AC1_ADDR $CURRENCY_ID 3 | jq \
-      ./bin/mc seal send --network-id=$NETWORK_ID $AC0_PRV --seal=-
+    $ ./mc seal transfer --network-id=$NETWORK_ID $AC0_PRV $AC0_ADDR $AC1_ADDR $CURRENCY_ID 3 | jq \
+      ./mc seal send --network-id=$NETWORK_ID $AC0_PRV --seal=-
 
 * Whether the operation is successfully processed can be checked through the api.
 * For more information, please refer to :ref:`Operation Reason`.

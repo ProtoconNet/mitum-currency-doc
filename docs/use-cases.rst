@@ -8,7 +8,7 @@ Use Cases
 
 .. code-block:: sh
 
-    $ NETWORK_ID="mc; Tue 08 Dec 2020 07:22:18 AM KST"
+    $ NETWORK_ID="mitum"
     $ GENESIS_PRV="c741259e1444ce46e08c2489f3112fb8f0b9f85cb11c84ced9d948cef259ce74-0114:0.0.1"
     $ GENESIS_ADDR="7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:0.0.1"
     $ AC0_PRV="e4e236b0f02156a5c28031aa4608a299f44496be56081d09d0ef3667c33dbac3-0114:0.0.1"
@@ -21,23 +21,23 @@ Use Cases
     $ NODE="quic://127.0.0.1:54331"
     
     # Genesis account에서 ac0 account 생성
-    $ ./bin/mc seal create-account --network-id=$NETWORK_ID $GENESIS_PRV $GENESIS_ADDR $CURRENCY_ID 50 --key=$AC0_PUB,100 | \
-    ./bin/mc seal send --network-id=$NETWORK_ID $GENESIS_PRV --seal=-
+    $ ./mc seal create-account --network-id=$NETWORK_ID $GENESIS_PRV $GENESIS_ADDR $CURRENCY_ID 50 --key=$AC0_PUB,100 | \
+    ./mc seal send --network-id=$NETWORK_ID $GENESIS_PRV --seal=-
     
     # Genesis account에서 ac1 account 생성
-    $ ./bin/mc seal create-account --network-id=$NETWORK_ID $GENESIS_PRV $GENESIS_ADDR $CURRENCY_ID 50 --key=$AC1_PUB,100 | \
-    ./bin/mc seal send --network-id=$NETWORK_ID $GENESIS_PRV --seal=-
+    $ ./mc seal create-account --network-id=$NETWORK_ID $GENESIS_PRV $GENESIS_ADDR $CURRENCY_ID 50 --key=$AC1_PUB,100 | \
+    ./mc seal send --network-id=$NETWORK_ID $GENESIS_PRV --seal=-
 
     # ac0 account에서 ac1 account로 5 송금
-    ./bin/mc seal transfer --network-id=$NETWORK_ID $AC0_PRV $AC0_ADDR $AC1_ADDR $CURRENCY_ID 5 | \
-    ./bin/mc seal send --network-id=$NETWORK_ID $AC0_PRV --seal=- --node=$NODE
+    ./mc seal transfer --network-id=$NETWORK_ID $AC0_PRV $AC0_ADDR $AC1_ADDR $CURRENCY_ID 5 | \
+    ./mc seal send --network-id=$NETWORK_ID $AC0_PRV --seal=- --node=$NODE
 
 multi sig 계좌 생성한 후 송금
 -----------------------------
 
 .. code-block:: sh
 
-    $ NETWORK_ID="mc; Tue 08 Dec 2020 07:22:18 AM KST"
+    $ NETWORK_ID="mitum"
     $ GENESIS_PRV="c741259e1444ce46e08c2489f3112fb8f0b9f85cb11c84ced9d948cef259ce74-0114:0.0.1"
     $ GENESIS_ADDR="7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:0.0.1"
     $ AC0_PRV="e4e236b0f02156a5c28031aa4608a299f44496be56081d09d0ef3667c33dbac3-0114:0.0.1"
@@ -49,27 +49,27 @@ multi sig 계좌 생성한 후 송금
 
     # genesis account에서 ac0의 public key, ac1의 public key로 각각 weight 50, threshold 90인 multi sig account 생성
 
-    $ ./bin/mc seal create-account --network-id=$NETWORK_ID $GENESIS_PRV $GENESIS_ADDR $CURRENCY_ID 10000 \
+    $ ./mc seal create-account --network-id=$NETWORK_ID $GENESIS_PRV $GENESIS_ADDR $CURRENCY_ID 10000 \
     --key=$AC0_PUB,50@$AC1_PUB,50 --threshold=90 | \
-    ./bin/mc seal send --network-id=$NETWORK_ID $GENESIS_PRV --seal=- --node=$NODE
+    ./mc seal send --network-id=$NETWORK_ID $GENESIS_PRV --seal=- --node=$NODE
 
     # 생성된 multi sig account의 주소는 cli 명령으로 확인
-    $ ./bin/mc key address 90 $AC0_PUB,50 $AC1_PUB,50
+    $ ./mc key address 90 $AC0_PUB,50 $AC1_PUB,50
     2PsqEZ27LMvAX19nVCWHyL4ctwERm5mVd7wo4DxGSUh9-a000:0.0.1
 
     # multi sig account에서 ac0 account로 10 송금
 
     $ MULTISIG_ADDR="2PsqEZ27LMvAX19nVCWHyL4ctwERm5mVd7wo4DxGSUh9-a000:0.0.1"
-    $ ./bin/mc seal transfer --network-id=$NETWORK_ID $AC0_PRV $MULTISIG_ADDR $CURRENCY_ID 10 | \
-    ./bin/mc seal sign-fact $AC1_PRV --network-id=$NETWORK_ID --seal=- | \
-    ./bin/mc seal send --network-id=$NETWORK_ID $AC0_PRV --seal=- --node=$NODE
+    $ ./mc seal transfer --network-id=$NETWORK_ID $AC0_PRV $MULTISIG_ADDR $CURRENCY_ID 10 | \
+    ./mc seal sign-fact $AC1_PRV --network-id=$NETWORK_ID --seal=- | \
+    ./mc seal send --network-id=$NETWORK_ID $AC0_PRV --seal=- --node=$NODE
 
 multi sig 계좌 생성 후 key update
 ---------------------------------
 
 .. code-block:: sh
 
-    $ NETWORK_ID="mc; Tue 08 Dec 2020 07:22:18 AM KST"
+    $ NETWORK_ID="mitum"
     $ GENESIS_PRV="c741259e1444ce46e08c2489f3112fb8f0b9f85cb11c84ced9d948cef259ce74-0114:0.0.1"
     $ GENESIS_ADDR="7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:0.0.1"
     $ AC0_PRV="e4e236b0f02156a5c28031aa4608a299f44496be56081d09d0ef3667c33dbac3-0114:0.0.1"
@@ -86,21 +86,21 @@ multi sig 계좌 생성 후 key update
 
     # genesis account에서 ac0의 public key, ac1의 public key로 각각 weight 50, threshold 90인 multi sig account 생성
 
-    $ ./bin/mc seal create-account --network-id=$NETWORK_ID $GENESIS_PRV $GENESIS_ADDR $CURRENCY_ID 10000 \
+    $ ./mc seal create-account --network-id=$NETWORK_ID $GENESIS_PRV $GENESIS_ADDR $CURRENCY_ID 10000 \
     --key=$AC0_PUB,50@$AC1_PUB,50 --threshold=90 | \
-    ./bin/mc seal send --network-id=$NETWORK_ID $GENESIS_PRV --seal=- --node=$NODE
+    ./mc seal send --network-id=$NETWORK_ID $GENESIS_PRV --seal=- --node=$NODE
 
     # key update
-    $ ./bin/mc seal key-updater --network-id=$NETWORK_ID $AC0_PRV $MULTISIG_ADDR $CURRENCY_ID --key=$AC2_PUB,50@AC3_PUB,50 | \
-    ./bin/mc seal sign-fact $AC1_PRV --network-id=$NETWORK_ID --seal=- | \
-    ./bin/mc seal send --network-id=$NETWORK_ID $AC0_PRV --seal=- --node=$NODE
+    $ ./mc seal key-updater --network-id=$NETWORK_ID $AC0_PRV $MULTISIG_ADDR $CURRENCY_ID --key=$AC2_PUB,50@AC3_PUB,50 | \
+    ./mc seal sign-fact $AC1_PRV --network-id=$NETWORK_ID --seal=- | \
+    ./mc seal send --network-id=$NETWORK_ID $AC0_PRV --seal=- --node=$NODE
 
 새로운 currency를 생성한 후 송금
 ---------------------------------
 
 .. code-block:: sh
 
-    $ NETWORK_ID="mc; Tue 08 Dec 2020 07:22:18 AM KST"
+    $ NETWORK_ID="mitum"
     $ AC0_PRV="e4e236b0f02156a5c28031aa4608a299f44496be56081d09d0ef3667c33dbac3-0114:0.0.1"
     $ AC0_PUB="042f828efb3b75de4fd7d38eab7800ab212528599a3c47f3dd18658da6d8a216969f8be772c9374834b93599b1e9632f7eda536f5c6eaec582ece8d6a730b0476a-0115:0.0.1"
     $ AC1_PRV=792c971c801a8e45745938946a85b1089e61c1cdc310cf61370568bf260a29be-0114:0.0.1
@@ -123,23 +123,23 @@ multi sig 계좌 생성 후 key update
 
     # 새로운 currency MCC2를 생성하고 ac0의 account를 genesis account로 설정함
     # currency 생성을 위해서 노드 n0, n1, n2, n3의 sign이 필요함.
-    $ ./bin/mc seal currency-register --network-id=$NETWORK_ID --feeer="fixed" --feeer-fixed-receiver=$AC0_ADDR \
+    $ ./mc seal currency-register --network-id=$NETWORK_ID --feeer="fixed" --feeer-fixed-receiver=$AC0_ADDR \
     --feeer-fixed-amount=3 --policy-new-account-min-balance=10 $N0_PRV $NEW_CURRENCY_ID $NEW_CURRENCY_GENESIS_AMOUNT $AC0_ADDR | \
-    ./bin/mc seal sign-fact $N1_PRV --network-id=$NETWORK_ID --seal=- | \
-    ./bin/mc seal sign-fact $N2_PRV --network-id=$NETWORK_ID --seal=- | \
-    ./bin/mc seal sign-fact $N3_PRV --network-id=$NETWORK_ID --seal=- | \
-    ./bin/mc seal send --network-id=$NETWORK_ID $AC0_PRV --seal=- --node=$NODE
+    ./mc seal sign-fact $N1_PRV --network-id=$NETWORK_ID --seal=- | \
+    ./mc seal sign-fact $N2_PRV --network-id=$NETWORK_ID --seal=- | \
+    ./mc seal sign-fact $N3_PRV --network-id=$NETWORK_ID --seal=- | \
+    ./mc seal send --network-id=$NETWORK_ID $AC0_PRV --seal=- --node=$NODE
 
     # ac0에서 ac1으로 새로 생성된 MCC2 10을 송금
-    $ ./bin/mc seal transfer --network-id=$NETWORK_ID $AC0_PRV $AC0_ADDR $AC1_ADDR $NEW_CURRENCY_ID 10 | \
-    ./bin/mc seal send --network-id=$NETWORK_ID $AC0_PRV --seal=- --node=$NODE
+    $ ./mc seal transfer --network-id=$NETWORK_ID $AC0_PRV $AC0_ADDR $AC1_ADDR $NEW_CURRENCY_ID 10 | \
+    ./mc seal send --network-id=$NETWORK_ID $AC0_PRV --seal=- --node=$NODE
 
 새로운 currency를 생성한 후 currency policy update
 ----------------------------------------------------
 
 .. code-block:: sh
 
-    $ NETWORK_ID="mc; Tue 08 Dec 2020 07:22:18 AM KST"
+    $ NETWORK_ID="mitum"
     $ AC0_PRV="e4e236b0f02156a5c28031aa4608a299f44496be56081d09d0ef3667c33dbac3-0114:0.0.1"
     $ AC0_PUB="042f828efb3b75de4fd7d38eab7800ab212528599a3c47f3dd18658da6d8a216969f8be772c9374834b93599b1e9632f7eda536f5c6eaec582ece8d6a730b0476a-0115:0.0.1"
     $ AC1_PRV=792c971c801a8e45745938946a85b1089e61c1cdc310cf61370568bf260a29be-0114:0.0.1
@@ -162,18 +162,18 @@ multi sig 계좌 생성 후 key update
 
     # 새로운 currency MCC2를 생성하고 ac0의 account를 genesis account로 설정함
     # currency 생성을 위해서 노드 n0, n1, n2, n3의 sign이 필요함.
-    $ ./bin/mc seal currency-register --network-id=$NETWORK_ID --feeer="fixed" --feeer-fixed-receiver=$AC0_ADDR \
+    $ ./mc seal currency-register --network-id=$NETWORK_ID --feeer="fixed" --feeer-fixed-receiver=$AC0_ADDR \
     --feeer-fixed-amount=3 --policy-new-account-min-balance=10 $N0_PRV $NEW_CURRENCY_ID $NEW_CURRENCY_GENESIS_AMOUNT $AC0_ADDR | \
-    ./bin/mc seal sign-fact $N1_PRV --network-id=$NETWORK_ID --seal=- | \
-    ./bin/mc seal sign-fact $N2_PRV --network-id=$NETWORK_ID --seal=- | \
-    ./bin/mc seal sign-fact $N3_PRV --network-id=$NETWORK_ID --seal=- | \
-    ./bin/mc seal send --network-id=$NETWORK_ID $AC0_PRV --seal=- --node=$NODE
+    ./mc seal sign-fact $N1_PRV --network-id=$NETWORK_ID --seal=- | \
+    ./mc seal sign-fact $N2_PRV --network-id=$NETWORK_ID --seal=- | \
+    ./mc seal sign-fact $N3_PRV --network-id=$NETWORK_ID --seal=- | \
+    ./mc seal send --network-id=$NETWORK_ID $AC0_PRV --seal=- --node=$NODE
 
     # currency policy를 업데이트함. currency policy 업데이트를 위해서 노드 n0, n1, n2, n3의 sign이 필요함.
     # policy 업데이트 내용 : feeer를 fixed에서 ratio로, ac1을 feeer-ratio-receiver로 수정
-    $ ./bin/mc seal currency-policy-updater --network-id=$NETWORK_ID --feeer="ratio" --feeer-ratio-receiver=$AC1_ADDR \
+    $ ./mc seal currency-policy-updater --network-id=$NETWORK_ID --feeer="ratio" --feeer-ratio-receiver=$AC1_ADDR \
     --feeer-ratio-ratio=0.5 --feeer-ratio-min=3 --feeer-ratio-max=1000 --policy-new-account-min-balance=100 $N0_PRV $NEW_CURRENCY_ID | \
-    ./bin/mc seal sign-fact $N1_PRV --network-id=$NETWORK_ID --seal=- | \
-    ./bin/mc seal sign-fact $N2_PRV --network-id=$NETWORK_ID --seal=- | \
-    ./bin/mc seal sign-fact $N3_PRV --network-id=$NETWORK_ID --seal=- | \
-    ./bin/mc seal send --network-id=$NETWORK_ID $AC0_PRV --seal=- --node=$NODE
+    ./mc seal sign-fact $N1_PRV --network-id=$NETWORK_ID --seal=- | \
+    ./mc seal sign-fact $N2_PRV --network-id=$NETWORK_ID --seal=- | \
+    ./mc seal sign-fact $N3_PRV --network-id=$NETWORK_ID --seal=- | \
+    ./mc seal send --network-id=$NETWORK_ID $AC0_PRV --seal=- --node=$NODE

@@ -8,14 +8,14 @@ Seal Send
 
 .. code-block:: sh
 
-    $ mitum-currency seal send <sender privatekey> --network-id=<network id> --seal=<data file path> --node=<node quic url>
+    $ ./mc seal send <sender privatekey> --network-id=<network id> --seal=<data file path> --node=<node quic url>
 
 .. code-block:: sh
 
-    $ NETWORK_ID="mc; Tue 08 Dec 2020 07:22:18 AM KST"
+    $ NETWORK_ID="mitum"
     $ NODE="quic://127.0.0.1:54331"
     $ AC0_PRV=L1jPsE8Sjo5QerUHJUZNRqdH1ctxTWzc1ue8Zp2mtpieNwtCKsNZ-0112:0.0.1
-    $ ./bin/mc seal send --network-id=$NETWORK_ID $AC0_PRV --seal=data.json --node=$NODE
+    $ ./mc seal send --network-id=$NETWORK_ID $AC0_PRV --seal=data.json --node=$NODE
     {
       "_hint": "0151:0.0.1",
       "hash": "JBWy8z27iQdr2rxRxqBJFfNbRrBYjqqchacyvbMiwAJ4",
@@ -66,7 +66,7 @@ Seal Send
 
 .. code-block:: sh
 
-    $ ./bin/mc seal send --network-id=$NETWORK_ID $AC0_PRV --tls-insecure=true --seal=data.json --node=$NODE
+    $ ./mc seal send --network-id=$NETWORK_ID $AC0_PRV --tls-insecure=true --seal=data.json --node=$NODE
 
 * Whether the operation is successfully processed can be checked through the api.
 * For more information, please refer to :ref:`Operation Reason`.

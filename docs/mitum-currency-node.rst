@@ -1,9 +1,9 @@
 Mitum Currency Node
 ======================
 
-- Mitum Blockchain network running Mitum currency uses pbft-based ISSAC+ consensus protocol.
+- Mitum Blockchain network running Mitum currency uses pbft-based ISAAC+ consensus protocol.
   
-- In the ISSAC+ consensus protocol, all nodes play the same role and participate in block generation.
+- In the ISAAC+ consensus protocol, all nodes play the same role and participate in block generation.
   
 - Nodes participating in the network perform the following tasks.
     - Make Proposal

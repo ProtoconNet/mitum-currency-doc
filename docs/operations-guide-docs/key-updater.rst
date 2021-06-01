@@ -29,13 +29,15 @@ Update the key of ``ac0``
 
 .. code-block:: sh
 
-    $ NETWORK_ID="mc; Tue 08 Dec 2020 07:22:18 AM KST"
+    $ NETWORK_ID="mitum"
     $ AC0_PRV=L1jPsE8Sjo5QerUHJUZNRqdH1ctxTWzc1ue8Zp2mtpieNwtCKsNZ-0112:0.0.1
     $ AC0_PUB=rd89GxTnMP91bZ1VepbkBrvB77BSQyQbquEVBy2fN1tV-0113:0.0.1
     $ AC0_ADDR=4UM4CN8MZNyv26TK84486CX5X8bu9EUYbsWz5ovRsp1M-a000:0.0.1
-    $ ./bin/mc seal key-updater --network-id=$NETWORK_ID $AC0_PRV 
+    $ CURRENCY_ID=MCC
+    $ ./mc seal key-updater --network-id=$NETWORK_ID $AC0_PRV 
         "EinT1E7FADZN1y4WrQcWzyfM2UnG6FmaGQM2Q4qyJVn1-a000:0.0.1" \
-        --key "047cccc413bc0fbabb92da3fd01808252d29d99c8201df0dc6dbd3b972943f9523ac4144abe9e1bebf9a02c1a04aef5dcc5ded1a4c395dfb1aa23251e293f71efb-0115:0.0.1,100" | jq
+        --key "047cccc413bc0fbabb92da3fd01808252d29d99c8201df0dc6dbd3b972943f9523ac4144abe9e1bebf9a02c1a04aef5dcc5ded1a4c395dfb1aa23251e293f71efb-0115:0.0.1,100" \
+        $CURRENCY_ID | jq
     {
       "_hint": "0151:0.0.1",
       "hash": "AHCwTPZbY1zXQJasEVXJLGqjxf89rcnFrciW7ebyYYDf",
@@ -78,11 +80,11 @@ Update the key of ``ac0``
       ]
     }
 
-    $ ./bin/mc seal key-updater --network-id="mc; Thu 10 Sep 2020 03:23:31 PM UTC" \
+    $ ./mc seal key-updater --network-id="mc; Thu 10 Sep 2020 03:23:31 PM UTC" \
         "e4e236b0f02156a5c28031aa4608a299f44496be56081d09d0ef3667c33dbac3-0114:0.0.1" \
         "EinT1E7FADZN1y4WrQcWzyfM2UnG6FmaGQM2Q4qyJVn1-a000:0.0.1" \
         --key "047cccc413bc0fbabb92da3fd01808252d29d99c8201df0dc6dbd3b972943f9523ac4144abe9e1bebf9a02c1a04aef5dcc5ded1a4c395dfb1aa23251e293f71efb-0115:0.0.1,100" | \
-    ./bin/mc seal send --network-id="mc; Thu 10 Sep 2020 03:23:31 PM UTC" \
+    ./mc seal send --network-id="mc; Thu 10 Sep 2020 03:23:31 PM UTC" \
         "c741259e1444ce46e08c2489f3112fb8f0b9f85cb11c84ced9d948cef259ce74-0114:0.0.1" \
         --seal=-
 
@@ -91,7 +93,7 @@ Check the changed key of ``ac0``
 
 .. code-block:: sh
 
-    $ find blockfs -name "*-states-*" -print | sort -g | xargs -n 1 zcat | jq '. | select(.key == "EinT1E7FADZN1y4WrQcWzyfM2UnG6FmaGQM2Q4qyJVn1:account") | [ "height: "+(.height|tostring),   "state_key: " + .key, "key.publickey: " + .value.value.keys.keys[0].key, "key.weight: " + (.value.value.keys.keys[0].weight|tostring), "threshold: " + (.value.value.keys.threshold|tostring)]'
+    $ find blockdata -name "*-states-*" -print | sort -g | xargs -n 1 zcat | jq '. | select(.key == "EinT1E7FADZN1y4WrQcWzyfM2UnG6FmaGQM2Q4qyJVn1:account") | [ "height: "+(.height|tostring),   "state_key: " + .key, "key.publickey: " + .value.value.keys.keys[0].key, "key.weight: " + (.value.value.keys.keys[0].weight|tostring), "threshold: " + (.value.value.keys.threshold|tostring)]'
     [
       "height: 5",
       "state_key: EinT1E7FADZN1y4WrQcWzyfM2UnG6FmaGQM2Q4qyJVn1:account",

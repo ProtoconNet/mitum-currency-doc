@@ -4,7 +4,7 @@ Command-line Options
 
 .. code-block:: shell
 
-    $ mitum-currency --help
+    $ ./mc --help
 
     Usage: mitum-currency <command>
 

@@ -13,14 +13,14 @@ Create Keypair
 
 .. code-block:: sh
 
-      $ ./bin/mc key new --type=<key type>
+      $ ./mc key new --type=<key type>
 
 * In Mitum, you can use bitcoin, ethereum, and stellar keypairs.
 * You can select btc, ether, or stellar for the key type. (default: btc)
 
 .. code-block:: sh
 
-      $ ./bin/mc key new --type btc
+      $ ./mc key new --type btc
             hint: hint{type="btc-privatekey" code="0112" version="0.0.1"}
       privatekey: KyJFEE8GpjBUDJbtEz5NW2QndUs4o994zJn1mstYR6Uc5U37BWv6-0112:0.0.1
        publickey: zwaGS678yT5HieAao45sbM3f6x4VAK19NZENQSNdMAGa-0113:0.0.1
@@ -65,12 +65,12 @@ Check Address
 
 .. code-block:: sh
 
-      $ ./bin/mc key address <threshold> <publickey>,<weight>
+      $ ./mc key address <threshold> <publickey>,<weight>
 
 .. code-block:: sh
      
       $ ACC_PUB=042f828efb3b75de4fd7d38eab7800ab212528599a3c47f3dd18658da6d8a216969f8be772c9374834b93599b1e9632f7eda536f5c6eaec582ece8d6a730b0476a-0115:0.0.1
       $ THRESHOLD=100
       $ WEIGHT=100
-      $ ./bin/mc key address $THRESHOLD $ACC_PUB,$WEIGHT
+      $ ./mc key address $THRESHOLD $ACC_PUB,$WEIGHT
         HP6M74XVsZ8UDC7btAV2kbgQNzoDwwj1omcjfusGwK5T-a000:0.0.1

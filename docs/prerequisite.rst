@@ -21,3 +21,4 @@ Golang
 | To create an executable binary, you need to build it from the source code.
 | We do not provide detailed instructions for installing the Go language here.
 | For more information, refer to `How to Install Go <https://golang.org/doc/install>`_.
+| You must have the Golang installed with at least version 1.16 to build Mitum currency. 

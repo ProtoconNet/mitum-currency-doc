@@ -17,23 +17,23 @@ Order of execution
 .. code-block:: sh
 
     # n0 node
-    $ ./bin/mc node init --log-level info ./n0.yml
-    $ ./bin/mc node run --log-level info ./n0.yml
+    $ ./mc node init --log-level info ./n0.yml
+    $ ./mc node run --log-level info ./n0.yml
 
 .. code-block:: sh
 
     # n1 node
-    $ ./bin/mc node run --log-level info ./n1.yml
+    $ ./mc node run --log-level info ./n1.yml
 
 .. code-block:: sh
 
     # n2 node
-    $ ./bin/mc node run --log-level info ./n2.yml
+    $ ./mc node run --log-level info ./n2.yml
 
 .. code-block:: sh    
 
     # n3 node
-    $ ./bin/mc node run --log-level info ./n3.yml
+    $ ./mc node run --log-level info ./n3.yml
 
 
 .. note::
@@ -103,7 +103,7 @@ yml full configuration of all nodes.(example)
     network:
         bind: quic://0.0.0.0:54330
         url: quic://127.0.0.1:54330
-    network-id: mitum contest; Sat 26 Dec 2020 05:29:13 AM KST
+    network-id: mitum
     policy:
         threshold: 100
     privatekey: Kxt22aSeFzJiDQagrvfXPWbEbrTSPsRxbYm9BhNbNJTsrbPbFnPA-0112:0.0.1
@@ -148,7 +148,7 @@ yml full configuration of all nodes.(example)
     network:
         bind: quic://0.0.0.0:54331
         url: quic://127.0.0.1:54331
-    network-id: mitum contest; Sat 26 Dec 2020 05:29:13 AM KST
+    network-id: mitum
     policy:
         threshold: 100
     privatekey: L4R2AZVmxWUiF2FrNEFi6rHwCTdDLQ1JuQHji69SbMcmWUdNMUSF-0112:0.0.1
@@ -192,7 +192,7 @@ yml full configuration of all nodes.(example)
     network:
         bind: quic://0.0.0.0:54332
         url: quic://127.0.0.1:54332
-    network-id: mitum contest; Sat 26 Dec 2020 05:29:13 AM KST
+    network-id: mitum
     policy:
         threshold: 100
     privatekey: L3Szj4t3w33YLsGFGeaB3v1vwae82yp5KWPcT7v1Y4WyQkAH7eCR-0112:0.0.1
@@ -236,7 +236,7 @@ yml full configuration of all nodes.(example)
     network:
         bind: quic://0.0.0.0:54333
         url: quic://127.0.0.1:54333
-    network-id: mitum contest; Sat 26 Dec 2020 05:29:13 AM KST
+    network-id: mitum
     policy:
         threshold: 100
     privatekey: KwxfBSzwevSggJz2grf8FWrjvXzrctY3WismTy6GNdJpWXe5tF5L-0112:0.0.1
@@ -340,7 +340,7 @@ yml full configuration of all nodes.(example)
     network:
         bind: quic://0.0.0.0:54330
         url: quic://127.0.0.1:54330
-    network-id: mitum contest; Sat 26 Dec 2020 05:29:13 AM KST
+    network-id: mitum
     policy:
         threshold: 100
     privatekey: Kxt22aSeFzJiDQagrvfXPWbEbrTSPsRxbYm9BhNbNJTsrbPbFnPA-0112:0.0.1
@@ -384,7 +384,7 @@ yml full configuration of all nodes.(example)
     network:
         bind: quic://0.0.0.0:54331
         url: quic://127.0.0.1:54331
-    network-id: mitum contest; Sat 26 Dec 2020 05:29:13 AM KST
+    network-id: mitum
     policy:
         threshold: 100
     privatekey: L4R2AZVmxWUiF2FrNEFi6rHwCTdDLQ1JuQHji69SbMcmWUdNMUSF-0112:0.0.1
@@ -428,7 +428,7 @@ yml full configuration of all nodes.(example)
     network:
         bind: quic://0.0.0.0:54332
         url: quic://127.0.0.1:54332
-    network-id: mitum contest; Sat 26 Dec 2020 05:29:13 AM KST
+    network-id: mitum
     policy:
         threshold: 100
     privatekey: L3Szj4t3w33YLsGFGeaB3v1vwae82yp5KWPcT7v1Y4WyQkAH7eCR-0112:0.0.1
@@ -472,7 +472,7 @@ yml full configuration of all nodes.(example)
     network:
         bind: quic://0.0.0.0:54333
         url: quic://127.0.0.1:54333
-    network-id: mitum contest; Sat 26 Dec 2020 05:29:13 AM KST
+    network-id: mitum
     policy:
         threshold: 100
     privatekey: KwxfBSzwevSggJz2grf8FWrjvXzrctY3WismTy6GNdJpWXe5tF5L-0112:0.0.1
@@ -516,7 +516,7 @@ yml full configuration of all nodes.(example)
     network:
         bind: quic://0.0.0.0:54334
         url: quic://127.0.0.1:54334
-    network-id: mitum contest; Sat 26 Dec 2020 05:29:13 AM KST
+    network-id: mitum
     policy:
         threshold: 67
     privatekey: KyKM3JtH8M9iBQrcFx4Lubi13Bg8pUPVYvxhihEfkiiqRRWYjjr4-0112:0.0.1

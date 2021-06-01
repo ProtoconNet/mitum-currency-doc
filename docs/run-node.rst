@@ -9,7 +9,7 @@ Here we will explain the process for running the node.
 .. note::
 
   * Digest API is included in Mitum currency, so API service is provided by default.
-  * Please check :ref:`node configure` for setting for Digest.
+  * Please check :ref:`node configure` for Digest setting.
   * If Digest is not set, data for API service must be processed separately.
 
 Setting up Node
@@ -30,7 +30,7 @@ Node init
 
 .. code-block:: sh
 
-    $ ./bin/mc node init --log-level info ./tutorial.yml
+    $ ./mc node init --log-level info ./tutorial.yml
     2021-03-29T09:16:55.759447Z INF dryrun? dryrun=false module=command-init
     2021-03-29T09:16:55.762494Z INF prepare to run module=command-init
     2021-03-29T09:16:55.762545Z INF prepared module=command-init
@@ -43,9 +43,9 @@ Node init
 
 .. note::
 
-    * If already saved block data is found, an error ``already blocks exist, clean first'' occurs.
+    * If already saved block data is found, an error ``environment already exists: block=0`` occurs.
     * To reset the error and ignore it, run it by adding the ``--force`` option.
-    * ``$ ./bin/mc --log-level info init ./tutorial.yml --force``
+    * ``$ ./mc --log-level info init ./tutorial.yml --force``
 
 .. _make node run:
 
@@ -57,7 +57,7 @@ Node run
 
 .. code-block:: sh
 
-    $ ./bin/mc node run --log-level info ./tutorial.yml 
+    $ ./mc node run --log-level info ./tutorial.yml 
     2021-03-29T09:17:38.942065Z INF dryrun? dryrun=false module=command-run
     2021-03-29T09:17:38.94577Z INF prepare to run module=command-run
     2021-03-29T09:17:38.945824Z INF prepared module=command-run
@@ -80,7 +80,7 @@ Node run
     2021-05-06T17:43:36.072520781Z DBG workspace/mitum/src/network/http.go:61 > request content-length=1647 content-type= duration=6.326587 headers={"X-Mitum-Encoder-Hint":["0101:0.0.1"]} host=127.0.0.1:54321 ip=127.0.0.1 method=POST module=network-quic-primitive-server proto=HTTP/3 remote=127.0.0.1:60614 req_id=c2a2li0m57f5lqgar0dg size=0 status=200 url=/seal?showme=1 user_agent="quic-go HTTP/3"
 
 
-* `--network-log` command line option can collect these requests message to the specific files.
+* `--network-log` command line option can collect these request messages to the specific files.
 
 .. code-block:: sh
 
@@ -102,7 +102,7 @@ Lookup genesis account
 
 .. code-block:: sh
 
-    $ find blockfs -name "*-states-*" -print | xargs -n 1 zcat | jq '. | select(.key == "8PdeEpvqfyL3uZFHRZG5PS3JngYUzFFUGPvCg29C2dBn-a000:0.0.1") | [ "height: "+(.height|tostring), "state_key: " + .key, "address: " + .value.value.address, .operations, .value.value.keys.keys, .value.value.keys.threshold]'
+    $ find blockdata -name "*-states-*" -print | xargs -n 1 zcat | jq '. | select(.key == "8PdeEpvqfyL3uZFHRZG5PS3JngYUzFFUGPvCg29C2dBn-a000:0.0.1") | [ "height: "+(.height|tostring), "state_key: " + .key, "address: " + .value.value.address, .operations, .value.value.keys.keys, .value.value.keys.threshold]'
     [
       "height: 0",
       "state_key: 7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:account",
@@ -119,7 +119,7 @@ Lookup genesis account
       ],
       100
     ]
-    $ find blockfs -name "*-states-*" -print | xargs -n 1 zcat | jq '. | select(.key == "7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000-MCC:balance") | [ "height: "+(.height|tostring), "state_key: " + .key, "balance:" + .value.value.amount]'
+    $ find blockdata -name "*-states-*" -print | xargs -n 1 zcat | jq '. | select(.key == "7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000-MCC:balance") | [ "height: "+(.height|tostring), "state_key: " + .key, "balance:" + .value.value.amount]'
     [
       "height: 0",
       "state_key: 7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000-MCC:balance",
@@ -137,7 +137,7 @@ Lookup using the Digest API
 
 .. code-block:: sh
 
-    $ curl --insecure -v https://localhost:54322 | jq '._embedded.genesis'
+    $ curl --insecure -v https://localhost:54322 | jq '_embedded'
     {
         "account": {
             "_hint": "a014:0.0.1",

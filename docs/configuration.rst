@@ -8,7 +8,7 @@ Configuration
 address
 -------------
 
-* local node의 address(alias for url address)
+* Address of local node(alias for url address)
 
 .. code-block:: yml
 
@@ -178,7 +178,8 @@ suffrage > nodes
 -----------------
 
 * Set addresses for suffrage nodes participating in consensus.
-* If the alias name of the local node is n0-010a:0.0.1 and the local node and all n1, n2, and n3 nodes are included in the suffrage nodes, it can be set as follows.
+* The alias name of the local node is n0-010a:0.0.1.
+* If n0, n1, n2, n3 nodes are included in the suffrage nodes, it can be set as follows.
 
 .. code-block:: yml
 
@@ -222,7 +223,7 @@ nodes
 * If not written, it operates as a standalone node.
 * Mitum nodes use CA signed certificate (public certificate) by default.
 * If certificate related settings are not made in Network config, the node uses self-signed certifate.
-* If other Mitum node uses self-signed certificate, insecure=true should be set to all the node which use self-signed certificate.
+* If other Mitum nodes use self-signed certificate, insecure=true should be set to all the nodes which use self-signed certificate.
 
 .. code-block:: yml
 
@@ -252,7 +253,7 @@ Specify the mongodb address that stores the data to be provided by the API and t
             cert-key: mitum.key
             cert: mitum.crt
 
-config example (standalone node)
+tutorial.yml (standalone node config example)
 ----------------
 
 .. code-block:: yml

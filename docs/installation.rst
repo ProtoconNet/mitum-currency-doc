@@ -9,16 +9,14 @@ After installing the Golang, please download the `Mitum Currency source code <ht
 
 .. code-block:: sh
 
-    $ mkdir -p mc/bin
-    $ git clone https://github.com/spikeekips/mitum-currency.git src
+    $ git clone https://github.com/spikeekips/mitum-currency.git
 
 
 Build the executable file.
 
 .. code-block:: sh
     
-    $ cd src
-    $ go build -ldflags="-X 'main.Version=v0.0.1-tutorial'" -o ../bin/mc ./main.go
-    $ cd ../
-    $ bin/mc version
-    v0.0.0
+    $ cd mitum-currency
+    $ go build -ldflags="-X 'main.Version=v0.0.1-tutorial'" -o ./mc ./main.go
+    $ ./mc version
+    v0.0.1
