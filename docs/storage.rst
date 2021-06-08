@@ -8,7 +8,7 @@
 
     .. code-block:: sh
 
-        $ ./mc storage download --tls-insecure --node=quic://127.0.0.1:54330  --save=data all -- -1 0 1 2 3 4 5
+        $ ./mc storage download --tls-insecure --node=quic://127.0.0.1:54321  --save=data all -- -1 0 1 2 3 4 5
     
         2021-06-08T10:50:08.018561Z INF saved file=data/000/000/000/000/000/000/0_1/-1-manifest-48cfbadd18b892bfd0a6fa230ff0c5f719bd517d37f594012aeca7244ef12599.jsonld.gz height=-1 module=command-block-download
         2021-06-08T10:50:08.018531Z INF saved file=data/000/000/000/000/000/000/000/0-manifest-307ffa78d4ce5e32e25347f5ec8ee626e44d41e55f565c2082ac00f8f128dbd9.jsonld.gz height=0 module=command-block-download
@@ -30,8 +30,66 @@
         2021-06-08T10:50:08.750795Z INF saved file=data/000/000/000/000/000/000/0_1/-1-proposal-812c550f7595c4c949d2255217a343864bdd878b09d124235d7db07758620bc7.jsonld.gz height=-1 module=command-block-download
 
     * ``download map`` : Download blockdata map.
-    * See :ref:`blockdata` for a detailed explanation. 
+    * See :ref:`blockdata` for a detailed explanation.
 
+    .. code-block::
+
+        ./mc storage download map --tls-insecure --node=quic://127.0.0.1:54321 0 | jq
+        {
+            "_hint": "0191:0.0.1",
+            "hash": "6dHB2ck4AP8iWt6UseQ2q1z7VXrimdMjJhBpgdWRFqEm",
+            "height": 0,
+            "block": "CzF6t6ePyBaz6RnSjw6YRhwKsxA5sRnhHwQJvK8xVgMR",
+            "created_at": "2021-05-26T08:34:45.901Z",
+            "items": {
+                "operations_tree": {
+                "type": "operations_tree",
+                "checksum": "45aff89f7084384fdecfac9689b75168a33f03bf6ba677ad085a6ac8fdf2bd12",
+                "url": "file:///000/000/000/000/000/000/000/0-operations_tree-45aff89f7084384fdecfac9689b75168a33f03bf6ba677ad085a6ac8fdf2bd12.jsonld.gz"
+                },
+                "suffrage_info": {
+                "type": "suffrage_info",
+                "checksum": "038aa59ed7db04c96d11405336c7a2d1cb8ad6df5a18d66f8f3bf2919c6767f8",
+                "url": "file:///000/000/000/000/000/000/000/0-suffrage_info-038aa59ed7db04c96d11405336c7a2d1cb8ad6df5a18d66f8f3bf2919c6767f8.jsonld.gz"
+                },
+                "manifest": {
+                "type": "manifest",
+                "checksum": "307ffa78d4ce5e32e25347f5ec8ee626e44d41e55f565c2082ac00f8f128dbd9",
+                "url": "file:///000/000/000/000/000/000/000/0-manifest-307ffa78d4ce5e32e25347f5ec8ee626e44d41e55f565c2082ac00f8f128dbd9.jsonld.gz"
+                },
+                "operations": {
+                "type": "operations",
+                "checksum": "d17d5b941aec3c100a43e2c228bca4134473bb9c78dcf567bdd8b9e12e5cc928",
+                "url": "file:///000/000/000/000/000/000/000/0-operations-d17d5b941aec3c100a43e2c228bca4134473bb9c78dcf567bdd8b9e12e5cc928.jsonld.gz"
+                },
+                "proposal": {
+                "type": "proposal",
+                "checksum": "81c03f9c912591796ae5f3dbaab85bc91d7ca4031413787abb3068c5efa78360",
+                "url": "file:///000/000/000/000/000/000/000/0-proposal-81c03f9c912591796ae5f3dbaab85bc91d7ca4031413787abb3068c5efa78360.jsonld.gz"
+                },
+                "init_voteproof": {
+                "type": "init_voteproof",
+                "checksum": "dab53369d715fc74ad750d95f1ceb859d62009165a76ea3368399da2b16bf4d7",
+                "url": "file:///000/000/000/000/000/000/000/0-init_voteproof-dab53369d715fc74ad750d95f1ceb859d62009165a76ea3368399da2b16bf4d7.jsonld.gz"
+                },
+                "states": {
+                "type": "states",
+                "checksum": "73ac164e67fb49877b132aaaae2f7adf92cc237ef0e63db30f3013c283fb7100",
+                "url": "file:///000/000/000/000/000/000/000/0-states-73ac164e67fb49877b132aaaae2f7adf92cc237ef0e63db30f3013c283fb7100.jsonld.gz"
+                },
+                "states_tree": {
+                "type": "states_tree",
+                "checksum": "7155e9c9f393943429f9341f22cba749203eaa2effd51bbbdb9b97c899cac62e",
+                "url": "file:///000/000/000/000/000/000/000/0-states_tree-7155e9c9f393943429f9341f22cba749203eaa2effd51bbbdb9b97c899cac62e.jsonld.gz"
+                },
+                "accept_voteproof": {
+                "type": "accept_voteproof",
+                "checksum": "09fd08050476a5d0a343154aaa0325809d721004b49cba303a58300b7415235e",
+                "url": "file:///000/000/000/000/000/000/000/0-accept_voteproof-09fd08050476a5d0a343154aaa0325809d721004b49cba303a58300b7415235e.jsonld.gz"
+                }
+            },
+            "writer": "0192:0.0.1"
+            }
 
     * ``verify-blockdata`` : Verify blockdata in local storage.
 
@@ -108,3 +166,5 @@
         2021-06-08T11:00:34.828859729Z INF block restored height=0 module=command-restore
         2021-06-08T11:00:34.829060729Z INF restored module=command-restore
         2021-06-08T11:00:35.833206729Z INF stopped module=command-restore
+
+    * ``set-blockdatamaps`` :  Update the multiple BlockDataMaps
