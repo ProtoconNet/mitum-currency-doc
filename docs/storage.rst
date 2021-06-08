@@ -29,6 +29,10 @@
         2021-06-08T10:50:08.613875Z INF saved file=data/000/000/000/000/000/000/000/0-proposal-81c03f9c912591796ae5f3dbaab85bc91d7ca4031413787abb3068c5efa78360.jsonld.gz height=0 module=command-block-download
         2021-06-08T10:50:08.750795Z INF saved file=data/000/000/000/000/000/000/0_1/-1-proposal-812c550f7595c4c949d2255217a343864bdd878b09d124235d7db07758620bc7.jsonld.gz height=-1 module=command-block-download
 
+    * ``download map`` : Download blockdata map.
+    * See :ref:`blockdata` for a detailed explanation. 
+
+
     * ``verify-blockdata`` : Verify blockdata in local storage.
 
     .. code-block:: sh
@@ -104,4 +108,3 @@
         2021-06-08T11:00:34.828859729Z INF block restored height=0 module=command-restore
         2021-06-08T11:00:34.829060729Z INF restored module=command-restore
         2021-06-08T11:00:35.833206729Z INF stopped module=command-restore
-
