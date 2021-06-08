@@ -33,6 +33,7 @@ Welcome to Mitum currency's documentation!
    :caption: Using Mitum currency
 
    docs/send-seal
+   docs/blockdata
    docs/cli
    docs/node
    docs/seal
