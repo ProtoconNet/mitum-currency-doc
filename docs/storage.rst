@@ -8,75 +8,82 @@
 
     .. code-block:: sh
 
-        $ ./mc storage download --tls-insecure --node=quic://127.0.0.1:54330 all 550 --save=data
+        $ ./mc storage download --tls-insecure --node=quic://127.0.0.1:54330  --save=data all -- -1 0 1 2 3 4 5
     
-        2021-05-26T08:56:22.485304Z INF saved file=data/000/000/000/000/000/000/550/550-manifest-0f5aaa2753d799336a84e7e1a3379a562faf3294f2a906e7109ef46703b64b23.jsonld.gz height=550 module=command-block-download
-        2021-05-26T08:56:22.515033Z INF saved file=data/000/000/000/000/000/000/550/550-operations-0fedf0c3ccb08aea5694e04a382ca04fb1338dfc9c2c408fe6296c93c0931124.jsonld.gz height=550 module=command-block-download
-        2021-05-26T08:56:22.544153Z INF saved file=data/000/000/000/000/000/000/550/550-operations_tree-d0c45c5292593853052aba6d3f410c93f6cc4473e7873ded2d623069adfc0025.jsonld.gz height=550 module=command-block-download
-        2021-05-26T08:56:22.571878Z INF saved file=data/000/000/000/000/000/000/550/550-states-0fedf0c3ccb08aea5694e04a382ca04fb1338dfc9c2c408fe6296c93c0931124.jsonld.gz height=550 module=command-block-download
-        2021-05-26T08:56:22.601769Z INF saved file=data/000/000/000/000/000/000/550/550-states_tree-d0c45c5292593853052aba6d3f410c93f6cc4473e7873ded2d623069adfc0025.jsonld.gz height=550 module=command-block-download
-        2021-05-26T08:56:22.628742Z INF saved file=data/000/000/000/000/000/000/550/550-init_voteproof-c2cea9e4821ea660973bfbf1815950879a101f1722fa15a9d76951d1a32bff39.jsonld.gz height=550 module=command-block-download
-        2021-05-26T08:56:22.658752Z INF saved file=data/000/000/000/000/000/000/550/550-accept_voteproof-5719e1186d3a55b1b13eb7adfa9e644de35283c6c631b260ef4eff23fd4fadcc.jsonld.gz height=550 module=command-block-download
-        2021-05-26T08:56:22.689224Z INF saved file=data/000/000/000/000/000/000/550/550-suffrage_info-4272fc6d391cdc22089403a75dafd10871371d8af6bd483d7d9b26e8271dfd11.jsonld.gz height=550 module=command-block-download
-        2021-05-26T08:56:22.718794Z INF saved file=data/000/000/000/000/000/000/550/550-proposal-85b8e80eabfede099b1a1e5c171e32992aab94a0c1a417cc2bf8cc851f036643.jsonld.gz height=550 module=command-block-download
+        2021-06-08T10:50:08.018561Z INF saved file=data/000/000/000/000/000/000/0_1/-1-manifest-48cfbadd18b892bfd0a6fa230ff0c5f719bd517d37f594012aeca7244ef12599.jsonld.gz height=-1 module=command-block-download
+        2021-06-08T10:50:08.018531Z INF saved file=data/000/000/000/000/000/000/000/0-manifest-307ffa78d4ce5e32e25347f5ec8ee626e44d41e55f565c2082ac00f8f128dbd9.jsonld.gz height=0 module=command-block-download
+        2021-06-08T10:50:08.058628Z INF saved file=data/000/000/000/000/000/000/0_1/-1-operations-0fedf0c3ccb08aea5694e04a382ca04fb1338dfc9c2c408fe6296c93c0931124.jsonld.gz height=-1 module=command-block-download
+        2021-06-08T10:50:08.068871Z INF saved file=data/000/000/000/000/000/000/000/0-operations-d17d5b941aec3c100a43e2c228bca4134473bb9c78dcf567bdd8b9e12e5cc928.jsonld.gz height=0 module=command-block-download
+        2021-06-08T10:50:08.12423Z INF saved file=data/000/000/000/000/000/000/000/0-operations_tree-45aff89f7084384fdecfac9689b75168a33f03bf6ba677ad085a6ac8fdf2bd12.jsonld.gz height=0 module=command-block-download
+        2021-06-08T10:50:08.130027Z INF saved file=data/000/000/000/000/000/000/0_1/-1-operations_tree-d0c45c5292593853052aba6d3f410c93f6cc4473e7873ded2d623069adfc0025.jsonld.gz height=-1 module=command-block-download
+        2021-06-08T10:50:08.162735Z INF saved file=data/000/000/000/000/000/000/000/0-states-73ac164e67fb49877b132aaaae2f7adf92cc237ef0e63db30f3013c283fb7100.jsonld.gz height=0 module=command-block-download
+        2021-06-08T10:50:08.172536Z INF saved file=data/000/000/000/000/000/000/0_1/-1-states-0fedf0c3ccb08aea5694e04a382ca04fb1338dfc9c2c408fe6296c93c0931124.jsonld.gz height=-1 module=command-block-download
+        2021-06-08T10:50:08.215233Z INF saved file=data/000/000/000/000/000/000/000/0-states_tree-7155e9c9f393943429f9341f22cba749203eaa2effd51bbbdb9b97c899cac62e.jsonld.gz height=0 module=command-block-download
+        2021-06-08T10:50:08.217385Z INF saved file=data/000/000/000/000/000/000/0_1/-1-states_tree-d0c45c5292593853052aba6d3f410c93f6cc4473e7873ded2d623069adfc0025.jsonld.gz height=-1 module=command-block-download
+        2021-06-08T10:50:08.278019Z INF saved file=data/000/000/000/000/000/000/000/0-init_voteproof-dab53369d715fc74ad750d95f1ceb859d62009165a76ea3368399da2b16bf4d7.jsonld.gz height=0 module=command-block-download
+        2021-06-08T10:50:08.287794Z INF saved file=data/000/000/000/000/000/000/0_1/-1-init_voteproof-812c550f7595c4c949d2255217a343864bdd878b09d124235d7db07758620bc7.jsonld.gz height=-1 module=command-block-download
+        2021-06-08T10:50:08.319642Z INF saved file=data/000/000/000/000/000/000/000/0-accept_voteproof-09fd08050476a5d0a343154aaa0325809d721004b49cba303a58300b7415235e.jsonld.gz height=0 module=command-block-download
+        2021-06-08T10:50:08.334284Z INF saved file=data/000/000/000/000/000/000/0_1/-1-accept_voteproof-812c550f7595c4c949d2255217a343864bdd878b09d124235d7db07758620bc7.jsonld.gz height=-1 module=command-block-download
+        2021-06-08T10:50:08.399426Z INF saved file=data/000/000/000/000/000/000/000/0-suffrage_info-038aa59ed7db04c96d11405336c7a2d1cb8ad6df5a18d66f8f3bf2919c6767f8.jsonld.gz height=0 module=command-block-download
+        2021-06-08T10:50:08.591648Z INF saved file=data/000/000/000/000/000/000/0_1/-1-suffrage_info-038aa59ed7db04c96d11405336c7a2d1cb8ad6df5a18d66f8f3bf2919c6767f8.jsonld.gz height=-1 module=command-block-download
+        2021-06-08T10:50:08.613875Z INF saved file=data/000/000/000/000/000/000/000/0-proposal-81c03f9c912591796ae5f3dbaab85bc91d7ca4031413787abb3068c5efa78360.jsonld.gz height=0 module=command-block-download
+        2021-06-08T10:50:08.750795Z INF saved file=data/000/000/000/000/000/000/0_1/-1-proposal-812c550f7595c4c949d2255217a343864bdd878b09d124235d7db07758620bc7.jsonld.gz height=-1 module=command-block-download
 
     * ``verify-blockdata`` : Verify blockdata in local storage.
 
     .. code-block:: sh
 
-        $ ./mc storage verify-blockdata blockfs --network-id=mitum --verbose
+        $ ./mc storage verify-blockdata data --network-id=mitum --verbose
 
-        2021-05-26T08:45:15.74861211Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/cmd.go:79 > maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined module=command-blockdata-verify
-        2021-05-26T08:45:15.748770007Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/cmd.go:88 > flags parsed flags={"CPUProf":"mitum-cpu.pprof","EnableProfiling":false,"LogColor":false,"LogFile":null,"LogFormat":"terminal","LogLevel":"info","MemProf":"mitum-mem.pprof","NetworkID":"bWl0dW0=","Path":"/mitum/db/n0_data/blockfs","TraceProf":"mitum-trace.pprof","Verbose":true} module=command-blockdata-verify
-        2021-05-26T08:45:15.748866076Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/blockdata_verify.go:38 > trying to verify blockdata module=command-blockdata-verify path=/mitum/db/n0_data/blockfs
-        2021-05-26T08:45:15.750888243Z INF ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/blockdata_verify.go:107 > last height found last_height=242 module=command-blockdata-verify
-        2021-05-26T08:45:15.750943528Z INF ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/verify_storage.go:53 > checking manifests module=command-blockdata-verify
-        2021-05-26T08:45:15.756124734Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/verify_storage.go:109 > manifests loaded heights=[-1,50] module=command-blockdata-verify
-        2021-05-26T08:45:15.756409758Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/verify_storage.go:121 > manifests checked heights=[-1,50] module=command-blockdata-verify
-        2021-05-26T08:45:15.761722572Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/verify_storage.go:109 > manifests loaded base_height=49 heights=[50,100] module=command-blockdata-verify
-        2021-05-26T08:45:15.761990104Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/verify_storage.go:121 > manifests checked base_height=49 heights=[50,100] module=command-blockdata-verify
-        2021-05-26T08:45:15.765190132Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/verify_storage.go:109 > manifests loaded base_height=99 heights=[100,150] module=command-blockdata-verify
-        2021-05-26T08:45:15.766040741Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/verify_storage.go:121 > manifests checked base_height=99 heights=[100,150] module=command-blockdata-verify
-        2021-05-26T08:45:15.770557968Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/verify_storage.go:109 > manifests loaded base_height=149 heights=[150,200] module=command-blockdata-verify
-        2021-05-26T08:45:15.770933787Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/verify_storage.go:121 > manifests checked base_height=149 heights=[150,200] module=command-blockdata-verify
-        2021-05-26T08:45:15.77396627Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/verify_storage.go:109 > manifests loaded base_height=199 heights=[200,243] module=command-blockdata-verify
-        2021-05-26T08:45:15.774214677Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/verify_storage.go:121 > manifests checked base_height=199 heights=[200,243] module=command-blockdata-verify
-        2021-05-26T08:45:15.774899881Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/blockdata_verify.go:253 > block data files checked height=5 module=command-blockdata-verify
-        2021-05-26T08:45:15.775494443Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/blockdata_verify.go:253 > block data files checked height=98 module=command-blockdata-verify
-        2021-05-26T08:45:15.776419734Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/blockdata_verify.go:253 > block data files checked height=100 module=command-blockdata-verify
+        2021-06-08T10:52:03.249204Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/cmd.go:86 > maxprocs: Leaving GOMAXPROCS=8: CPU quota undefined module=command-blockdata-verify
+        2021-06-08T10:52:03.250015Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/cmd.go:95 > flags parsed flags={"CPUProf":"mitum-cpu.pprof","EnableProfiling":false,"LogColor":false,"LogFile":null,"LogFormat":"terminal","LogLevel":"info","LogOutput":{},"MemProf":"mitum-mem.pprof","NetworkID":"bWl0dW0=","Path":"data","TraceProf":"mitum-trace.pprof","Verbose":true} module=command-blockdata-verify
+        2021-06-08T10:52:03.250188Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/blockdata_verify.go:38 > trying to verify blockdata module=command-blockdata-verify path=data
+        2021-06-08T10:52:03.250315Z INF ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/blockdata_verify.go:107 > last height found last_height=5 module=command-blockdata-verify
+        2021-06-08T10:52:03.250607Z INF ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/verify_storage.go:53 > checking manifests module=command-blockdata-verify
+        2021-06-08T10:52:03.255675Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/verify_storage.go:109 > manifests loaded heights=[-1,6] module=command-blockdata-verify
+        2021-06-08T10:52:03.255766Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/verify_storage.go:121 > manifests checked heights=[-1,6] module=command-blockdata-verify
+        2021-06-08T10:52:03.258293Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/blockdata_verify.go:257 > block data files checked height=0 module=command-blockdata-verify
+        2021-06-08T10:52:03.257947Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/blockdata_verify.go:257 > block data files checked height=1 module=command-blockdata-verify
+        2021-06-08T10:52:03.259131Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/blockdata_verify.go:257 > block data files checked height=4 module=command-blockdata-verify
+        2021-06-08T10:52:03.257772Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/blockdata_verify.go:257 > block data files checked height=5 module=command-blockdata-verify
+        2021-06-08T10:52:03.260384Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/blockdata_verify.go:257 > block data files checked height=2 module=command-blockdata-verify
+        2021-06-08T10:52:03.260419Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/blockdata_verify.go:257 > block data files checked height=-1 module=command-blockdata-verify
+        2021-06-08T10:52:03.260606Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/blockdata_verify.go:257 > block data files checked height=3 module=command-blockdata-verify
+        2021-06-08T10:52:03.274069Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/blockdata_verify.go:187 > block checked height=-1 module=command-blockdata-verify
+        2021-06-08T10:52:03.279165Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/blockdata_verify.go:187 > block checked height=3 module=command-blockdata-verify
+        2021-06-08T10:52:03.279179Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/blockdata_verify.go:187 > block checked height=2 module=command-blockdata-verify
+        2021-06-08T10:52:03.279223Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/blockdata_verify.go:187 > block checked height=1 module=command-blockdata-verify
+        2021-06-08T10:52:03.279267Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/blockdata_verify.go:187 > block checked height=4 module=command-blockdata-verify
+        2021-06-08T10:52:03.279344Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/blockdata_verify.go:187 > block checked height=5 module=command-blockdata-verify
+        2021-06-08T10:52:03.281481Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/blockdata_verify.go:187 > block checked height=0 module=command-blockdata-verify
+        2021-06-08T10:52:03.281569Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/blockdata_verify.go:87 > blockdata verified module=command-blockdata-verify
         .....
 
     * ``verify-database`` : The database is verified by comparing it with the block data.
 
     .. code-block:: sh
 
-        $ ./mc storage verify-database mongodb://172.31.10.67:27017/n0_mc blockfs --network-id=mitum --verbose
+        $ ./mc storage verify-database mongodb://127.0.0.1:27017/n0_mc blockfs --network-id=mitum --verbose
 
-        2021-05-26T08:42:20.619634723Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/cmd.go:79 > maxprocs: Leaving GOMAXPROCS=4: CPU quota undefined module=command-database-verify
-        2021-05-26T08:42:20.619795909Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/cmd.go:88 > flags parsed flags={"CPUProf":"mitum-cpu.pprof","EnableProfiling":false,"LogColor":false,"LogFile":null,"LogFormat":"terminal","LogLevel":"info","MemProf":"mitum-mem.pprof","NetworkID":"bWl0dW0=","Path":"/mitum/db/n0_data/blockfs","TraceProf":"mitum-trace.pprof","URI":"mongodb://172.31.10.67:27017/n0_mc","Verbose":true} module=command-database-verify
-        2021-05-26T08:42:20.619911225Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/pm/processes.go:310 > processed from_process= module=process-manager process=init
-        2021-05-26T08:42:20.619995329Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/pm/processes.go:310 > processed from_process=time-syncer module=process-manager process=config
-        2021-05-26T08:42:20.747556897Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/util/localtime/time_sync.go:67 > started interval=120000 module=time-syncer server=time.google.com
-        2021-05-26T08:42:20.750471139Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/pm/processes.go:310 > processed from_process=init module=process-manager process=time-syncer
-        2021-05-26T08:42:20.750857313Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/pm/processes.go:359 > hook processed from=encoders hook=add_hinters module=process-manager
-        2021-05-26T08:42:20.75091253Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/pm/processes.go:310 > processed from_process=init module=process-manager process=encoders
-        2021-05-26T08:42:21.113543668Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/pm/processes.go:310 > processed from_process=init module=process-manager process=database
-        2021-05-26T08:42:21.113673052Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/pm/processes.go:359 > hook processed from=blockdata hook=check_blockdata_path module=process-manager
-        2021-05-26T08:42:21.113821044Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/database_verify.go:207 > block found block={"hash":"EjygjjRuEFvZZJzVv4mXnte66B2w6MYRvy1c7NPw5pXQ","height":159,"round":0} module=command-database-verify
-        2021-05-26T08:42:21.113888587Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/pm/processes.go:359 > hook processed from=blockdata hook=check_storage module=process-manager
-        2021-05-26T08:42:21.113939191Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/pm/processes.go:310 > processed from_process=init module=process-manager process=blockdata
-        2021-05-26T08:42:21.113991284Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/database_verify.go:74 > trying to verify database module=command-database-verify path=/mitum/db/n0_data/blockfs uri=mongodb://172.31.10.67:27017/n0_mc
-        2021-05-26T08:42:21.114039999Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/database_verify.go:100 > verifying database module=command-database-verify
-        2021-05-26T08:42:21.114076714Z INF ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/verify_storage.go:53 > checking manifests module=command-database-verify
-        2021-05-26T08:42:21.141941796Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/verify_storage.go:109 > manifests loaded heights=[-1,50] module=command-database-verify
-        2021-05-26T08:42:21.142284825Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/verify_storage.go:121 > manifests checked heights=[-1,50] module=command-database-verify
-        2021-05-26T08:42:21.153351901Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/verify_storage.go:109 > manifests loaded base_height=49 heights=[50,100] module=command-database-verify
-        2021-05-26T08:42:21.153681595Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/verify_storage.go:121 > manifests checked base_height=49 heights=[50,100] module=command-database-verify
-        2021-05-26T08:42:21.164437605Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/verify_storage.go:109 > manifests loaded base_height=99 heights=[100,150] module=command-database-verify
-        2021-05-26T08:42:21.164790502Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/verify_storage.go:121 > manifests checked base_height=99 heights=[100,150] module=command-database-verify
-        2021-05-26T08:42:21.167414078Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/verify_storage.go:109 > manifests loaded base_height=149 heights=[150,160] module=command-database-verify
-        2021-05-26T08:42:21.167544954Z DBG ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/verify_storage.go:121 > manifests checked base_height=149 heights=[150,160] module=command-database-verify
-        2021-05-26T08:42:21.167594278Z INF ../go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210526055518-21cec91c0ed4/launch/cmds/database_verify.go:105 > database verified module=command-database-verify\
+        2021-06-08T10:56:20.879671Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/cmd.go:86 > maxprocs: Leaving GOMAXPROCS=8: CPU quota undefined module=command-database-verify
+        2021-06-08T10:56:20.879921Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/cmd.go:95 > flags parsed flags={"CPUProf":"mitum-cpu.pprof","EnableProfiling":false,"LogColor":false,"LogFile":null,"LogFormat":"terminal","LogLevel":"info","LogOutput":{},"MemProf":"mitum-mem.pprof","NetworkID":"bWl0dW0=","Path":"data","TraceProf":"mitum-trace.pprof","URI":"mongodb://127.0.0.1:27017/mc","Verbose":true} module=command-database-verify
+        2021-06-08T10:56:20.880018Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/pm/processes.go:310 > processed from_process= module=process-manager process=init
+        2021-06-08T10:56:20.880066Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/pm/processes.go:310 > processed from_process=time-syncer module=process-manager process=config
+        2021-06-08T10:56:21.038454Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/util/localtime/time_sync.go:67 > started interval=120000 module=time-syncer server=time.google.com
+        2021-06-08T10:56:21.042330408Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/pm/processes.go:310 > processed from_process=init module=process-manager process=time-syncer
+        2021-06-08T10:56:21.042835408Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/pm/processes.go:359 > hook processed from=encoders hook=add_hinters module=process-manager
+        2021-06-08T10:56:21.042884408Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/pm/processes.go:310 > processed from_process=init module=process-manager process=encoders
+        2021-06-08T10:56:21.203404408Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/pm/processes.go:310 > processed from_process=init module=process-manager process=database
+        2021-06-08T10:56:21.203608408Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/pm/processes.go:359 > hook processed from=blockdata hook=check_blockdata_path module=process-manager
+        2021-06-08T10:56:21.203899408Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/database_verify.go:207 > block found block={"hash":"CzF6t6ePyBaz6RnSjw6YRhwKsxA5sRnhHwQJvK8xVgMR","height":0,"round":0} module=command-database-verify
+        2021-06-08T10:56:21.204001408Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/pm/processes.go:359 > hook processed from=blockdata hook=check_storage module=process-manager
+        2021-06-08T10:56:21.204054408Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/pm/processes.go:310 > processed from_process=init module=process-manager process=blockdata
+        2021-06-08T10:56:21.204357408Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/database_verify.go:74 > trying to verify database module=command-database-verify path=data uri=mongodb://127.0.0.1:27017/mc
+        2021-06-08T10:56:21.204424408Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/database_verify.go:100 > verifying database module=command-database-verify
+        2021-06-08T10:56:21.204941408Z INF ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/verify_storage.go:53 > checking manifests module=command-database-verify
+        2021-06-08T10:56:21.210215408Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/verify_storage.go:109 > manifests loaded heights=[-1,1] module=command-database-verify
+        2021-06-08T10:56:21.210355408Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/verify_storage.go:121 > manifests checked heights=[-1,1] module=command-database-verify
+        2021-06-08T10:56:21.210456408Z INF ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/database_verify.go:105 > database verified module=command-database-verify
 
     * ``clean`` : Clean storage.
 
@@ -85,3 +92,16 @@
         $ ./mc storage clean node.yml
 
     * ``restore`` : Restore the entire database from the downloaded blockdata.
+    * Check if the network id in the settings of the yml file is the same as the network id of the downloaded node.
+
+    .. code-block:: sh
+
+        $ ./mc storage restore node.yml
+
+        2021-06-08T11:00:34.304594Z INF prepare to run module=command-restore
+        2021-06-08T11:00:34.304656Z INF prepared module=command-restore
+        2021-06-08T11:00:34.743477729Z INF block restored height=-1 module=command-restore
+        2021-06-08T11:00:34.828859729Z INF block restored height=0 module=command-restore
+        2021-06-08T11:00:34.829060729Z INF restored module=command-restore
+        2021-06-08T11:00:35.833206729Z INF stopped module=command-restore
+
