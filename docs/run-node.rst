@@ -77,7 +77,7 @@ Node run
 
 .. code-block:: sh
 
-    2021-05-06T17:43:36.072520781Z DBG workspace/mitum/src/network/http.go:61 > request content-length=1647 content-type= duration=6.326587 headers={"X-Mitum-Encoder-Hint":["0101:0.0.1"]} host=127.0.0.1:54321 ip=127.0.0.1 method=POST module=network-quic-primitive-server proto=HTTP/3 remote=127.0.0.1:60614 req_id=c2a2li0m57f5lqgar0dg size=0 status=200 url=/seal?showme=1 user_agent="quic-go HTTP/3"
+    2021-05-06T17:43:36.072520781Z DBG workspace/mitum/src/network/http.go:61 > request content-length=1647 content-type= duration=6.326587 headers={"X-Mitum-Encoder-Hint":["0101:0.0.1"]} host=127.0.0.1:54320 ip=127.0.0.1 method=POST module=network-quic-primitive-server proto=HTTP/3 remote=127.0.0.1:60614 req_id=c2a2li0m57f5lqgar0dg size=0 status=200 url=/seal?showme=1 user_agent="quic-go HTTP/3"
 
 
 * `--network-log` command line option can collect these request messages to the specific files.
@@ -132,12 +132,12 @@ Lookup genesis account
 Lookup using the Digest API
 ---------------------------------
 
-* The api address according to the digest setting :ref:`node configure` is https://localhost:54322.
+* The api address according to the digest setting :ref:`node configure` is https://localhost:54320.
 * Check genesis account through node info
 
 .. code-block:: sh
 
-    $ curl --insecure -v https://localhost:54322 | jq '_embedded'
+    $ curl --insecure -v https://localhost:54320 | jq '._embedded'
     {
         "account": {
             "_hint": "a014:0.0.1",
@@ -163,7 +163,7 @@ Lookup using the Digest API
 
 .. code-block:: sh
 
-    $ curl --insecure -v https://localhost:54322/account/7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:0.0.1 | jq
+    $ curl --insecure -v https://localhost:54320/account/7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:0.0.1 | jq
     {
       "_hint": "a016:0.0.1",
       "hint": {

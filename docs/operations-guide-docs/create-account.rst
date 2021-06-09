@@ -153,7 +153,7 @@ create-account Operation
       --key="04a80bf7516f8b01385b680793d9d1eb3e69b8375a4ffc24a8413b13d7b5211f1aed315eec8851c391d6043fff0272b98484e5a5efa6c8815026a30029dba6c31c-0115:0.0.1,100" --seal=- | \
     ./mc seal send --network-id="mc; Thu 10 Sep 2020 03:23:31 PM UTC" \
         "c741259e1444ce46e08c2489f3112fb8f0b9f85cb11c84ced9d948cef259ce74-0114:0.0.1" \
-        --seal=- --node=quic://127.0.0.1:54321
+        --seal=- --node=quic://127.0.0.1:54330
     $ echo $?
     0
 
@@ -162,7 +162,7 @@ create-account Operation
 .. code-block:: sh
 
     $ FACT_HASH=3YZZ1kNxdt7Aof7cuwfiNGFNXB85nFypMcdsqux1ezHT
-    $ DIGEST_API="https://localhost:54322"
+    $ DIGEST_API="https://localhost:54320"
     $ curl --insecure -v $DIGEST_API/block/operation/$FACT_HASH | jq
     {
       "_hint": "a016:0.0.1",

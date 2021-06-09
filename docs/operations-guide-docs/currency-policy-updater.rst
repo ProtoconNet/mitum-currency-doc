@@ -11,7 +11,7 @@ currency-policy-updater Operation
 
 .. code-block:: sh
   
-    $ curl --insecure -v https://localhost:54322/currency/MCC2 | jq
+    $ curl --insecure -v https://localhost:54320/currency/MCC2 | jq
     {
     "_hint": "a016:0.0.1",
     "hint": {

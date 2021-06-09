@@ -32,7 +32,7 @@ Genesis account lookup
 
 .. code-block:: sh
 
-    $ curl --insecure -v https://localhost:54322/account/7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:0.0.1 | jq
+    $ curl --insecure -v https://localhost:54320/account/7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:0.0.1 | jq
     {
       "_hint": "a016:0.0.1",
       "hint": {
@@ -101,7 +101,7 @@ Genesis account lookup
 
 .. code-block:: sh
 
-    $ curl --insecure -v https://localhost:54322/account/HP6M74XVsZ8UDC7btAV2kbgQNzoDwwj1omcjfusGwK5T-a000:0.0.1 | jq
+    $ curl --insecure -v https://localhost:54320/account/HP6M74XVsZ8UDC7btAV2kbgQNzoDwwj1omcjfusGwK5T-a000:0.0.1 | jq
     {
       "_hint": "a016:0.0.1",
       "hint": {

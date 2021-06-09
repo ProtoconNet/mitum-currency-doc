@@ -39,6 +39,7 @@ Welcome to Mitum currency's documentation!
    docs/seal
    docs/key
    docs/storage
+   docs/deploy
    docs/operations-guide
 
 .. toctree::

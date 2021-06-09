@@ -248,8 +248,8 @@ Specify the mongodb address that stores the data to be provided by the API and t
     digest:
         storage: mongodb://127.0.0.1:27017/mc_digest
         network:
-            bind: https://localhost:54322
-            url: https://localhost:54322
+            bind: https://localhost:54320
+            url: https://localhost:54320
             cert-key: mitum.key
             cert: mitum.crt
 

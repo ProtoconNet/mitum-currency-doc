@@ -16,7 +16,7 @@
 
     .. code-block::
 
-        $ ./mc node info quic://127.0.0.1:54321
+        $ ./mc node info quic://127.0.0.1:54330
         {
             "_hint": "a015:0.0.1",
             "node": {

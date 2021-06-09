@@ -8,7 +8,7 @@
 
     .. code-block:: sh
 
-        $ ./mc storage download --tls-insecure --node=quic://127.0.0.1:54321  --save=data all -- -1 0 1 2 3 4 5
+        $ ./mc storage download --tls-insecure --node=quic://127.0.0.1:54330  --save=data all -- -1 0 1 2 3 4 5
     
         2021-06-08T10:50:08.018561Z INF saved file=data/000/000/000/000/000/000/0_1/-1-manifest-48cfbadd18b892bfd0a6fa230ff0c5f719bd517d37f594012aeca7244ef12599.jsonld.gz height=-1 module=command-block-download
         2021-06-08T10:50:08.018531Z INF saved file=data/000/000/000/000/000/000/000/0-manifest-307ffa78d4ce5e32e25347f5ec8ee626e44d41e55f565c2082ac00f8f128dbd9.jsonld.gz height=0 module=command-block-download
@@ -34,7 +34,7 @@
 
     .. code-block::
 
-        ./mc storage download map --tls-insecure --node=quic://127.0.0.1:54321 0 | jq
+        ./mc storage download map --tls-insecure --node=quic://127.0.0.1:54330 0 | jq
         {
             "_hint": "0191:0.0.1",
             "hash": "6dHB2ck4AP8iWt6UseQ2q1z7VXrimdMjJhBpgdWRFqEm",
