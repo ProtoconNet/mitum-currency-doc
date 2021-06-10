@@ -64,23 +64,23 @@ Depending on the configuration of the node, it is necessary to configure the nod
     
     suffrage:
         nodes:
-            - n0-010a:0.0.1
-            - n1-010a:0.0.1
-            - n2-010a:0.0.1
-            - n3-010a:0.0.1
+            - n0:sa-v-0.0.1
+            - n1:sa-v-0.0.1
+            - n2:sa-v-0.0.1
+            - n3:sa-v-0.0.1
 
     nodes:
-        - address: n0-010a:0.0.1
-          publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
+        - address: n0:sa-v-0.0.1
+          publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD:btc-pub-v0.0.1
           url: quic://127.0.0.1:54330?insecure=true
-        - address: n1-010a:0.0.1
-          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
+        - address: n1:sa-v-0.0.1
+          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
           url: quic://127.0.0.1:54331?insecure=true
-        - address: n2-010a:0.0.1
-          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd-0113:0.0.1
+        - address: n2:sa-v-0.0.1
+          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd:btc-pub-v0.0.1
           url: quic://127.0.0.1:54332?insecure=true
-        - address: n3-010a:0.0.1
-          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
+        - address: n3:sa-v-0.0.1
+          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
           url: quic://127.0.0.1:54333?insecure=true
 
 
@@ -89,11 +89,11 @@ yml full configuration of all nodes.(example)
 .. code-block:: yml
 
     # n0 node
-    address: n0-010a:0.0.1
+    address: n0:sa-v-0.0.1
     genesis-operations:
         - account-keys:
               keys:
-                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
+                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1
                     weight: 100
               threshold: 100
           currencies:
@@ -106,8 +106,8 @@ yml full configuration of all nodes.(example)
     network-id: mitum
     policy:
         threshold: 100
-    privatekey: Kxt22aSeFzJiDQagrvfXPWbEbrTSPsRxbYm9BhNbNJTsrbPbFnPA-0112:0.0.1
-    publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
+    privatekey: Kxt22aSeFzJiDQagrvfXPWbEbrTSPsRxbYm9BhNbNJTsrbPbFnPA:btc-priv-v0.0.1
+    publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD:btc-pub-v0.0.1
     storage:
         blockdata:
             path: ./n0_data/blockfs
@@ -115,30 +115,30 @@ yml full configuration of all nodes.(example)
             uri: mongodb://127.0.0.1:27017/n0_mc
     suffrage:
         nodes:
-            - n0-010a:0.0.1
-            - n1-010a:0.0.1
-            - n2-010a:0.0.1
-            - n3-010a:0.0.1
+            - n0:sa-v-0.0.1
+            - n1:sa-v-0.0.1
+            - n2:sa-v-0.0.1
+            - n3:sa-v-0.0.1
     nodes:
-        - address: n1-010a:0.0.1
-          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
+        - address: n1:sa-v-0.0.1
+          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
           url: quic://127.0.0.1:54331?insecure=true
-        - address: n2-010a:0.0.1
-          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd-0113:0.0.1
+        - address: n2:sa-v-0.0.1
+          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd:btc-pub-v0.0.1
           url: quic://127.0.0.1:54332?insecure=true
-        - address: n3-010a:0.0.1
-          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
+        - address: n3:sa-v-0.0.1
+          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
           url: quic://127.0.0.1:54333?insecure=true
 
 .. code-block:: yml
 
     # n1 node
-    address: n1-010a:0.0.1
+    address: n1:sa-v-0.0.1
     genesis-operations:
         - account-keys:
               keys:
-                  - privatekey: L5GTSKkRs9NPsXwYgACZdodNUJqCAWjz2BccuR4cAgxJumEZWjok-0112:0.0.1
-                    publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
+                  - privatekey: L5GTSKkRs9NPsXwYgACZdodNUJqCAWjz2BccuR4cAgxJumEZWjok:btc-priv-v0.0.1
+                    publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1
                     weight: 100
               threshold: 100
           currencies:
@@ -151,8 +151,8 @@ yml full configuration of all nodes.(example)
     network-id: mitum
     policy:
         threshold: 100
-    privatekey: L4R2AZVmxWUiF2FrNEFi6rHwCTdDLQ1JuQHji69SbMcmWUdNMUSF-0112:0.0.1
-    publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
+    privatekey: L4R2AZVmxWUiF2FrNEFi6rHwCTdDLQ1JuQHji69SbMcmWUdNMUSF:btc-priv-v0.0.1
+    publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
     storage:
         blockdata:
             path: ./n1_data/blockfs
@@ -160,29 +160,29 @@ yml full configuration of all nodes.(example)
             uri: mongodb://127.0.0.1:27018/n1_mc
     suffrage:
         nodes:
-            - n0-010a:0.0.1
-            - n1-010a:0.0.1
-            - n2-010a:0.0.1
-            - n3-010a:0.0.1
+            - n0:sa-v-0.0.1
+            - n1:sa-v-0.0.1
+            - n2:sa-v-0.0.1
+            - n3:sa-v-0.0.1
     nodes:
-        - address: n0-010a:0.0.1
-          publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
+        - address: n0:sa-v-0.0.1
+          publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD:btc-pub-v0.0.1
           url: quic://127.0.0.1:54330?insecure=true
-        - address: n2-010a:0.0.1
-          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd-0113:0.0.1
+        - address: n2:sa-v-0.0.1
+          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd:btc-pub-v0.0.1
           url: quic://127.0.0.1:54332?insecure=true
-        - address: n3-010a:0.0.1
-          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
+        - address: n3:sa-v-0.0.1
+          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
           url: quic://127.0.0.1:54333?insecure=true
 
 .. code-block:: yml
 
     # n2 node
-    address: n2-010a:0.0.1
+    address: n2:sa-v-0.0.1
     genesis-operations:
         - account-keys:
               keys:
-                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
+                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1
                     weight: 100
               threshold: 100
           currencies:
@@ -195,8 +195,8 @@ yml full configuration of all nodes.(example)
     network-id: mitum
     policy:
         threshold: 100
-    privatekey: L3Szj4t3w33YLsGFGeaB3v1vwae82yp5KWPcT7v1Y4WyQkAH7eCR-0112:0.0.1
-    publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd-0113:0.0.1
+    privatekey: L3Szj4t3w33YLsGFGeaB3v1vwae82yp5KWPcT7v1Y4WyQkAH7eCR:btc-priv-v0.0.1
+    publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd:btc-pub-v0.0.1
     storage:
         blockdata:
             path: ./n2_data/blockfs
@@ -204,29 +204,29 @@ yml full configuration of all nodes.(example)
             uri: mongodb://127.0.0.1:27019/n2_mc
     suffrage:
         nodes:
-            - n0-010a:0.0.1
-            - n1-010a:0.0.1
-            - n2-010a:0.0.1
-            - n3-010a:0.0.1
+            - n0:sa-v-0.0.1
+            - n1:sa-v-0.0.1
+            - n2:sa-v-0.0.1
+            - n3:sa-v-0.0.1
     nodes:
-        - address: n0-010a:0.0.1
-          publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
+        - address: n0:sa-v-0.0.1
+          publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD:btc-pub-v0.0.1
           url: quic://127.0.0.1:54330?insecure=true
-        - address: n1-010a:0.0.1
-          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
+        - address: n1:sa-v-0.0.1
+          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
           url: quic://127.0.0.1:54331?insecure=true
-        - address: n3-010a:0.0.1
-          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
+        - address: n3:sa-v-0.0.1
+          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
           url: quic://127.0.0.1:54333?insecure=true
 
 .. code-block:: yml
 
     # n3 node
-    address: n3-010a:0.0.1
+    address: n3:sa-v-0.0.1
     genesis-operations:
         - account-keys:
               keys:
-                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
+                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1
                     weight: 100
               threshold: 100
           currencies:
@@ -239,8 +239,8 @@ yml full configuration of all nodes.(example)
     network-id: mitum
     policy:
         threshold: 100
-    privatekey: KwxfBSzwevSggJz2grf8FWrjvXzrctY3WismTy6GNdJpWXe5tF5L-0112:0.0.1
-    publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
+    privatekey: KwxfBSzwevSggJz2grf8FWrjvXzrctY3WismTy6GNdJpWXe5tF5L:btc-priv-v0.0.1
+    publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
     storage:
         blockdata:
             path: ./n3_data/blockfs
@@ -248,19 +248,19 @@ yml full configuration of all nodes.(example)
             uri: mongodb://127.0.0.1:27020/n3_mc
     suffrage:
         nodes:
-            - n0-010a:0.0.1
-            - n1-010a:0.0.1
-            - n2-010a:0.0.1
-            - n3-010a:0.0.1
+            - n0:sa-v-0.0.1
+            - n1:sa-v-0.0.1
+            - n2:sa-v-0.0.1
+            - n3:sa-v-0.0.1
     nodes:
-        - address: n0-010a:0.0.1
-          publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
+        - address: n0:sa-v-0.0.1
+          publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD:btc-pub-v0.0.1
           url: quic://127.0.0.1:54330?insecure=true
-        - address: n1-010a:0.0.1
-          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
+        - address: n1:sa-v-0.0.1
+          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
           url: quic://127.0.0.1:54331?insecure=true
-        - address: n2-010a:0.0.1
-          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd-0113:0.0.1
+        - address: n2:sa-v-0.0.1
+          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd:btc-pub-v0.0.1
           url: quic://127.0.0.1:54332?insecure=true
 
 
@@ -282,23 +282,23 @@ Only ``suffrage`` and ``nodes`` part of configuration of suffrage nodes(n0, n1, 
 
     suffrage:
         nodes:
-            - n0-010a:0.0.1
-            - n1-010a:0.0.1
-            - n2-010a:0.0.1
-            - n3-010a:0.0.1
+            - n0:sa-v-0.0.1
+            - n1:sa-v-0.0.1
+            - n2:sa-v-0.0.1
+            - n3:sa-v-0.0.1
 
     nodes:
-        - address: n0-010a:0.0.1
-          publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
+        - address: n0:sa-v-0.0.1
+          publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD:btc-pub-v0.0.1
           url: quic://127.0.0.1:54330?insecure=true
-        - address: n1-010a:0.0.1
-          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
+        - address: n1:sa-v-0.0.1
+          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
           url: quic://127.0.0.1:54331?insecure=true
-        - address: n2-010a:0.0.1
-          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd-0113:0.0.1
+        - address: n2:sa-v-0.0.1
+          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd:btc-pub-v0.0.1
           url: quic://127.0.0.1:54332?insecure=true
-        - address: n3-010a:0.0.1
-          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
+        - address: n3:sa-v-0.0.1
+          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
           url: quic://127.0.0.1:54333?insecure=true
 
 Only ``suffrage`` and ``nodes`` part of configuration of sync node(n4).
@@ -309,15 +309,15 @@ Only ``suffrage`` and ``nodes`` part of configuration of sync node(n4).
 
     suffrage:
         nodes:
-            - n1-010a:0.0.1
-            - n3-010a:0.0.1
+            - n1:sa-v-0.0.1
+            - n3:sa-v-0.0.1
 
     nodes:
-        - address: n1-010a:0.0.1
-          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
+        - address: n1:sa-v-0.0.1
+          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
           url: quic://127.0.0.1:54331?insecure=true
-        - address: n3-010a:0.0.1
-          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
+        - address: n3:sa-v-0.0.1
+          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
           url: quic://127.0.0.1:54333?insecure=true
 
 
@@ -326,11 +326,11 @@ yml full configuration of all nodes.(example)
 .. code-block:: yml
 
     # n0 node
-    address: n0-010a:0.0.1
+    address: n0:sa-v-0.0.1
     genesis-operations:
         - account-keys:
               keys:
-                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
+                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1
                     weight: 100
               threshold: 100
           currencies:
@@ -343,8 +343,8 @@ yml full configuration of all nodes.(example)
     network-id: mitum
     policy:
         threshold: 100
-    privatekey: Kxt22aSeFzJiDQagrvfXPWbEbrTSPsRxbYm9BhNbNJTsrbPbFnPA-0112:0.0.1
-    publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
+    privatekey: Kxt22aSeFzJiDQagrvfXPWbEbrTSPsRxbYm9BhNbNJTsrbPbFnPA:btc-priv-v0.0.1
+    publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD:btc-pub-v0.0.1
     storage:
         blockdata:
             path: ./n0_data/blockfs
@@ -352,29 +352,29 @@ yml full configuration of all nodes.(example)
             uri: mongodb://127.0.0.1:27017/n0_mc
     suffrage:
         nodes:
-            - n0-010a:0.0.1
-            - n1-010a:0.0.1
-            - n2-010a:0.0.1
-            - n3-010a:0.0.1
+            - n0:sa-v-0.0.1
+            - n1:sa-v-0.0.1
+            - n2:sa-v-0.0.1
+            - n3:sa-v-0.0.1
     nodes:
-        - address: n1-010a:0.0.1
-          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
+        - address: n1:sa-v-0.0.1
+          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
           url: quic://127.0.0.1:54331?insecure=true
-        - address: n2-010a:0.0.1
-          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd-0113:0.0.1
+        - address: n2:sa-v-0.0.1
+          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd:btc-pub-v0.0.1
           url: quic://127.0.0.1:54332?insecure=true
-        - address: n3-010a:0.0.1
-          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
+        - address: n3:sa-v-0.0.1
+          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
           url: quic://127.0.0.1:54333?insecure=true
 
 .. code-block:: yml
 
     # n1 node
-    address: n1-010a:0.0.1
+    address: n1:sa-v-0.0.1
     genesis-operations:
         - account-keys:
               keys:
-                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
+                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1
                     weight: 100
               threshold: 100
           currencies:
@@ -387,8 +387,8 @@ yml full configuration of all nodes.(example)
     network-id: mitum
     policy:
         threshold: 100
-    privatekey: L4R2AZVmxWUiF2FrNEFi6rHwCTdDLQ1JuQHji69SbMcmWUdNMUSF-0112:0.0.1
-    publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
+    privatekey: L4R2AZVmxWUiF2FrNEFi6rHwCTdDLQ1JuQHji69SbMcmWUdNMUSF:btc-priv-v0.0.1
+    publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
     storage:
         blockdata:
             path: ./n1_data/blockfs
@@ -396,29 +396,29 @@ yml full configuration of all nodes.(example)
             uri: mongodb://127.0.0.1:27018/n1_mc
     suffrage:
         nodes:
-            - n0-010a:0.0.1
-            - n1-010a:0.0.1
-            - n2-010a:0.0.1
-            - n3-010a:0.0.1
+            - n0:sa-v-0.0.1
+            - n1:sa-v-0.0.1
+            - n2:sa-v-0.0.1
+            - n3:sa-v-0.0.1
     nodes:
-        - address: n0-010a:0.0.1
-          publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
+        - address: n0:sa-v-0.0.1
+          publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD:btc-pub-v0.0.1
           url: quic://127.0.0.1:54330?insecure=true
-        - address: n2-010a:0.0.1
-          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd-0113:0.0.1
+        - address: n2:sa-v-0.0.1
+          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd:btc-pub-v0.0.1
           url: quic://127.0.0.1:54332?insecure=true
-        - address: n3-010a:0.0.1
-          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
+        - address: n3:sa-v-0.0.1
+          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
           url: quic://127.0.0.1:54333?insecure=true
 
 .. code-block:: yml
 
     # n2 node
-    address: n2-010a:0.0.1
+    address: n2:sa-v-0.0.1
     genesis-operations:
         - account-keys:
               keys:
-                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
+                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1
                     weight: 100
               threshold: 100
           currencies:
@@ -431,8 +431,8 @@ yml full configuration of all nodes.(example)
     network-id: mitum
     policy:
         threshold: 100
-    privatekey: L3Szj4t3w33YLsGFGeaB3v1vwae82yp5KWPcT7v1Y4WyQkAH7eCR-0112:0.0.1
-    publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd-0113:0.0.1
+    privatekey: L3Szj4t3w33YLsGFGeaB3v1vwae82yp5KWPcT7v1Y4WyQkAH7eCR:btc-priv-v0.0.1
+    publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd:btc-pub-v0.0.1
     storage:
         blockdata:
             path: ./n2_data/blockfs
@@ -440,29 +440,29 @@ yml full configuration of all nodes.(example)
             uri: mongodb://127.0.0.1:27019/n2_mc
     suffrage:
         nodes:
-            - n0-010a:0.0.1
-            - n1-010a:0.0.1
-            - n2-010a:0.0.1
-            - n3-010a:0.0.1
+            - n0:sa-v-0.0.1
+            - n1:sa-v-0.0.1
+            - n2:sa-v-0.0.1
+            - n3:sa-v-0.0.1
     nodes:
-        - address: n0-010a:0.0.1
-          publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
+        - address: n0:sa-v-0.0.1
+          publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD:btc-pub-v0.0.1
           url: quic://127.0.0.1:54330?insecure=true
-        - address: n1-010a:0.0.1
-          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
+        - address: n1:sa-v-0.0.1
+          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
           url: quic://127.0.0.1:54331?insecure=true
-        - address: n3-010a:0.0.1
-          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
+        - address: n3:sa-v-0.0.1
+          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
           url: quic://127.0.0.1:54333?insecure=true
 
 .. code-block:: yml
 
     # n3 node
-    address: n3-010a:0.0.1
+    address: n3:sa-v-0.0.1
     genesis-operations:
         - account-keys:
               keys:
-                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
+                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1
                     weight: 100
               threshold: 100
           currencies:
@@ -475,8 +475,8 @@ yml full configuration of all nodes.(example)
     network-id: mitum
     policy:
         threshold: 100
-    privatekey: KwxfBSzwevSggJz2grf8FWrjvXzrctY3WismTy6GNdJpWXe5tF5L-0112:0.0.1
-    publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
+    privatekey: KwxfBSzwevSggJz2grf8FWrjvXzrctY3WismTy6GNdJpWXe5tF5L:btc-priv-v0.0.1
+    publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
     storage:
         blockdata:
             path: ./n3_data/blockfs
@@ -484,29 +484,29 @@ yml full configuration of all nodes.(example)
             uri: mongodb://127.0.0.1:27020/n3_mc
     suffrage:
         nodes:
-            - n0-010a:0.0.1
-            - n1-010a:0.0.1
-            - n2-010a:0.0.1
-            - n3-010a:0.0.1
+            - n0:sa-v-0.0.1
+            - n1:sa-v-0.0.1
+            - n2:sa-v-0.0.1
+            - n3:sa-v-0.0.1
     nodes:
-        - address: n0-010a:0.0.1
-          publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
+        - address: n0:sa-v-0.0.1
+          publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD:btc-pub-v0.0.1
           url: quic://127.0.0.1:54330?insecure=true
-        - address: n1-010a:0.0.1
-          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
+        - address: n1:sa-v-0.0.1
+          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
           url: quic://127.0.0.1:54331?insecure=true
-        - address: n2-010a:0.0.1
-          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd-0113:0.0.1
+        - address: n2:sa-v-0.0.1
+          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd:btc-pub-v0.0.1
           url: quic://127.0.0.1:54332?insecure=true
 
 .. code-block:: yml
 
     # n4 node
-    address: n4-010a:0.0.1
+    address: n4:sa-v-0.0.1
     genesis-operations:
         - account-keys:
               keys:
-                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
+                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1
                     weight: 100
               threshold: 100
           currencies:
@@ -519,8 +519,8 @@ yml full configuration of all nodes.(example)
     network-id: mitum
     policy:
         threshold: 67
-    privatekey: KyKM3JtH8M9iBQrcFx4Lubi13Bg8pUPVYvxhihEfkiiqRRWYjjr4-0112:0.0.1
-    publickey: 2BQkVjJpMdx4BFEhfTtf1oTaG4nLN148Dfax3ZnWybA2b-0113:0.0.1
+    privatekey: KyKM3JtH8M9iBQrcFx4Lubi13Bg8pUPVYvxhihEfkiiqRRWYjjr4:btc-priv-v0.0.1
+    publickey: 2BQkVjJpMdx4BFEhfTtf1oTaG4nLN148Dfax3ZnWybA2b:btc-pub-v0.0.1
     storage:
         blockdata:
             path: ./n4_data/blockfs
@@ -528,12 +528,12 @@ yml full configuration of all nodes.(example)
             uri: mongodb://127.0.0.1:27021/n4_mc
     suffrage:
         nodes:
-            - n1-010a:0.0.1
-            - n3-010a:0.0.1
+            - n1:sa-v-0.0.1
+            - n3:sa-v-0.0.1
     nodes:
-        - address: n1-010a:0.0.1
-          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
+        - address: n1:sa-v-0.0.1
+          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
           url: quic://127.0.0.1:54331?insecure=true
-        - address: n3-010a:0.0.1
-          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
+        - address: n3:sa-v-0.0.1
+          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
           url: quic://127.0.0.1:54333?insecure=true

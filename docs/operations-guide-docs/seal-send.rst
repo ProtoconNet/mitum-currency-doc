@@ -13,53 +13,64 @@ Seal Send
 .. code-block:: sh
 
     $ NETWORK_ID="mitum"
-    $ NODE="quic://127.0.0.1:54331"
+    $ NODE="quic://127.0.0.1:54330"
     $ AC0_PRV=L1jPsE8Sjo5QerUHJUZNRqdH1ctxTWzc1ue8Zp2mtpieNwtCKsNZ-0112:0.0.1
-    $ ./mc seal send --network-id=$NETWORK_ID $AC0_PRV --seal=data.json --node=$NODE
+    $ ./mc seal send --network-id=$NETWORK_ID $AC0_PRV --seal=data.json --node=$NODE jq -R '. as $line | try fromjson catch $line'
     {
-      "_hint": "0151:0.0.1",
-      "hash": "JBWy8z27iQdr2rxRxqBJFfNbRrBYjqqchacyvbMiwAJ4",
-      "body_hash": "EQJgWRrK41GrDpEq8voJK2fNhMH6E8SBkJx6udp5g8Rs",
-      "signer": "skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1",
-      "signature": "AN1rKvtWsC6JzQ67xQZMgFYRbHAzxQYJ3oTSGsoZkLbWwM1Caoo5ACNrohQhBcj9G4JUGD8LFPiZsfDXKUBqY2huT8kMUpr3T",
-      "signed_at": "2021-05-04T07:24:57.266723Z",
-      "operations": [
-        {
-          "fact_signs": [
-              {
-                "_hint": "0150:0.0.1",
-                "signer": "rd89GxTnMP91bZ1VepbkBrvB77BSQyQbquEVBy2fN1tV-0113:0.0.1",
-                "signature": "AN1rKvta6ZJCcd9u4gC8p8nc9TcdcVocc3PNQs98bu2LL4Mc3V2T6br6nANDDMA6y9JEvmiW7SBWYDWkToR4pPGminekVLXco",
-                "signed_at": "2021-05-04T07:24:48.832558Z"
-              }
-          ],
-          "memo": "",
-          "_hint": "a002:0.0.1",
-          "hash": "ZtRM11zMQVojqpzgkRgfNUNrNf1x7rRZuGVtX7H6pHS",
-          "fact": {
-              "_hint": "a001:0.0.1",
-              "hash": "2HWSdcdhBR42WY2bsG4khqrHsrtx5nA8MQbNgzq82bkb",
-              "token": "MjAyMS0wNS0wNFQwNzoyNDo0OC44MzE5ODNa",
-              "sender": "4UM4CN8MZNyv26TK84486CX5X8bu9EUYbsWz5ovRsp1M-a000:0.0.1",
-              "items": [
-                {
-                  "_hint": "a027:0.0.1",
-                  "receiver": "5terLZQX4fTPpjmBsjPjvwBLMY78qRWhKZ6j1kEiDNeV-a000:0.0.1",
-                  "amounts": [
+        "_hint": "seal-v0.0.1",
+        "hash": "6nLRWj5hGQ7va9gxpAJCBxNDKvgFnms9jaa913uWgsx1",
+        "body_hash": "32ZEf8V9fV41JHVWbbqQdYWtrw5T255XN8fSXhBAhGFD",
+        "signer": "cnMJqt1Q7LXKqFAWprm6FBC7fRbWQeZhrymTavN11PKJ:btc-pub-v0.0.1",
+        "signature": "381yXZ4LFY5HnK211gpG3W22V52vMLqix4SysXEeMnqcXUk5eEYGM1JfFaX5UE86EF6qog5jUScPqZo6UkiaAFocUhwtSsjx",
+        "signed_at": "2021-06-10T09:17:51.236729Z",
+        "operations": [
+            {
+                "_hint": "mitum-currency-create-accounts-operation-v0.0.1",
+                "hash": "7YvcA6WAcKEag1Z4Jv1bQ2wYxAZix5sNB6u8MUXDM44D",
+                "fact": {
+                    "_hint": "mitum-currency-create-accounts-operation-fact-v0.0.1",
+                    "hash": "3equMRJAVHk8WdVanffzEWkHfwnBDqF2cFwmmcv8MzDW",
+                    "token": "MjAyMS0wNi0xMFQwOToxNzo1MS4yMDgwOTVa",
+                    "sender": "EbVibuKTyPqRVRcCpMRQdP7wBkr33GW2brSQvZQNJDSn:mca-v0.0.1",
+                    "items": [
+                        {
+                            "_hint": "mitum-currency-create-accounts-single-amount-v0.0.1",
+                            "keys": {
+                                "_hint": "mitum-currency-keys-v0.0.1",
+                                "hash": "381mXScfnV5mU38woCRn1VqUYqpVAoQf9fg2rXXN6iVv",
+                                "keys": [
+                                    {
+                                        "_hint": "mitum-currency-key-v0.0.1",
+                                        "weight": 100,
+                                        "key": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc:btc-pub-v0.0.1"
+                                    }
+                                ],
+                                "threshold": 100
+                            },
+                            "amounts": [
+                                {
+                                    "_hint": "mitum-currency-amount-v0.0.1",
+                                    "amount": "100000",
+                                    "currency": "MCC"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "fact_signs": [
                     {
-                      "_hint": "a022:0.0.1",
-                      "amount": "1000",
-                      "currency": "MCC"
+                        "_hint": "base-fact-sign-v0.0.1",
+                        "signer": "cnMJqt1Q7LXKqFAWprm6FBC7fRbWQeZhrymTavN11PKJ:btc-pub-v0.0.1",
+                        "signature": "AN1rKvtPEX4MRu6kWRYDJ6WtsSnwxwJsYXiVi2Qujx8sF6SJzsZZKj7anCd9cmUZ175FSYLkkWkpDRj3fVgZFDxLFSnos3szz",
+                        "signed_at": "2021-06-10T09:17:51.211816Z"
                     }
-                  ]
-                }
-              ]
-          }
-        }
-      ] 
+                ],
+                "memo": ""
+            }
+        ]
     }
-    2021-05-04T07:24:57.267908Z INF trying to send seal module=command-send-seal
-    2021-05-04T07:24:57.324527Z INF sent seal module=command-send-seal
+    2021-06-10T09:17:51.240066Z INF trying to send seal module=command-send-seal
+    2021-06-10T09:17:51.345243Z INF sent seal module=command-send-seal
 
 * When sending to a local node for testing, an error may occur related to tls authentication.
 * In this case, set --tls-insecure=true and send.

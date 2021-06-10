@@ -31,12 +31,11 @@ Node init
 .. code-block:: sh
 
     $ ./mc node init --log-level info ./tutorial.yml
-    2021-03-29T09:16:55.759447Z INF dryrun? dryrun=false module=command-init
-    2021-03-29T09:16:55.762494Z INF prepare to run module=command-init
-    2021-03-29T09:16:55.762545Z INF prepared module=command-init
-    2021-03-29T09:17:06.165294438Z INF database and block data was cleaned by force module=command-init
-    2021-03-29T09:17:06.889790438Z INF genesis block created block={"hash":"EnwumZhg1eUxwjh8HARUceya9gqwzU8gK5Ecka9KjJbd","height":0} module=command-init
-    2021-03-29T09:17:07.896340438Z INF stopped module=command-init
+    2021-06-10T05:13:09.232802Z INF dryrun? dryrun=false module=command-init
+    2021-06-10T05:13:09.235942Z INF prepare to run module=command-init
+    2021-06-10T05:13:09.236013Z INF prepared module=command-init
+    2021-06-10T05:13:09.780335419Z INF genesis block created block={"hash":"6HjkXEhTNhPzUTG167jsTEany3dHebDQ5cKGNTNEzcgh","height":0} module=command-init
+    2021-06-10T05:13:10.786661419Z INF stopped module=command-init
     ...
     $ echo $?
     0
@@ -58,18 +57,14 @@ Node run
 .. code-block:: sh
 
     $ ./mc node run --log-level info ./tutorial.yml 
-    2021-03-29T09:17:38.942065Z INF dryrun? dryrun=false module=command-run
-    2021-03-29T09:17:38.94577Z INF prepare to run module=command-run
-    2021-03-29T09:17:38.945824Z INF prepared module=command-run
-    2021-03-29T09:17:46.196241322Z INF new blocks found to digest last_block=-2 last_manifest=0 module=command-run
-    2021-03-29T09:17:47.396357322Z INF digested new blocks module=command-run
-    2021-03-29T09:17:47.398958322Z INF trying to start http2 server for digest API bind=https://0.0.0.0:54320 module=command-run publish=https://127.0.0.1:54320
-    2021-03-29T09:17:49.533142322Z INF new block stored block={"hash":"GPUqoNjhQ9GSh6p7NPuYekeJBy4K2gWkXMBGd7WwLrDB","height":1,"round":0} elapsed=38.619459 module=basic-consensus-state proposal_hash=oDhisx9UqhYGV7sujFcHKfDfL6QCpUEyn3xNerbcQpm voteproof_id=9YVXwz971QMWQerdiRNVnUJvWbwP6dqWqaNQpnhRjPq1
-    2021-03-29T09:17:49.554807322Z INF block digested block=1 module=digester
-    2021-03-29T09:17:51.592903322Z INF new block stored block={"hash":"Ccc79abTEQYAEeGggSnUyYY1WkyW12iBAm6PeshdzJe4","height":2,"round":0} elapsed=22.395125 module=basic-consensus-state proposal_hash=CZwieMxiCL1robs9YmeAySbQ67iQV95g1LM2Ttdj1kvb voteproof_id=Bthy5R9EW56vdPcPTYMUiMJw9tq7FAYL3oST3F1dwKGJ
-    2021-03-29T09:17:51.606397322Z INF block digested block=2 module=digester
-    2021-03-29T09:17:53.655096322Z INF new block stored block={"hash":"3secyQ9KYNVag2E4hhVShofM3vBYxZiBGWNq9fXEsn2H","height":3,"round":0} elapsed=25.89425 module=basic-consensus-state proposal_hash=GndqA1bQeufDmgkm8HoJ4thGn5qAmMxXgwr6Xd9PAhCr voteproof_id=2aw8Upm4pkwq5Pu16hMpcHxycPBtV4qQs1365PWc2a9E
-    2021-03-29T09:17:53.667322322Z INF block digested block=3 module=digester
+    2021-06-10T05:14:08.225487Z INF dryrun? dryrun=false module=command-run
+    2021-06-10T05:14:08.228797Z INF prepare to run module=command-run
+    2021-06-10T05:14:08.228869Z INF prepared module=command-run
+    2021-06-10T05:14:09.706271049Z INF new blocks found to digest last_block=-2 last_manifest=0 module=command-run
+    2021-06-10T05:14:09.827980049Z INF digested new blocks module=command-run
+    2021-06-10T05:14:09.828967049Z INF trying to start http2 server for digest API bind=https://localhost:54320 module=command-run publish=https://localhost:54320
+    2021-06-10T05:14:11.894638049Z INF new block stored block={"hash":"CC57VpSKPozBRABPnznyMk6QY4GHn7CiSH4zSZBs8Rri","height":1,"round":0} elapsed=17.970959 module=basic-consensus-state proposal_hash=DJBgmoAJ4ef7h7iF6E3gTQ83AjWxbGDGQrmDSiQMrfya voteproof_id=BAg2HCNfBenFebuCM4P4HkDfF1off8FCBcSejdK1j7w6
+    2021-06-10T05:14:11.907600049Z INF block digested block=1 module=digester
 
 * If you set the log level to info, you can easily check the information of the newly created block.
 * `--log` command line option can collect logs to the specific files.
@@ -77,19 +72,18 @@ Node run
 
 .. code-block:: sh
 
-    2021-05-06T17:43:36.072520781Z DBG workspace/mitum/src/network/http.go:61 > request content-length=1647 content-type= duration=6.326587 headers={"X-Mitum-Encoder-Hint":["0101:0.0.1"]} host=127.0.0.1:54320 ip=127.0.0.1 method=POST module=network-quic-primitive-server proto=HTTP/3 remote=127.0.0.1:60614 req_id=c2a2li0m57f5lqgar0dg size=0 status=200 url=/seal?showme=1 user_agent="quic-go HTTP/3"
-
+    "l":"debug","module":"http2-server","ip":"127.0.0.1","user_agent":"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0.3 Safari/605.1.15","req_id":"c30q3kqciaejf9nj79c0","status":200,"size":2038,"duration":0.541625,"content-length":0,"content-type":"","headers":{"Accept-Language":["en-us"],"Connection":["keep-alive"],"Upgrade-Insecure-Requests":["1"]},"host":"127.0.0.1:54320","method":"GET","proto":"HTTP/1.1","remote":"127.0.0.1:55617","url":"/","t":"2021-06-10T05:23:31.030086621Z","caller":"/Users/soonkukkang/go/pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210609043008-298f37780037/network/http.go:61","m":"request"
 
 * `--network-log` command line option can collect these request messages to the specific files.
 
 .. code-block:: sh
 
-    $ ./mitum-currency run node \
+    $ ./mc node run \
         --log-level debug \
         --log-format json \
         --log ./mitum.log \
-        --network-log ./mitum-request.log
-
+        --network-log ./mitum-request.log \
+        ./tutorial.yml
 
 * Multiple file can be set to `--network-log` and `--log`.
 * In mitum-currency, `--network-log` option will also collect the requests log from digest API(http2) 
@@ -102,111 +96,68 @@ Lookup genesis account
 
 .. code-block:: sh
 
-    $ find blockdata -name "*-states-*" -print | xargs -n 1 zcat | jq '. | select(.key == "8PdeEpvqfyL3uZFHRZG5PS3JngYUzFFUGPvCg29C2dBn-a000:0.0.1") | [ "height: "+(.height|tostring), "state_key: " + .key, "address: " + .value.value.address, .operations, .value.value.keys.keys, .value.value.keys.threshold]'
+    $ find blockfs -name "*-states-*" -print | xargs -n 1 gzcat | grep '^{' | jq '. | select(.key == "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz-mca:account") | [ "height: "+(.height|tostring), "state_key: " + .key, "address: " + .value.value.address, .operations, .value.value.keys.keys, .value.value.keys.threshold]'
     [
       "height: 0",
-      "state_key: 7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:account",
-      "address: 7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:0.0.1",
+      "state_key: GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz-mca:account",
+      "address: GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz:mca-v0.0.1",
       [
-        "2sQk264zRzLHUhFKHTkBQcgjJrQhZeWzymqn2SfCE3es"
+        "ECSDvWwxcjbEw2F3E6n6pyQXMsZn2uy7msX19XXDCYi8"
       ],
       [
         {
-          "_hint": "a003:0.0.1",
+          "_hint": "mitum-currency-key-v0.0.1",
           "weight": 100,
-          "key": "04b96826d72457a38aa9a2298c3f435f655c28a7d8e94b4e3adf772ac11e3101cbecf9e755312f8a61bd565c182f0d9d67d24f1590ddd2fef1d0af126b5bdfa5a7-0115:0.0.1"
+          "key": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1"
         }
       ],
       100
     ]
-    $ find blockdata -name "*-states-*" -print | xargs -n 1 zcat | jq '. | select(.key == "7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000-MCC:balance") | [ "height: "+(.height|tostring), "state_key: " + .key, "balance:" + .value.value.amount]'
+    $ find blockfs -name "*-states-*" -print | xargs -n 1 gzcat | grep '^{' |jq '. | select(.key == "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz-mca-MCC:balance") | [ "height: "+(.height|tostring), "state_key: " + .key, "balance:" + .value.value.amount]'
     [
       "height: 0",
-      "state_key: 7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000-MCC:balance",
+      "state_key: GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz-mca-MCC:balance",
       "balance:99999999999999999999"
     ]
 
-* *height*, *address* of genesis account at ``0``, ``7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:0.0.1`` is saved in block.
+* *height*, *address* of genesis account at ``0``, ``GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz:mca-v0.0.1`` is saved in block.
 * Account information can also be checked through Digest API.
 
 Lookup using the Digest API
 ---------------------------------
 
 * The api address according to the digest setting :ref:`node configure` is https://localhost:54320.
-* Check genesis account through node info
-
-.. code-block:: sh
-
-    $ curl --insecure -v https://localhost:54320 | jq '._embedded'
-    {
-        "account": {
-            "_hint": "a014:0.0.1",
-            "hash": "CkNB7yu1YbAU5c8LFRV6HbFiuj9azQ3LCwuTuxMREbkd",
-            "address": "7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:0.0.1",
-            "keys": {
-            "_hint": "a004:0.0.1",
-            "hash": "7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv",
-            "keys": [
-                {
-                "_hint": "a003:0.0.1",
-                "weight": 100,
-                "key": "04b96826d72457a38aa9a2298c3f435f655c28a7d8e94b4e3adf772ac11e3101cbecf9e755312f8a61bd565c182f0d9d67d24f1590ddd2fef1d0af126b5bdfa5a7-0115:0.0.1"
-                }
-            ],
-            "threshold": 100
-            }
-        },
-        "balance": "999"
-    }
 
 * Check genesis account through account information
 
 .. code-block:: sh
 
-    $ curl --insecure -v https://localhost:54320/account/7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:0.0.1 | jq
+    $ curl --insecure http://localhost:54320/account/GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz:mca-v0.0.1 | jq '{_embedded}'
     {
-      "_hint": "a016:0.0.1",
-      "hint": {
-        "hint": "a018:0.0.1",
-        "name": "mitum-currency-account-value"
-      },
       "_embedded": {
-        "_hint": "a018:0.0.1",
-        "hash": "CkNB7yu1YbAU5c8LFRV6HbFiuj9azQ3LCwuTuxMREbkd",
-        "address": "7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:0.0.1",
+        "_hint": "mitum-currency-account-value-v0.0.1",
+        "hash": "6vCuuiqaYtNGfPbqfDqA234kiDoueWejd7jMs7dwvq5U",
+        "address": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz:mca-v0.0.1",
         "keys": {
-          "_hint": "a004:0.0.1",
-          "hash": "7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv",
+          "_hint": "mitum-currency-keys-v0.0.1",
+          "hash": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz",
           "keys": [
             {
-              "_hint": "a003:0.0.1",
+              "_hint": "mitum-currency-key-v0.0.1",
               "weight": 100,
-              "key": "04b96826d72457a38aa9a2298c3f435f655c28a7d8e94b4e3adf772ac11e3101cbecf9e755312f8a61bd565c182f0d9d67d24f1590ddd2fef1d0af126b5bdfa5a7-0115:0.0.1"
+              "key": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1"
             }
           ],
           "threshold": 100
         },
-        "balance": "999",
+        "balance": [
+          {
+            "_hint": "mitum-currency-amount-v0.0.1",
+            "amount": "99999999999999999999",
+            "currency": "MCC"
+          }
+        ],
         "height": 0,
         "previous_height": -2
-      },
-      "_links": {
-        "operations": {
-          "href": "/account/7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:0.0.1/operations"
-        },
-        "operations:{offset}": {
-          "templated": true,
-          "href": "/account/7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:0.0.1/operations?offset={offset}"
-        },
-        "operations:{offset,reverse}": {
-          "templated": true,
-          "href": "/account/7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:0.0.1/operations?offset={offset}&reverse=1"
-        },
-        "block": {
-          "href": "/block/0"
-        },
-        "self": {
-          "href": "/account/7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:0.0.1"
-        }
       }
     }

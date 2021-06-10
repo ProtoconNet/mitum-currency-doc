@@ -121,117 +121,117 @@ How to update BlockDataMap for external Storage
     $ ./mc storage download map 10 --tls-insecure --node=$NODE > mapData
     $ cat mapData | jq
     {
-        "_hint": "0191:0.0.1",
-        "hash": "BjrgEX1ziSfSQ1MqAATBLtbXMd7R86snFzCjxVvSCmFH",
+        "_hint": "base-blockdatamap-v0.0.1",
+        "hash": "DvYK11jZ8KWafAGPssypdNMRwwXwJJTKeyzTAx4JNnwc",
         "height": 10,
-        "block": "HYDBJkMmJoYFcLL4AHvWYreQBzZLgsv1x7vUFvLPfqte",
-        "created_at": "2021-06-09T03:14:15.605Z",
+        "block": "AnjD39fpP6cJKVhnSfJxPfQ8sxrVwCrKhm1zWjb38dUS",
+        "created_at": "2021-06-10T06:37:42.251Z",
         "items": {
-            "states": {
-                "type": "states",
-                "checksum": "0fedf0c3ccb08aea5694e04a382ca04fb1338dfc9c2c408fe6296c93c0931124",
-                "url": "file:///000/000/000/000/000/000/010/10-states-0fedf0c3ccb08aea5694e04a382ca04fb1338dfc9c2c408fe6296c93c0931124.jsonld.gz"
-            },
-            "manifest": {
-                "type": "manifest",
-                "checksum": "4007a072f19c9b87e1e370b639a3eea2c2d9438e7be4f577c3f2da6804fc076c",
-                "url": "file:///000/000/000/000/000/000/010/10-manifest-4007a072f19c9b87e1e370b639a3eea2c2d9438e7be4f577c3f2da6804fc076c.jsonld.gz"
-            },
-            "operations_tree": {
-                "type": "operations_tree",
-                "checksum": "d0c45c5292593853052aba6d3f410c93f6cc4473e7873ded2d623069adfc0025",
-                "url": "file:///000/000/000/000/000/000/010/10-operations_tree-d0c45c5292593853052aba6d3f410c93f6cc4473e7873ded2d623069adfc0025.jsonld.gz"
-            },
-            "operations": {
-                "type": "operations",
-                "checksum": "0fedf0c3ccb08aea5694e04a382ca04fb1338dfc9c2c408fe6296c93c0931124",
-                "url": "file:///000/000/000/000/000/000/010/10-operations-0fedf0c3ccb08aea5694e04a382ca04fb1338dfc9c2c408fe6296c93c0931124.jsonld.gz"
-            },
-            "proposal": {
-                "type": "proposal",
-                "checksum": "5c6dc1cd86c0feee423c06a6170548451bd767b7c9dbea67688108899b3981da",
-                "url": "file:///000/000/000/000/000/000/010/10-proposal-5c6dc1cd86c0feee423c06a6170548451bd767b7c9dbea67688108899b3981da.jsonld.gz"
-            },
-            "states_tree": {
-                "type": "states_tree",
-                "checksum": "d0c45c5292593853052aba6d3f410c93f6cc4473e7873ded2d623069adfc0025",
-                "url": "file:///000/000/000/000/000/000/010/10-states_tree-d0c45c5292593853052aba6d3f410c93f6cc4473e7873ded2d623069adfc0025.jsonld.gz"
-            },
             "accept_voteproof": {
-                "type": "accept_voteproof",
-                "checksum": "732b4306d2afcee956ed39490068fc9e4e78f24ecc994bda83f74504cba429ae",
-                "url": "file:///000/000/000/000/000/000/010/10-accept_voteproof-732b4306d2afcee956ed39490068fc9e4e78f24ecc994bda83f74504cba429ae.jsonld.gz"
-            },
-            "suffrage_info": {
-                "type": "suffrage_info",
-                "checksum": "5a069edd5867509cd2f4db7ece22d3d5b2ef53ee734d92b9c53e3c71a2c2bce4",
-                "url": "file:///000/000/000/000/000/000/010/10-suffrage_info-5a069edd5867509cd2f4db7ece22d3d5b2ef53ee734d92b9c53e3c71a2c2bce4.jsonld.gz"
+            "type": "accept_voteproof",
+            "checksum": "03dd3c2ce852729ff52ec7dcd31a2a1532656fbcea12a28438c3e84c8146c753",
+            "url": "file:///000/000/000/000/000/000/010/10-accept_voteproof-03dd3c2ce852729ff52ec7dcd31a2a1532656fbcea12a28438c3e84c8146c753.jsonld.gz"
             },
             "init_voteproof": {
-                "type": "init_voteproof",
-                "checksum": "d96b90f913f1107453f09f5cabc87a2d7eea7c9170fdd3ac49e0445138c4a5b4",
-                "url": "file:///000/000/000/000/000/000/010/10-init_voteproof-d96b90f913f1107453f09f5cabc87a2d7eea7c9170fdd3ac49e0445138c4a5b4.jsonld.gz"
+            "type": "init_voteproof",
+            "checksum": "70d59dc3e84ddd06d319e9d38d68a976b09a816fbe5a5fdef42f5b80908b0fa0",
+            "url": "file:///000/000/000/000/000/000/010/10-init_voteproof-70d59dc3e84ddd06d319e9d38d68a976b09a816fbe5a5fdef42f5b80908b0fa0.jsonld.gz"
+            },
+            "states": {
+            "type": "states",
+            "checksum": "d890f3ba40375a6b2d331883907dc0a9ca980ce45f7d5dcaca9087278c0b6d59",
+            "url": "file:///000/000/000/000/000/000/010/10-states-d890f3ba40375a6b2d331883907dc0a9ca980ce45f7d5dcaca9087278c0b6d59.jsonld.gz"
+            },
+            "proposal": {
+            "type": "proposal",
+            "checksum": "ccd31f6627aa3cc6e9768b318f8cfd8e7f371b907f329fb89d692c7aea2ef465",
+            "url": "file:///000/000/000/000/000/000/010/10-proposal-ccd31f6627aa3cc6e9768b318f8cfd8e7f371b907f329fb89d692c7aea2ef465.jsonld.gz"
+            },
+            "suffrage_info": {
+            "type": "suffrage_info",
+            "checksum": "f8955c57fb4a7dc48e71973af01852008c76ae4bb5487f8d6fccebcc10e5412e",
+            "url": "file:///000/000/000/000/000/000/010/10-suffrage_info-f8955c57fb4a7dc48e71973af01852008c76ae4bb5487f8d6fccebcc10e5412e.jsonld.gz"
+            },
+            "manifest": {
+            "type": "manifest",
+            "checksum": "1f21552b0d7a11c0397c7429849a0f611d9681f70cecd5165e21fcbd5276a880",
+            "url": "file:///000/000/000/000/000/000/010/10-manifest-1f21552b0d7a11c0397c7429849a0f611d9681f70cecd5165e21fcbd5276a880.jsonld.gz"
+            },
+            "operations": {
+            "type": "operations",
+            "checksum": "d890f3ba40375a6b2d331883907dc0a9ca980ce45f7d5dcaca9087278c0b6d59",
+            "url": "file:///000/000/000/000/000/000/010/10-operations-d890f3ba40375a6b2d331883907dc0a9ca980ce45f7d5dcaca9087278c0b6d59.jsonld.gz"
+            },
+            "states_tree": {
+            "type": "states_tree",
+            "checksum": "1f9877aebf8854fd42154c6e6479ff6a3e379b2762c65995c80f3dff2a357a26",
+            "url": "file:///000/000/000/000/000/000/010/10-states_tree-1f9877aebf8854fd42154c6e6479ff6a3e379b2762c65995c80f3dff2a357a26.jsonld.gz"
+            },
+            "operations_tree": {
+            "type": "operations_tree",
+            "checksum": "1f9877aebf8854fd42154c6e6479ff6a3e379b2762c65995c80f3dff2a357a26",
+            "url": "file:///000/000/000/000/000/000/010/10-operations_tree-1f9877aebf8854fd42154c6e6479ff6a3e379b2762c65995c80f3dff2a357a26.jsonld.gz"
             }
         },
-        "writer": "0192:0.0.1"
+        "writer": "blockdata-writer-v0.0.1"
     }
     $ aws s3 cp ./blockdata/000/000/000/000/000/000/010 s3://destbucket/blockdata/000/000/000/000/000/000/010 --recursive
     # update mapData blockdata url from "file:///000/000/000/000/000/000/010/" to https://aws/"
     $ ./mc storage set-blockdatamaps $DEPLOY_KEY mapData $NODE --tls-insecure
     $ ./mc storage download map 10 --tls-insecure --node=$NODE
     {
-        "_hint": "0191:0.0.1",
-        "hash": "BjrgEX1ziSfSQ1MqAATBLtbXMd7R86snFzCjxVvSCmFH",
+        "_hint": "base-blockdatamap-v0.0.1",
+        "hash": "DvYK11jZ8KWafAGPssypdNMRwwXwJJTKeyzTAx4JNnwc",
         "height": 10,
-        "block": "HYDBJkMmJoYFcLL4AHvWYreQBzZLgsv1x7vUFvLPfqte",
-        "created_at": "2021-06-09T03:14:15.605Z",
+        "block": "AnjD39fpP6cJKVhnSfJxPfQ8sxrVwCrKhm1zWjb38dUS",
+        "created_at": "2021-06-10T06:37:42.251Z",
         "items": {
-            "states": {
-                "type": "states",
-                "checksum": "0fedf0c3ccb08aea5694e04a382ca04fb1338dfc9c2c408fe6296c93c0931124",
-                "url": "https://aws/10-states-0fedf0c3ccb08aea5694e04a382ca04fb1338dfc9c2c408fe6296c93c0931124.jsonld.gz"
-            },
-            "manifest": {
-                "type": "manifest",
-                "checksum": "4007a072f19c9b87e1e370b639a3eea2c2d9438e7be4f577c3f2da6804fc076c",
-                "url": "https://aws/10-manifest-4007a072f19c9b87e1e370b639a3eea2c2d9438e7be4f577c3f2da6804fc076c.jsonld.gz"
-            },
-            "operations_tree": {
-                "type": "operations_tree",
-                "checksum": "d0c45c5292593853052aba6d3f410c93f6cc4473e7873ded2d623069adfc0025",
-                "url": "https://aws/10-operations_tree-d0c45c5292593853052aba6d3f410c93f6cc4473e7873ded2d623069adfc0025.jsonld.gz"
-            },
-            "operations": {
-                "type": "operations",
-                "checksum": "0fedf0c3ccb08aea5694e04a382ca04fb1338dfc9c2c408fe6296c93c0931124",
-                "url": "https://aws/10-operations-0fedf0c3ccb08aea5694e04a382ca04fb1338dfc9c2c408fe6296c93c0931124.jsonld.gz"
-            },
-            "proposal": {
-                "type": "proposal",
-                "checksum": "5c6dc1cd86c0feee423c06a6170548451bd767b7c9dbea67688108899b3981da",
-                "url": "https://aws/10-proposal-5c6dc1cd86c0feee423c06a6170548451bd767b7c9dbea67688108899b3981da.jsonld.gz"
-            },
-            "states_tree": {
-                "type": "states_tree",
-                "checksum": "d0c45c5292593853052aba6d3f410c93f6cc4473e7873ded2d623069adfc0025",
-                "url": "https://aws/10-states_tree-d0c45c5292593853052aba6d3f410c93f6cc4473e7873ded2d623069adfc0025.jsonld.gz"
-            },
             "accept_voteproof": {
-                "type": "accept_voteproof",
-                "checksum": "732b4306d2afcee956ed39490068fc9e4e78f24ecc994bda83f74504cba429ae",
-                "url": "https://aws/10-accept_voteproof-732b4306d2afcee956ed39490068fc9e4e78f24ecc994bda83f74504cba429ae.jsonld.gz"
-            },
-            "suffrage_info": {
-                "type": "suffrage_info",
-                "checksum": "5a069edd5867509cd2f4db7ece22d3d5b2ef53ee734d92b9c53e3c71a2c2bce4",
-                "url": "https://aws/10-suffrage_info-5a069edd5867509cd2f4db7ece22d3d5b2ef53ee734d92b9c53e3c71a2c2bce4.jsonld.gz"
+            "type": "accept_voteproof",
+            "checksum": "03dd3c2ce852729ff52ec7dcd31a2a1532656fbcea12a28438c3e84c8146c753",
+            "url": "https://aws/10-accept_voteproof-03dd3c2ce852729ff52ec7dcd31a2a1532656fbcea12a28438c3e84c8146c753.jsonld.gz"
             },
             "init_voteproof": {
-                "type": "init_voteproof",
-                "checksum": "d96b90f913f1107453f09f5cabc87a2d7eea7c9170fdd3ac49e0445138c4a5b4",
-                "url": "https://aws/10-init_voteproof-d96b90f913f1107453f09f5cabc87a2d7eea7c9170fdd3ac49e0445138c4a5b4.jsonld.gz"
+            "type": "init_voteproof",
+            "checksum": "70d59dc3e84ddd06d319e9d38d68a976b09a816fbe5a5fdef42f5b80908b0fa0",
+            "url": "https://aws/10-init_voteproof-70d59dc3e84ddd06d319e9d38d68a976b09a816fbe5a5fdef42f5b80908b0fa0.jsonld.gz"
+            },
+            "states": {
+            "type": "states",
+            "checksum": "d890f3ba40375a6b2d331883907dc0a9ca980ce45f7d5dcaca9087278c0b6d59",
+            "url": "https://aws/10-states-d890f3ba40375a6b2d331883907dc0a9ca980ce45f7d5dcaca9087278c0b6d59.jsonld.gz"
+            },
+            "proposal": {
+            "type": "proposal",
+            "checksum": "ccd31f6627aa3cc6e9768b318f8cfd8e7f371b907f329fb89d692c7aea2ef465",
+            "url": "https://aws/10-proposal-ccd31f6627aa3cc6e9768b318f8cfd8e7f371b907f329fb89d692c7aea2ef465.jsonld.gz"
+            },
+            "suffrage_info": {
+            "type": "suffrage_info",
+            "checksum": "f8955c57fb4a7dc48e71973af01852008c76ae4bb5487f8d6fccebcc10e5412e",
+            "url": "https://aws/10-suffrage_info-f8955c57fb4a7dc48e71973af01852008c76ae4bb5487f8d6fccebcc10e5412e.jsonld.gz"
+            },
+            "manifest": {
+            "type": "manifest",
+            "checksum": "1f21552b0d7a11c0397c7429849a0f611d9681f70cecd5165e21fcbd5276a880",
+            "url": "https://aws/10-manifest-1f21552b0d7a11c0397c7429849a0f611d9681f70cecd5165e21fcbd5276a880.jsonld.gz"
+            },
+            "operations": {
+            "type": "operations",
+            "checksum": "d890f3ba40375a6b2d331883907dc0a9ca980ce45f7d5dcaca9087278c0b6d59",
+            "url": "https://aws/10-operations-d890f3ba40375a6b2d331883907dc0a9ca980ce45f7d5dcaca9087278c0b6d59.jsonld.gz"
+            },
+            "states_tree": {
+            "type": "states_tree",
+            "checksum": "1f9877aebf8854fd42154c6e6479ff6a3e379b2762c65995c80f3dff2a357a26",
+            "url": "https://aws/10-states_tree-1f9877aebf8854fd42154c6e6479ff6a3e379b2762c65995c80f3dff2a357a26.jsonld.gz"
+            },
+            "operations_tree": {
+            "type": "operations_tree",
+            "checksum": "1f9877aebf8854fd42154c6e6479ff6a3e379b2762c65995c80f3dff2a357a26",
+            "url": "https://aws/10-operations_tree-1f9877aebf8854fd42154c6e6479ff6a3e379b2762c65995c80f3dff2a357a26.jsonld.gz"
             }
         },
-        "writer": "0192:0.0.1"
+        "writer": "blockdata-writer-v0.0.1"
     }
 .. 

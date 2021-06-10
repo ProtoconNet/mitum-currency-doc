@@ -19,12 +19,13 @@ Genesis account lookup
 
 .. code-block:: sh
 
-    $ find blockdata -name "*-states-*" -print | xargs -n 1 zcat | jq '. | select(.key == "7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:balance") | [ "height: "+(.height|tostring), "state_key: " + .key, "balance: " + .value.value.amount]'
-    [
-      "height: 0",
-      "state_key: 7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:balance",
-      "balance: 99999999999999999999"
-    ]
+  $ find blockfs -name "*-states-*" -print | xargs -n 1 gzcat | grep '^{' |jq '. | select(.key == "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz-mca-MCC:balance") | [ "height: "+(.height|tostring), "state_key: " + .key, "balance:" + .value.value.amount]'
+  [
+    "height: 0",
+    "state_key: GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz-mca-MCC:balance",
+    "balance:99999999999999999999"
+  ]
+
 
 * ``99999999999999999977 = 99999999999999999999 - (2 create account: 10 * 2) - (2 fee: 1 * 2)``
 
@@ -101,55 +102,37 @@ Genesis account lookup
 
 .. code-block:: sh
 
-    $ curl --insecure -v https://localhost:54320/account/HP6M74XVsZ8UDC7btAV2kbgQNzoDwwj1omcjfusGwK5T-a000:0.0.1 | jq
+    $ curl --insecure http://localhost:54320/account/GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz:mca-v0.0.1 | jq '{_embedded}'
     {
-      "_hint": "a016:0.0.1",
-      "hint": {
-        "name": "mitum-currency-account-value",
-        "hint": "a018:0.0.1"
-      },
       "_embedded": {
-        "_hint": "a018:0.0.1",
-        "hash": "EcGgCGGNFGbRN7twtMw4eBJpTEXQ7en148waBv9Q1VPb",
-        "address": "HP6M74XVsZ8UDC7btAV2kbgQNzoDwwj1omcjfusGwK5T-a000:0.0.1",
+        "_hint": "mitum-currency-account-value-v0.0.1",
+        "hash": "6vCuuiqaYtNGfPbqfDqA234kiDoueWejd7jMs7dwvq5U",
+        "address": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz:mca-v0.0.1",
         "keys": {
-          "_hint": "a004:0.0.1",
-          "hash": "HP6M74XVsZ8UDC7btAV2kbgQNzoDwwj1omcjfusGwK5T",
+          "_hint": "mitum-currency-keys-v0.0.1",
+          "hash": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz",
           "keys": [
             {
-              "_hint": "a003:0.0.1",
+              "_hint": "mitum-currency-key-v0.0.1",
               "weight": 100,
-              "key": "042f828efb3b75de4fd7d38eab7800ab212528599a3c47f3dd18658da6d8a216969f8be772c9374834b93599b1e9632f7eda536f5c6eaec582ece8d6a730b0476a-0115:0.0.1"
+              "key": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1"
             }
           ],
           "threshold": 100
         },
-        "balance": "50",
-        "height": 5,
+        "balance": [
+          {
+            "_hint": "mitum-currency-amount-v0.0.1",
+            "amount": "99999999999999999999",
+            "currency": "MCC"
+          }
+        ],
+        "height": 0,
         "previous_height": -2
-      },
-      "_links": {
-        "operations": {
-          "href": "/account/HP6M74XVsZ8UDC7btAV2kbgQNzoDwwj1omcjfusGwK5T-a000:0.0.1/operations"
-        },
-        "operations:{offset}": {
-          "templated": true,
-          "href": "/account/HP6M74XVsZ8UDC7btAV2kbgQNzoDwwj1omcjfusGwK5T-a000:0.0.1/operations?offset={offset}"
-        },
-        "operations:{offset,reverse}": {
-          "templated": true,
-          "href": "/account/HP6M74XVsZ8UDC7btAV2kbgQNzoDwwj1omcjfusGwK5T-a000:0.0.1/operations?offset={offset}&reverse=1"
-        },
-        "block": {
-          "href": "/block/5"
-        },
-        "self": {
-          "href": "/account/HP6M74XVsZ8UDC7btAV2kbgQNzoDwwj1omcjfusGwK5T-a000:0.0.1"
-        }
       }
     }
 
 .. note::
-    * When you lookup **state** by *address* from mongodb, remove the part after ``:`` of address and use it as key.
-    * ``7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000:0.0.1`` → ``7xDhv3CyDAyzdnSEFMyGV78c85wYKjDbghpghbgn6mkv-a000``
+    * When you lookup **state** by *address* from mongodb, remove the part after ``-`` of address and use it as key.
+    * ``GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz:mca-v0.0.1`` → ``GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz:mca``
     

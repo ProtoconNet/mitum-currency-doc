@@ -12,7 +12,7 @@ address
 
 .. code-block:: yml
 
-    address: n0-010a:0.0.1
+    address: n0:sa-v0.0.1
 
 genesis-operations
 ------------------------
@@ -27,7 +27,7 @@ genesis-operations
     genesis-operations:
         - account-keys:
               keys:
-                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
+                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1
                     weight: 100
               threshold: 100
           currencies:
@@ -66,8 +66,8 @@ network > rate-limit
 .. code-block:: yml
 
     network:
-        bind: quic://0.0.0.0:54341
-        url: quic://127.0.0.1:54341
+        bind: quic://0.0.0.0:54330
+        url: quic://127.0.0.1:54330
 
         rate-limit:
             cache: "memory:?prefix=showme"
@@ -159,7 +159,7 @@ keypair
 .. code-block:: yml
 
     privatekey: Kxt22aSeFzJiDQagrvfXPWbEbrTSPsRxbYm9BhNbNJTsrbPbFnPA-0112:0.0.1
-    publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
+    publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD:btc-pub-v0.0.1
 
 storage
 ----------
@@ -178,17 +178,17 @@ suffrage > nodes
 -----------------
 
 * Set addresses for suffrage nodes participating in consensus.
-* The alias name of the local node is n0-010a:0.0.1.
+* The alias name of the local node is n0:sa-v0.0.1.
 * If n0, n1, n2, n3 nodes are included in the suffrage nodes, it can be set as follows.
 
 .. code-block:: yml
 
     suffrage:
         nodes:
-            - n0-010a:0.0.1
-            - n1-010a:0.0.1
-            - n2-010a:0.0.1
-            - n3-010a:0.0.1
+            - n0:sa-v0.0.1
+            - n1:sa-v0.0.1
+            - n2:sa-v0.0.1
+            - n3:sa-v0.0.1
 
 * If the n0 node, which is a local node, is not included in the suffrage nodes, the local node becomes a None-Suffrage node and serves only as a syncing node.
 * The Syncing node does not participate in consensus and only syncs the generated block data.
@@ -201,9 +201,9 @@ suffrage > nodes
 
     suffrage:
         nodes:
-            - n1-010a:0.0.1
-            - n2-010a:0.0.1
-            - n3-010a:0.0.1
+            - n1:sa-v0.0.1
+            - n2:sa-v0.0.1
+            - n3:sa-v0.0.1
 
 sync-interval
 -----------------
@@ -228,14 +228,14 @@ nodes
 .. code-block:: yml
 
     nodes:
-        - address: n1-010a:0.0.1
-          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM-0113:0.0.1
+        - address: n1:sa-v0.0.1
+          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
           url: quic://127.0.0.1:54331?insecure=true
-        - address: n2-010a:0.0.1
-          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd-0113:0.0.1
+        - address: n2:sa-v0.0.1
+          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd:btc-pub-v0.0.1
           url: quic://127.0.0.1:54332?insecure=true
-        - address: n3-010a:0.0.1
-          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb-0113:0.0.1
+        - address: n3:sa-v0.0.1
+          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
           url: quic://127.0.0.1:54333?insecure=true
 
 digest
@@ -258,11 +258,11 @@ tutorial.yml (standalone node config example)
 
 .. code-block:: yml
 
-    address: n0-010a:0.0.1
+    address: n0:sa-v0.0.1
     genesis-operations:
         - account-keys:
               keys:
-                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG-0113:0.0.1
+                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1
                     weight: 100
               threshold: 100
           currencies:
@@ -278,18 +278,20 @@ tutorial.yml (standalone node config example)
     network-id: mitum
     policy:
         threshold: 100
-        network-connection-tls-insecure: true
-    privatekey: Kxt22aSeFzJiDQagrvfXPWbEbrTSPsRxbYm9BhNbNJTsrbPbFnPA-0112:0.0.1
-    publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD-0113:0.0.1
+    privatekey: Kxt22aSeFzJiDQagrvfXPWbEbrTSPsRxbYm9BhNbNJTsrbPbFnPA:btc-priv-v0.0.1
+    publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD:btc-pub-v0.0.1
     storage:
         blockdata:
             path: ./data/blockfs
         database:
             uri: mongodb://127.0.0.1:27017/n0_mc
+    suffrage:
+        nodes: n0:sa-v0.0.1
+
     digest:
         storage: mongodb://127.0.0.1:27017/mc_digest
         network:
-            bind: http://0.0.0.0:54320
-            url: http://127.0.0.1:54320
+            bind: https://0.0.0.0:54320
+            url: https://127.0.0.1:54320
             cert-key: mitum.key
             cert: mitum.crt
