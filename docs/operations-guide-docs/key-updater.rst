@@ -23,9 +23,6 @@ Update the key of ``ac0``
     privatekey: L1jPsE8Sjo5QerUHJUZNRqdH1ctxTWzc1ue8Zp2mtpieNwtCKsNZ-0112:0.0.1
      publickey: rd89GxTnMP91bZ1VepbkBrvB77BSQyQbquEVBy2fN1tV-0113:0.0.1
        address: 4UM4CN8MZNyv26TK84486CX5X8bu9EUYbsWz5ovRsp1M-a000:0.0.1
-     
-
-
 
 .. code-block:: sh
 

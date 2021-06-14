@@ -81,7 +81,7 @@ Currency-policy-updater example
     $ N2_PRV=<n2 private key>
     $ N3_PRV=<n3 private key>
     $ ./mc seal currency-policy-updater --network-id=$NETWORK_ID --feeer="ratio" --feeer-ratio-receiver=$AC0_ADDR \
-    --feeer-ratio-ratio=0.5 --feeer-ratio-min=3 --feeer-ratio-max=1000 --policy-new-account-min-balance=100 $N0_PRV $4 \
+    --feeer-ratio-ratio=0.5 --feeer-ratio-min=3 --feeer-ratio-max=1000 --policy-new-account-min-balance=100 $N0_PRV MCC2 \
     | ./mc seal sign-fact $N1_PRV --network-id=$NETWORK_ID --seal=- \
     | ./mc seal sign-fact $N2_PRV --network-id=$NETWORK_ID --seal=- \
     | ./mc seal sign-fact $N3_PRV --network-id=$NETWORK_ID --seal=- \

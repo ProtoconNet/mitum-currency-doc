@@ -162,48 +162,48 @@
 
     .. code-block:: json
 
-    {
-        "_hint": "seal-v0.0.1",
-        "hash": "CgFaHkJEP966xRQjzPtXBUwzqgQYWB53RHwjBqyvmKHs",
-        "body_hash": "Akjx1kJZKzyYMo2eVbqcUvtEfivDEGsK4yeUUuNwbGmu",
-        "signer": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc:btc-pub-v0.0.1",
-        "signature": "381yXZ8qZBYQXDBaGr1KyAcsMJyB9HZLo1aQQRsxhx854aMYm5n7nh3NXzsJHpEhiYHgWUYnCtbAZaVsQ8pe6nEnLaHCXizY",
-        "signed_at": "2021-06-10T09:54:35.868873Z",
-        "operations": [
-            {
-                "hash": "Eep8SJH7Vkqft3BcvKYd9NY14Zgzmhyp7Uts2GmpaS5N",
-                "fact": {
-                    "_hint": "mitum-currency-transfers-operation-fact-v0.0.1",
-                    "hash": "Eu1b4gr528Xy4u2sg97DsEo5uj9BuQEMjHzJxdsLgH48",
-                    "token": "MjAyMS0wNi0xMFQwOTo1NDozNS44NjQwOTha",
-                    "sender": "3TNoGhXH4HaXHb12PE3MhXRRNGLvcVJFfh9fUjrWFp83:mca-v0.0.1",
-                    "items": [
+        {
+            "_hint": "seal-v0.0.1",
+            "hash": "CgFaHkJEP966xRQjzPtXBUwzqgQYWB53RHwjBqyvmKHs",
+            "body_hash": "Akjx1kJZKzyYMo2eVbqcUvtEfivDEGsK4yeUUuNwbGmu",
+            "signer": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc:btc-pub-v0.0.1",
+            "signature": "381yXZ8qZBYQXDBaGr1KyAcsMJyB9HZLo1aQQRsxhx854aMYm5n7nh3NXzsJHpEhiYHgWUYnCtbAZaVsQ8pe6nEnLaHCXizY",
+            "signed_at": "2021-06-10T09:54:35.868873Z",
+            "operations": [
+                {
+                    "hash": "Eep8SJH7Vkqft3BcvKYd9NY14Zgzmhyp7Uts2GmpaS5N",
+                    "fact": {
+                        "_hint": "mitum-currency-transfers-operation-fact-v0.0.1",
+                        "hash": "Eu1b4gr528Xy4u2sg97DsEo5uj9BuQEMjHzJxdsLgH48",
+                        "token": "MjAyMS0wNi0xMFQwOTo1NDozNS44NjQwOTha",
+                        "sender": "3TNoGhXH4HaXHb12PE3MhXRRNGLvcVJFfh9fUjrWFp83:mca-v0.0.1",
+                        "items": [
+                            {
+                                "_hint": "mitum-currency-transfers-item-single-amount-v0.0.1",
+                                "receiver": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz:mca-v0.0.1",
+                                "amounts": [
+                                    {
+                                    "_hint": "mitum-currency-amount-v0.0.1",
+                                    "amount": "100",
+                                    "currency": "MCC"
+                                    }
+                                ]
+                            }
+                        ]
+                    },
+                    "fact_signs": [
                         {
-                            "_hint": "mitum-currency-transfers-item-single-amount-v0.0.1",
-                            "receiver": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz:mca-v0.0.1",
-                            "amounts": [
-                                {
-                                "_hint": "mitum-currency-amount-v0.0.1",
-                                "amount": "100",
-                                "currency": "MCC"
-                                }
-                            ]
+                            "_hint": "base-fact-sign-v0.0.1",
+                            "signer": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc:btc-pub-v0.0.1",
+                            "signature": "AN1rKvtZFkx5e4NexvBSjjJkuzUj45UKau8DL2JZx5d1htnbnkmPmHnNbgwqfvUnz8KHpUR72Z9YxD4JVQhdh4JCzGv9zMDDG",
+                            "signed_at": "2021-06-10T09:54:35.868223Z"
                         }
-                    ]
-                },
-                "fact_signs": [
-                    {
-                        "_hint": "base-fact-sign-v0.0.1",
-                        "signer": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc:btc-pub-v0.0.1",
-                        "signature": "AN1rKvtZFkx5e4NexvBSjjJkuzUj45UKau8DL2JZx5d1htnbnkmPmHnNbgwqfvUnz8KHpUR72Z9YxD4JVQhdh4JCzGv9zMDDG",
-                        "signed_at": "2021-06-10T09:54:35.868223Z"
-                    }
-                ],
-                "memo": "",
-                "_hint": "mitum-currency-transfers-operation-v0.0.1"
-            }
-        ]
-    }
+                    ],
+                    "memo": "",
+                    "_hint": "mitum-currency-transfers-operation-v0.0.1"
+                }
+            ]
+        }
 
     * Use the ``sign-fact`` command to add a fact signature.
 
