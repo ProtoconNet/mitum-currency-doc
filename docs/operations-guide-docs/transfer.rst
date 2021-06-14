@@ -16,47 +16,56 @@ transfers Operation
 
 .. code-block:: sh
 
-    $ AC0_PRV=e4e236b0f02156a5c28031aa4608a299f44496be56081d09d0ef3667c33dbac3-0114:0.0.1
-    $ AC0_ADDR=HP6M74XVsZ8UDC7btAV2kbgQNzoDwwj1omcjfusGwK5T-a000:0.0.1
-    $ AC1_ADDR=HWXPq5mBSneSsQis6BbrNT6nvpkafuBqE6F2vgaTYfAC-a000:0.0.1
+    $ AC0_PRV=KzUYFHNzxvUnZfm1ePJJ4gnLcLtMv1Tvod7Fib2sRuFmGwzm1GVb:btc-priv-v0.0.1
+    $ AC0_ADDR=381mXScfnV5mU38woCRn1VqUYqpVAoQf9fg2rXXN6iVv:mca-v0.0.1
+    $ AC1_ADDR=EuCb6BVafkV1tBLsrMqkxojkanJCM4bvmG6JFUZ4s7XL:mca-v0.0.1
     $ CURRENCY_ID=MCC
     $ NETWORK_ID="mitum"
     $ ./mc seal transfer --network-id=$NETWORK_ID $AC0_PRV $AC0_ADDR $AC1_ADDR $CURRENCY_ID 3 | jq
+
     {
-      "_hint": "0151:0.0.1",
-      "hash": "ACSP5cdJRTz4YFg72sAxsTzgECwNsJ9J2J3DtY7a2uYe",
-      "body_hash": "G9C8x27G777hsTMXd1BcoMBqWyhnh7QX3H7jwxfmNFt3",
-      "signer": "042f828efb3b75de4fd7d38eab7800ab212528599a3c47f3dd18658da6d8a216969f8be772c9374834b93599b1e9632f7eda536f5c6eaec582ece8d6a730b0476a-0115:0.0.1",
-      "signature": "5BpRZ6YGtewJnaRw7mpK3DKJraAHTLrVY7Yuy1qy7Vs9bpLT2kbkZuKjG6Hr7TCHKahJunbqBKQGRenAGDktfYixQsYdY",
-      "signed_at": "2020-09-16T13:31:12.203767242+09:00",
-      "operations": [
-        {
-          "fact": {
-            "_hint": "a001:0.0.1",
-            "hash": "AVQivpcsT1gApMQZLTV1p89cVK3hZkJEzr26qxdxsbnW",
-            "token": "MjAyMC0wOS0xNlQxMzozMToxMi4yMDM1NjExNDcrMDk6MDA=",
-            "sender": "HP6M74XVsZ8UDC7btAV2kbgQNzoDwwj1omcjfusGwK5T-a000:0.0.1",
-            "items": [
-              {
-                "receiver": "HWXPq5mBSneSsQis6BbrNT6nvpkafuBqE6F2vgaTYfAC-a000:0.0.1",
-                "amount": "3"
-              }
-            ]
-          },
-          "fact_signs": [
+        "_hint": "seal-v0.0.1",
+        "hash": "EJDzHbusvvcknN9NWaK1wjuvSTav2TVfnDmtRnqVjEVn",
+        "body_hash": "FWLTyQePguo6CFxH8SgEHesoLL8ab3FofEw9nXHDDLMp",
+        "signer": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc:btc-pub-v0.0.1",
+        "signature": "381yXZMbRqwMgfWwJNk4rWNuaJenJMHZU3HBufz7Uo4Yj3zo944oeJeGoKjUDyCJXuL4pZLt49gqW2FHV3YuB5zBR24h96ZH",
+        "signed_at": "2021-06-14T03:42:11.969679Z",
+        "operations": [
             {
-              "_hint": "0150:0.0.1",
-              "signer": "042f828efb3b75de4fd7d38eab7800ab212528599a3c47f3dd18658da6d8a216969f8be772c9374834b93599b1e9632f7eda536f5c6eaec582ece8d6a730b0476a-0115:0.0.1",
-              "signature": "5BpRZ96xDRW3QzpigYNPthKDJgEu2488bseE79G2YoKMsgV7jFm3SzWXciBgZdAAmFzcJ7R3EJvRkm4FTfekRCjuXeTFe",
-              "signed_at": "2020-09-16T13:31:12.20375494+09:00"
+                "_hint": "mitum-currency-transfers-operation-v0.0.1",
+                "hash": "F3WZYRgcwwYENiVXx6J6zKPqkiDjSZcuF2vUUPiyR3n9",
+                "fact": {
+                    "_hint": "mitum-currency-transfers-operation-fact-v0.0.1",
+                    "hash": "7xzioXfnkKU1qrFvgeWK1KrhR71RMHMSBZdpWRVK3MUD",
+                    "token": "MjAyMS0wNi0xNFQwMzo0MjoxMS45NjUyNjNa",
+                    "sender": "381mXScfnV5mU38woCRn1VqUYqpVAoQf9fg2rXXN6iVv:mca-v0.0.1",
+                    "items": [
+                        {
+                            "_hint": "mitum-currency-transfers-item-single-amount-v0.0.1",
+                            "receiver": "EuCb6BVafkV1tBLsrMqkxojkanJCM4bvmG6JFUZ4s7XL:mca-v0.0.1",
+                            "amounts": [
+                                {
+                                    "_hint": "mitum-currency-amount-v0.0.1",
+                                    "amount": "10",
+                                    "currency": "MCC"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                "fact_signs": [
+                    {
+                        "_hint": "base-fact-sign-v0.0.1",
+                        "signer": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc:btc-pub-v0.0.1",
+                        "signature": "AN1rKvtRQeMWcFQ9oPLqgakgW33fed4mCcxxfQwi3icWLyn19AKJ3XpYehA8njvAi7qzgGSVpv23JXBDcXbwiZvQkHBj6T8jw",
+                        "signed_at": "2021-06-14T03:42:11.96891Z"
+                    }
+                ],
+                "memo": ""
             }
-          ],
-          "memo": "",
-          "_hint": "a002:0.0.1",
-          "hash": "JAgPABZ6vX8icHDQTJEyNXe5KzY3c6jF4UmCRTVQo24y"
-        }
-      ]
+        ]
     }
+
 
     $ ./mc seal transfer --network-id=$NETWORK_ID $AC0_PRV $AC0_ADDR $AC1_ADDR $CURRENCY_ID 3 | jq \
       ./mc seal send --network-id=$NETWORK_ID $AC0_PRV --seal=-

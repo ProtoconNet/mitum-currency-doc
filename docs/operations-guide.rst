@@ -12,7 +12,7 @@ Operation Guide
    operations-guide-docs/key-updater
    operations-guide-docs/currency-register
    operations-guide-docs/currency-policy-updater
-   operations-guide-docs/check-account
+   operations-guide-docs/lookup-account
 
 .. note::
    * Mitum provides only basic network interface (API) such as sending and receiving block and voting messages

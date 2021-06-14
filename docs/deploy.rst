@@ -23,7 +23,7 @@ What is deploy key
 
     .. code-block:: json
 
-        $ NODE_PRV_KEY=KxaTHDAQnmFeWWik5MqWXBYkhvp5EpWbsZzXeHDdTDb5NE1dVw8w-0112:0.0.1
+        $ NODE_PRV_KEY=KxaTHDAQnmFeWWik5MqWXBYkhvp5EpWbsZzXeHDdTDb5NE1dVw8w:btc-priv-v0.0.1
         $ NODE=quic://127.0.0.1:54330
         $ ./mc deploy key new $NODE_PRV_KEY mitum $NODE --tls-insecure
         {"key":"d-fc4179e7-2ff3-4372-bd83-f70526bed476","added_at":"2021-06-09T09:31:22.321675852Z"}
@@ -33,7 +33,7 @@ What is deploy key
 
     .. code-block:: json
 
-        $ NODE_PRV_KEY=KxaTHDAQnmFeWWik5MqWXBYkhvp5EpWbsZzXeHDdTDb5NE1dVw8w-0112:0.0.1
+        $ NODE_PRV_KEY=KxaTHDAQnmFeWWik5MqWXBYkhvp5EpWbsZzXeHDdTDb5NE1dVw8w:btc-priv-v0.0.1
         $ NODE=quic://127.0.0.1:54330
         $ ./mc deploy key keys $NODE_PRV_KEY mitum $NODE --tls-insecure
         [{"key":"d-974702df-89a7-4fd1-a742-2d66c1ead6cd","added_at":"2021-06-09T03:14:33.9Z"},{"key":"d-2897ced4-ceb5-4e11-be81-3139350c9c55","added_at":"2021-06-09T03:56:49.393Z"},{"key":"d-fc4179e7-2ff3-4372-bd83-f70526bed476","added_at":"2021-06-09T09:31:22.321675852Z"}]
@@ -42,7 +42,7 @@ What is deploy key
 
     .. code-block:: json
 
-        $ NODE_PRV_KEY=KxaTHDAQnmFeWWik5MqWXBYkhvp5EpWbsZzXeHDdTDb5NE1dVw8w-0112:0.0.1
+        $ NODE_PRV_KEY=KxaTHDAQnmFeWWik5MqWXBYkhvp5EpWbsZzXeHDdTDb5NE1dVw8w:btc-priv-v0.0.1
         $ NODE=quic://127.0.0.1:54330
         $ DEPLOY_KEY=d-974702df-89a7-4fd1-a742-2d66c1ead6cd
         $ ./mc deploy key key $DEPLOY_KEY $NODE_PRV_KEY mitum $NODE --tls-insecure
@@ -52,7 +52,7 @@ What is deploy key
 
     .. code-block:: json
 
-        $ NODE_PRV_KEY=KxaTHDAQnmFeWWik5MqWXBYkhvp5EpWbsZzXeHDdTDb5NE1dVw8w-0112:0.0.1
+        $ NODE_PRV_KEY=KxaTHDAQnmFeWWik5MqWXBYkhvp5EpWbsZzXeHDdTDb5NE1dVw8w:btc-priv-v0.0.1
         $ NODE=quic://127.0.0.1:54330
         $ DEPLOY_KEY=d-974702df-89a7-4fd1-a742-2d66c1ead6cd
         $ ./mc deploy key revoke $DEPLOY_KEY $NODE_PRV_KEY mitum $NODE --tls-insecure
