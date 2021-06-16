@@ -168,3 +168,4 @@
         2021-06-08T11:00:35.833206729Z INF stopped module=command-restore
 
     * ``set-blockdatamaps`` :  Update the multiple BlockDataMaps
+    * See :ref:`blockdata` for a detailed explanation.
