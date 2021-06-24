@@ -42,17 +42,31 @@ Multi Sig Account
    "balance", "{currency: MCC, amount: 10000}, {currency: MCC2, amount: 20000}"
 
 * Set the threshold value in Account. 1 < threshold <= 100.
-* The sum of the weights of the keys should be 100.
-* 
-.. csv-table:: "case with only one key"
+* The sum of the weights of the keys should be greater than or equal to the threshold.
+
+.. csv-table:: "case with only one key and threshold 100"
     :widths: 30, 300
 
-    "keys", "{key: rd89Gx..., weight: 100}                                                           "
-
-.. csv-table:: "case with multiple keys"
+    "threshold", 100
+    "keys", "{key: rd89Gx..., weight: 100}"
+    
+.. csv-table:: "case with only one key and threshold 50"
     :widths: 30, 300
 
+    "threshold", 50
+    "keys", "{key: rd89Gx..., weight: 60}"
+
+.. csv-table:: "case with multiple keys and threshold 100"
+    :widths: 30, 300
+
+    "threshold", 100
     "keys", "{key: rd89Gx..., weight: 40}, {key: skRdC6..., weight: 30}, {key: mymMwq..., weight: 30}"
+
+.. csv-table:: "case with multiple keys and threshold 50"
+    :widths: 30, 300
+
+    "threshold", 50
+    "keys", "{key: rd89Gx..., weight: 20}, {key: skRdC6..., weight: 20}, {key: mymMwq..., weight: 10}"
 
 * Even in the same *publickey* combination, *address* will have different values if *weight* or *threshold* are different.
 
