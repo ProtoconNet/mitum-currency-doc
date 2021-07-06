@@ -165,6 +165,7 @@ storage
 ----------
 
 * Specify the file system path and mongodb database address of blockchain data storage.
+* If blockdata setting is missing, blockdata > path is set to a folder called blockdata in the current path by default
 
 .. code-block:: yml
 
