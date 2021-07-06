@@ -287,7 +287,8 @@ tutorial.yml (standalone node config example)
         database:
             uri: mongodb://127.0.0.1:27017/n0_mc
     suffrage:
-        nodes: n0:sa-v0.0.1
+        nodes: 
+            - n0:sa-v0.0.1
 
     digest:
         storage: mongodb://127.0.0.1:27017/mc_digest
