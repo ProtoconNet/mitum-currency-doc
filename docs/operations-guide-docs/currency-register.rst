@@ -41,9 +41,9 @@ currency-register Operation example
     $ N1_PRV=<n1 private key>
     $ N2_PRV=<n2 private key>
     $ N3_PRV=<n3 private key>
-    $ ./mc seal currency-register --network-id=$NETWORK_ID --feeer="fixed" --feeer-fixed-receiver=$AC1_ADDR \ 
+    $ ./mc seal currency-register --network-id="$NETWORK_ID" --feeer="fixed" --feeer-fixed-receiver=$AC1_ADDR \ 
       --feeer-fixed-amount=3 --policy-new-account-min-balance=10 $N0_PRV MCC2 9999999999999 $AC1_ADDR \
-      | ./mc seal sign-fact $N1_PRV --network-id=$NETWORK_ID --seal=- \
-      | ./mc seal sign-fact $N2_PRV --network-id=$NETWORK_ID --seal=- \
-      | ./mc seal sign-fact $N3_PRV --network-id=$NETWORK_ID --seal=- \
-      | ./mc seal send --network-id=$NETWORK_ID $AC1_PRV --seal=-
+      | ./mc seal sign-fact $N1_PRV --network-id="$NETWORK_ID" --seal=- \
+      | ./mc seal sign-fact $N2_PRV --network-id="$NETWORK_ID" --seal=- \
+      | ./mc seal sign-fact $N3_PRV --network-id="$NETWORK_ID" --seal=- \
+      | ./mc seal send --network-id="$NETWORK_ID" $AC1_PRV --seal=-

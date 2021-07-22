@@ -21,7 +21,7 @@ transfers Operation
     $ AC1_ADDR=EuCb6BVafkV1tBLsrMqkxojkanJCM4bvmG6JFUZ4s7XL:mca-v0.0.1
     $ CURRENCY_ID=MCC
     $ NETWORK_ID="mitum"
-    $ ./mc seal transfer --network-id=$NETWORK_ID $AC0_PRV $AC0_ADDR $AC1_ADDR $CURRENCY_ID 3 | jq
+    $ ./mc seal transfer --network-id="$NETWORK_ID" $AC0_PRV $AC0_ADDR $AC1_ADDR $CURRENCY_ID 3 | jq
 
     {
         "_hint": "seal-v0.0.1",
@@ -67,8 +67,8 @@ transfers Operation
     }
 
 
-    $ ./mc seal transfer --network-id=$NETWORK_ID $AC0_PRV $AC0_ADDR $AC1_ADDR $CURRENCY_ID 3 | jq \
-      ./mc seal send --network-id=$NETWORK_ID $AC0_PRV --seal=-
+    $ ./mc seal transfer --network-id="$NETWORK_ID" $AC0_PRV $AC0_ADDR $AC1_ADDR $CURRENCY_ID 3 | jq \
+      ./mc seal send --network-id="$NETWORK_ID" $AC0_PRV --seal=-
 
 * Whether the operation is successfully processed can be checked through the api.
 * For more information, please refer to :ref:`Operation Reason`.

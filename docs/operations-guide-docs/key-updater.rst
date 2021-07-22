@@ -39,7 +39,7 @@ Update the key of ``ac0``
     $ AC1_PUB=247KCJyus9NYJii9rkT4R3z6GxengcwYQHwRKA6DySbiU:btc-pub-v0.0.1
     $ AC0_ACC_KEY=381mXScfnV5mU38woCRn1VqUYqpVAoQf9fg2rXXN6iVv-mca:account
     $ CURRENCY_ID=MCC
-    $ ./mc seal key-updater --network-id=$NETWORK_ID $AC0_PRV $AC0_ADDR \
+    $ ./mc seal key-updater --network-id="$NETWORK_ID" $AC0_PRV $AC0_ADDR \
         --key $AC1_PUB,100" $CURRENCY_ID | jq
         {
             "_hint": "seal-v0.0.1",
@@ -84,9 +84,9 @@ Update the key of ``ac0``
             ]
         }
 
-    $ ./mc seal key-updater --network-id=$NETWORK_ID $AC0_PRV $AC0_ADDR \
+    $ ./mc seal key-updater --network-id="$NETWORK_ID" $AC0_PRV $AC0_ADDR \
       --key $AC1_PUB,100" $CURRENCY_ID \
-    | ./mc seal send --network-id=$NETWORK_ID \
+    | ./mc seal send --network-id="$NETWORK_ID" \
         $AC0_PRV --seal=- --node=$NODE --tls-insecure
 
 Check the changed key of ``ac0``

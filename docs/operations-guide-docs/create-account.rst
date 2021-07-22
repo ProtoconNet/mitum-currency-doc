@@ -24,7 +24,7 @@ create-account Operation
     $ GENESIS_PRV=L5GTSKkRs9NPsXwYgACZdodNUJqCAWjz2BccuR4cAgxJumEZWjok:btc-priv-v0.0.1
     $ GENESIS_ADDR=GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz:mca-v0.0.1
     $ AC0_PUB=cnMJqt1Q7LXKqFAWprm6FBC7fRbWQeZhrymTavN11PKJ:btc-pub-v0.0.1
-    $ ./mc seal create-account --network-id=$NETWORK_ID $GENESIS_PRV $GENESIS_ADDR XXX 50 --key=$AC0_PUB,100 | jq
+    $ ./mc seal create-account --network-id="$NETWORK_ID" $GENESIS_PRV $GENESIS_ADDR XXX 50 --key=$AC0_PUB,100 | jq
     {
         "_hint": "seal-v0.0.1",
         "hash": "Xr7HS7rnbfxTrNbr6qRJ64on6KFuMzvJf5Z6BGqVZsX",
@@ -95,13 +95,13 @@ create-account Operation
     $ CURRENCY_ID=MCC
     $ AC0_PUB=cnMJqt1Q7LXKqFAWprm6FBC7fRbWQeZhrymTavN11PKJ:btc-pub-v0.0.1
     $ AC1_PUB=sdjgo1jJ2kxAxMyBj6qZDb8okZpwzHYE8ZACgePYW4eT:btc-pub-v0.0.1
-    $ ./mc seal create-account --network-id=$NETWORK_ID \
+    $ ./mc seal create-account --network-id="$NETWORK_ID" \
       $GENESIS_PRV $GENESIS_ADDR $CURRENCY_ID 50 \
       --key=$AC0_PUB,100 |
-    ./mc seal create-account --network-id=$NETWORK_ID" \
+    ./mc seal create-account --network-id="$NETWORK_ID" \
       $GENESIS_PRV $GENESIS_ADDR $CURRENCY_ID 50 \
       --key=$AC1_PUB,100 --seal=- | \
-    ./mc seal send --network-id=$NETWORK_ID \
+    ./mc seal send --network-id="$NETWORK_ID" \
         $GENESIS_PRV --seal=- --node=$NODE --tls-insecure | jq -R '. as $line | try fromjson catch $line'
 
     {

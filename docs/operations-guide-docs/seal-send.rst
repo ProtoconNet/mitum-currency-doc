@@ -15,7 +15,7 @@ Seal Send
     $ NETWORK_ID="mitum"
     $ NODE="quic://127.0.0.1:54330"
     $ AC0_PRV=L1jPsE8Sjo5QerUHJUZNRqdH1ctxTWzc1ue8Zp2mtpieNwtCKsNZ-0112:0.0.1
-    $ ./mc seal send --network-id=$NETWORK_ID $AC0_PRV --seal=data.json --node=$NODE jq -R '. as $line | try fromjson catch $line'
+    $ ./mc seal send --network-id="$NETWORK_ID" $AC0_PRV --seal=data.json --node=$NODE jq -R '. as $line | try fromjson catch $line'
     {
         "_hint": "seal-v0.0.1",
         "hash": "6nLRWj5hGQ7va9gxpAJCBxNDKvgFnms9jaa913uWgsx1",
@@ -77,7 +77,7 @@ Seal Send
 
 .. code-block:: sh
 
-    $ ./mc seal send --network-id=$NETWORK_ID $AC0_PRV --tls-insecure=true --seal=data.json --node=$NODE
+    $ ./mc seal send --network-id="$NETWORK_ID" $AC0_PRV --tls-insecure=true --seal=data.json --node=$NODE
 
 * Whether the operation is successfully processed can be checked through the api.
 * For more information, please refer to :ref:`Operation Reason`.
