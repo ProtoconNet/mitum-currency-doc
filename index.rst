@@ -50,12 +50,6 @@ Welcome to Mitum currency's documentation!
 
 .. toctree::
    :maxdepth: 1
-   :caption: Tutorials
-
-   docs/tutorial
-
-.. toctree::
-   :maxdepth: 1
    :caption: API Reference
 
    docs/api

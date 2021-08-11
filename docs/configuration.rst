@@ -10,7 +10,7 @@ address
 
 * Address of local node(alias for url address)
 
-.. code-block:: yml
+.. code-block:: yaml
 
     address: n0:sa-v0.0.1
 
@@ -22,7 +22,7 @@ genesis-operations
 * In the currency model, information on the main currency and genesis account must be set.
 * It registers the information (key, weight, threshold value) about the keys of the genesis account, and specifies the initial balance, currency ID, and fee policy of the currency to be created.
 
-.. code-block:: yml
+.. code-block:: yaml
 
     genesis-operations:
         - account-keys:
@@ -43,11 +43,11 @@ network
 * Specify the domain address or IP address of the node used in the network.
 * Address to receive messages from node or client, using quic communication protocol.
 
-.. code-block:: yml
+.. code-block:: yaml
 
     network:
-        bind: quic://0.0.0.0:54330
-        url: quic://127.0.0.1:54330
+        bind: https://0.0.0.0:54330
+        url: https://127.0.0.1:54330
         cert-key: mitum.key
         cert: mitum.crt
 
@@ -63,11 +63,11 @@ network > rate-limit
 * and Mitum-currency additionally supports http2 based API service(called digest).
 * ``rate-limit`` applied to these API services.
 
-.. code-block:: yml
+.. code-block:: yaml
 
     network:
-        bind: quic://0.0.0.0:54330
-        url: quic://127.0.0.1:54330
+        bind: https://0.0.0.0:54330
+        url: https://127.0.0.1:54330
 
         rate-limit:
             cache: "memory:?prefix=showme"
@@ -146,7 +146,7 @@ network-id
 * Network id acts like an identifier that identifies a network.
 * All nodes on the same network have the same network-id value.
 
-.. code-block:: yml
+.. code-block:: yaml
 
     network-id: mitum contest; Sat 26 Dec 2020 05:29:13 AM KST
 
@@ -156,7 +156,7 @@ keypair
 * Enter the node's private key and public key.
 * See :ref:`create keypair` to learn how to create a key pair.
 
-.. code-block:: yml
+.. code-block:: yaml
 
     privatekey: Kxt22aSeFzJiDQagrvfXPWbEbrTSPsRxbYm9BhNbNJTsrbPbFnPA-0112:0.0.1
     publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD:btc-pub-v0.0.1
@@ -167,7 +167,7 @@ storage
 * Specify the file system path and mongodb database address of blockchain data storage.
 * If blockdata setting is missing, blockdata > path is set to a folder called blockdata in the current path by default
 
-.. code-block:: yml
+.. code-block:: yaml
 
     storage:
         blockdata:
@@ -182,7 +182,7 @@ suffrage > nodes
 * The alias name of the local node is n0:sa-v0.0.1.
 * If n0, n1, n2, n3 nodes are included in the suffrage nodes, it can be set as follows.
 
-.. code-block:: yml
+.. code-block:: yaml
 
     suffrage:
         nodes:
@@ -198,7 +198,7 @@ suffrage > nodes
 * When the node-suffrage node stores the operation seal, it broadcasts the seal to the suffrage nodes.
 * If the None-suffrage node does not add other nodes to the suffrage node, or does not configure other suffrage nodes, operation seal cannot be processed.
 
-.. code-block:: yml
+.. code-block:: yaml
 
     suffrage:
         nodes:
@@ -213,7 +213,7 @@ sync-interval
 * The default interval is 10 seconds.
 * You can change the interval value through the sync-interval setting.
 
-.. code-block:: yml
+.. code-block:: yaml
 
     sync-interval: 3s
 
@@ -222,29 +222,43 @@ nodes
 
 * Write the address (alias for the address), public key, and url (ip address) of known nodes in the blockchain network.
 * If not written, it operates as a standalone node.
+* If the node is a suffrage node and the node discovery function is used, the url of the node is not required.
+* However, if the node is not a suffrage node, the urls of the suffrage nodes must be included.
 * Mitum nodes use CA signed certificate (public certificate) by default.
 * If certificate related settings are not made in Network config, the node uses self-signed certifate.
 * If other Mitum nodes use self-signed certificate, insecure=true should be set to all the nodes which use self-signed certificate.
 
-.. code-block:: yml
+.. code-block:: yaml
 
+    (In case of suffrage node)
     nodes:
         - address: n1:sa-v0.0.1
           publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
-          url: quic://127.0.0.1:54331?insecure=true
         - address: n2:sa-v0.0.1
           publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd:btc-pub-v0.0.1
-          url: quic://127.0.0.1:54332?insecure=true
         - address: n3:sa-v0.0.1
           publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
-          url: quic://127.0.0.1:54333?insecure=true
+
+.. code-block:: yaml
+
+    (If it is not a suffrage node)
+    nodes:
+        - address: n1:sa-v0.0.1
+          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
+          url: quic://127.0.0.1:54331#insecure
+        - address: n2:sa-v0.0.1
+          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd:btc-pub-v0.0.1
+          url: quic://127.0.0.1:54332#insecure
+        - address: n3:sa-v0.0.1
+          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
+          url: quic://127.0.0.1:54333#insecure
 
 digest
 --------
 
 Specify the mongodb address that stores the data to be provided by the API and the IP address of the API access.
 
-.. code-block:: yml
+.. code-block:: yaml
 
     digest:
         storage: mongodb://127.0.0.1:27017/mc_digest
@@ -255,9 +269,9 @@ Specify the mongodb address that stores the data to be provided by the API and t
             cert: mitum.crt
 
 tutorial.yml (standalone node config example)
-----------------
+--------------------------------------------------
 
-.. code-block:: yml
+.. code-block:: yaml
 
     address: n0:sa-v0.0.1
     genesis-operations:

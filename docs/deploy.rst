@@ -21,7 +21,7 @@ What is deploy key
   
     * ``new`` : Create and register new deploy key to the node.
 
-    .. code-block:: json
+    .. code-block::
 
         $ NODE_PRV_KEY=KxaTHDAQnmFeWWik5MqWXBYkhvp5EpWbsZzXeHDdTDb5NE1dVw8w:btc-priv-v0.0.1
         $ NODE=quic://127.0.0.1:54330
@@ -31,7 +31,7 @@ What is deploy key
 
     * ``keys`` : Get the list of registered deploy keys in the node.
 
-    .. code-block:: json
+    .. code-block::
 
         $ NODE_PRV_KEY=KxaTHDAQnmFeWWik5MqWXBYkhvp5EpWbsZzXeHDdTDb5NE1dVw8w:btc-priv-v0.0.1
         $ NODE=quic://127.0.0.1:54330
@@ -40,7 +40,7 @@ What is deploy key
 
     * ``key`` : Check the existence of deploy key in the node.
 
-    .. code-block:: json
+    .. code-block::
 
         $ NODE_PRV_KEY=KxaTHDAQnmFeWWik5MqWXBYkhvp5EpWbsZzXeHDdTDb5NE1dVw8w:btc-priv-v0.0.1
         $ NODE=quic://127.0.0.1:54330
@@ -50,7 +50,7 @@ What is deploy key
 
     * ``revoke`` : Revoke depoy key from the node.
 
-    .. code-block:: json
+    .. code-block::
 
         $ NODE_PRV_KEY=KxaTHDAQnmFeWWik5MqWXBYkhvp5EpWbsZzXeHDdTDb5NE1dVw8w:btc-priv-v0.0.1
         $ NODE=quic://127.0.0.1:54330

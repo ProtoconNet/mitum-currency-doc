@@ -4,7 +4,7 @@ Seal Send
 ==================================
 
 * Operations created in Mitum currency are transmitted in units of seals.
-* Signature is required to transmit the seal. Refer to the Seal section in :ref:`Send message to node` for the part related to the keypair used for signature creation.
+* Signature is required to transmit the seal. Refer to the Seal section in :ref:`Send the seal` for the part related to the keypair used for signature creation.
 
 .. code-block:: sh
 

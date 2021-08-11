@@ -8,6 +8,7 @@ Here we will explain the process for running the node.
 
 .. note::
 
+  * A node can find out the addresses of all nodes by using the node discovery protocol.
   * Digest API is included in Mitum currency, so API service is provided by default.
   * Please check :ref:`node configure` for Digest setting.
   * If Digest is not set, data for API service must be processed separately.
@@ -65,6 +66,20 @@ Node run
     2021-06-10T05:14:09.828967049Z INF trying to start http2 server for digest API bind=https://localhost:54320 module=command-run publish=https://localhost:54320
     2021-06-10T05:14:11.894638049Z INF new block stored block={"hash":"CC57VpSKPozBRABPnznyMk6QY4GHn7CiSH4zSZBs8Rri","height":1,"round":0} elapsed=17.970959 module=basic-consensus-state proposal_hash=DJBgmoAJ4ef7h7iF6E3gTQ83AjWxbGDGQrmDSiQMrfya voteproof_id=BAg2HCNfBenFebuCM4P4HkDfF1off8FCBcSejdK1j7w6
     2021-06-10T05:14:11.907600049Z INF block digested block=1 module=digester
+
+* If the node is a suffrage node, the addresses of other live suffrage nodes can be found using the Node discovery protocol.
+* The node discovery feature is only supported when the node is a suffrage node.
+* When the suffrage node starts up, it is possible to determine the network information of all suffrage nodes without publish url information of all suffrage nodes.
+* For node discovery, a node must set the address of one or more suffrage nodes it knows to a discovery url at startup.
+* To specify the discovery url, use the --discovery command line option.
+
+.. code-block:: sh
+
+    $ ./mc node run n0.yml --discovery "https://n1#insecure" --discovery "https://n2#insecure"
+
+* Even if a node does not set the discovery url by itself, if another suffrage node designates this node as a discovery node, the publish url of other nodes is known by the gossip protocol.
+* If the nodes specified by discovery are not running, it keeps trying until it succeeds.
+* Again, node discovery only works with suffrage nodes. For nodes not included in the suffrage node list, the urls of other suffrage nodes are still specified in the node settings.
 
 * If you set the log level to info, you can easily check the information of the newly created block.
 * `--log` command line option can collect logs to the specific files.
