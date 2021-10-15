@@ -72,13 +72,16 @@ Depending on the configuration of the node, it is necessary to configure the nod
     nodes:
         - address: n0:sa-v-0.0.1
           publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD:btc-pub-v0.0.1
+          tls-insecure: true
         - address: n1:sa-v-0.0.1
           publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
+          tls-insecure: true
         - address: n2:sa-v-0.0.1
           publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd:btc-pub-v0.0.1
+          tls-insecure: true
         - address: n3:sa-v-0.0.1
           publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
-
+          tls-insecure: true
 
 yml full configuration of all nodes.(example)
 
@@ -97,8 +100,8 @@ yml full configuration of all nodes.(example)
                 currency: MCC
           type: genesis-currencies
     network:
-        bind: https://0.0.0.0:54330
-        url: https://127.0.0.1:54330
+        bind: https://0.0.0.0:54321
+        url: https://127.0.0.1:54321
     network-id: mitum
     policy:
         threshold: 100
@@ -118,10 +121,13 @@ yml full configuration of all nodes.(example)
     nodes:
         - address: n1:sa-v-0.0.1
           publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
+          tls-insecure: true
         - address: n2:sa-v-0.0.1
           publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd:btc-pub-v0.0.1
+          tls-insecure: true
         - address: n3:sa-v-0.0.1
           publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
+          tls-insecure: true
 
 .. code-block:: yaml
 
@@ -160,10 +166,13 @@ yml full configuration of all nodes.(example)
     nodes:
         - address: n0:sa-v-0.0.1
           publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD:btc-pub-v0.0.1
+          tls-insecure: true
         - address: n2:sa-v-0.0.1
           publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd:btc-pub-v0.0.1
+          tls-insecure: true
         - address: n3:sa-v-0.0.1
           publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
+          tls-insecure: true
 
 .. code-block:: yaml
 
@@ -201,10 +210,13 @@ yml full configuration of all nodes.(example)
     nodes:
         - address: n0:sa-v-0.0.1
           publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD:btc-pub-v0.0.1
+          tls-insecure: true
         - address: n1:sa-v-0.0.1
           publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
+          tls-insecure: true
         - address: n3:sa-v-0.0.1
           publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
+          tls-insecure: true
 
 .. code-block:: yaml
 
@@ -242,10 +254,13 @@ yml full configuration of all nodes.(example)
     nodes:
         - address: n0:sa-v-0.0.1
           publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD:btc-pub-v0.0.1
+          tls-insecure: true
         - address: n1:sa-v-0.0.1
           publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
+          tls-insecure: true
         - address: n2:sa-v-0.0.1
           publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd:btc-pub-v0.0.1
+          tls-insecure: true
 
 
 4 Suffrage nodes + 1 Sync node
@@ -274,12 +289,16 @@ Only ``suffrage`` and ``nodes`` part of configuration of suffrage nodes(n0, n1, 
     nodes:
         - address: n0:sa-v-0.0.1
           publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD:btc-pub-v0.0.1
+          tls-insecure: true
         - address: n1:sa-v-0.0.1
           publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
+          tls-insecure: true
         - address: n2:sa-v-0.0.1
           publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd:btc-pub-v0.0.1
+          tls-insecure: true
         - address: n3:sa-v-0.0.1
           publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
+          tls-insecure: true
 
 Only ``suffrage`` and ``nodes`` part of configuration of sync node(n4).
 
@@ -295,10 +314,12 @@ Only ``suffrage`` and ``nodes`` part of configuration of sync node(n4).
     nodes:
         - address: n1:sa-v-0.0.1
           publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
-          url: quic://127.0.0.1:54331#insecure
+          url: https://127.0.0.1:54331
+          tls-insecure: true
         - address: n3:sa-v-0.0.1
           publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
-          url: quic://127.0.0.1:54333#insecure
+          url: https://127.0.0.1:54351
+          tls-insecure: true
 
 
 yml full configuration of all nodes.(example)
@@ -318,8 +339,8 @@ yml full configuration of all nodes.(example)
                 currency: MCC
           type: genesis-currencies
     network:
-        bind: https://0.0.0.0:54330
-        url: https://127.0.0.1:54330
+        bind: https://0.0.0.0:54321
+        url: https://127.0.0.1:54321
     network-id: mitum
     policy:
         threshold: 100
@@ -339,10 +360,13 @@ yml full configuration of all nodes.(example)
     nodes:
         - address: n1:sa-v-0.0.1
           publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
+          tls-insecure: true
         - address: n2:sa-v-0.0.1
           publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd:btc-pub-v0.0.1
+          tls-insecure: true
         - address: n3:sa-v-0.0.1
           publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
+          tls-insecure: true
 
 .. code-block:: yaml
 
@@ -380,10 +404,13 @@ yml full configuration of all nodes.(example)
     nodes:
         - address: n0:sa-v-0.0.1
           publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD:btc-pub-v0.0.1
+          tls-insecure: true
         - address: n2:sa-v-0.0.1
           publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd:btc-pub-v0.0.1
+          tls-insecure: true
         - address: n3:sa-v-0.0.1
           publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
+          tls-insecure: true
 
 .. code-block:: yaml
 
@@ -421,10 +448,13 @@ yml full configuration of all nodes.(example)
     nodes:
         - address: n0:sa-v-0.0.1
           publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD:btc-pub-v0.0.1
+          tls-insecure: true
         - address: n1:sa-v-0.0.1
           publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
+          tls-insecure: true
         - address: n3:sa-v-0.0.1
           publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
+          tls-insecure: true
 
 .. code-block:: yaml
 
@@ -462,10 +492,13 @@ yml full configuration of all nodes.(example)
     nodes:
         - address: n0:sa-v-0.0.1
           publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD:btc-pub-v0.0.1
+          tls-insecure: true
         - address: n1:sa-v-0.0.1
           publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
+          tls-insecure: true
         - address: n2:sa-v-0.0.1
           publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd:btc-pub-v0.0.1
+          tls-insecure: true
 
 .. code-block:: yaml
 
@@ -501,10 +534,12 @@ yml full configuration of all nodes.(example)
     nodes:
         - address: n1:sa-v-0.0.1
           publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
-          url: quic://127.0.0.1:54331#insecure
+          url: https://127.0.0.1:54331
+          tls-insecure: true
         - address: n3:sa-v-0.0.1
           publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
-          url: quic://127.0.0.1:54333#insecure
+          url: https://127.0.0.1:54333
+          tls-insecure: true
 
 Node discovery scenario(example)
 

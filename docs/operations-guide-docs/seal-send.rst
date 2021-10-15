@@ -8,12 +8,12 @@ Seal Send
 
 .. code-block:: sh
 
-    $ ./mc seal send <sender privatekey> --network-id=<network id> --seal=<data file path> --node=<node quic url>
+    $ ./mc seal send <sender privatekey> --network-id=<network id> --seal=<data file path> --node=<node https url>
 
 .. code-block:: sh
 
     $ NETWORK_ID="mitum"
-    $ NODE="quic://127.0.0.1:54330"
+    $ NODE="https://127.0.0.1:54321"
     $ AC0_PRV=L1jPsE8Sjo5QerUHJUZNRqdH1ctxTWzc1ue8Zp2mtpieNwtCKsNZ-0112:0.0.1
     $ ./mc seal send --network-id="$NETWORK_ID" $AC0_PRV --seal=data.json --node=$NODE jq -R '. as $line | try fromjson catch $line'
     {

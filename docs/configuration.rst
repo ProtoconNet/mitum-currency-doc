@@ -42,12 +42,18 @@ network
 
 * Specify the domain address or IP address of the node used in the network.
 * Address to receive messages from node or client, using quic communication protocol.
+* Self-signed certificates can be used to set up test node. You can use it for only test and development nodes where security is not a big concern.
+
+.. code-block:: sh
+
+    $ openssl genrsa -out mitum.key 4096
+    $ openssl req -x509 -new -nodes -key mitum.key -sha256 -days 1024 -out mitum.crt
 
 .. code-block:: yaml
 
     network:
-        bind: https://0.0.0.0:54330
-        url: https://127.0.0.1:54330
+        bind: https://0.0.0.0:54321
+        url: https://127.0.0.1:54321
         cert-key: mitum.key
         cert: mitum.crt
 
@@ -66,8 +72,8 @@ network > rate-limit
 .. code-block:: yaml
 
     network:
-        bind: https://0.0.0.0:54330
-        url: https://127.0.0.1:54330
+        bind: https://0.0.0.0:54321
+        url: https://127.0.0.1:54321
 
         rate-limit:
             cache: "memory:?prefix=showme"
@@ -148,18 +154,17 @@ network-id
 
 .. code-block:: yaml
 
-    network-id: mitum contest; Sat 26 Dec 2020 05:29:13 AM KST
+    network-id: mitum
 
 keypair
 ---------
 
-* Enter the node's private key and public key.
+* Enter the node's private key.
 * See :ref:`create keypair` to learn how to create a key pair.
 
 .. code-block:: yaml
 
     privatekey: Kxt22aSeFzJiDQagrvfXPWbEbrTSPsRxbYm9BhNbNJTsrbPbFnPA-0112:0.0.1
-    publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD:btc-pub-v0.0.1
 
 storage
 ----------
@@ -171,9 +176,9 @@ storage
 
     storage:
         blockdata:
-            path: ./n0_data/blockfs
+            path: ./mc-blockfs
         database:
-            uri: mongodb://127.0.0.1:27017/n0_mc
+            uri: mongodb://127.0.0.1:27017/mc
 
 suffrage > nodes
 -----------------
@@ -226,7 +231,7 @@ nodes
 * However, if the node is not a suffrage node, the urls of the suffrage nodes must be included.
 * Mitum nodes use CA signed certificate (public certificate) by default.
 * If certificate related settings are not made in Network config, the node uses self-signed certifate.
-* If other Mitum nodes use self-signed certificate, insecure=true should be set to all the nodes which use self-signed certificate.
+* If other Mitum nodes use self-signed certificate, tls-insecure:true should be set to all the nodes which use self-signed certificate.
 
 .. code-block:: yaml
 
@@ -234,10 +239,13 @@ nodes
     nodes:
         - address: n1:sa-v0.0.1
           publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
+          tls-insecure: true
         - address: n2:sa-v0.0.1
           publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd:btc-pub-v0.0.1
+          tls-insecure: true
         - address: n3:sa-v0.0.1
           publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
+          tls-insecure: true
 
 .. code-block:: yaml
 
@@ -245,13 +253,16 @@ nodes
     nodes:
         - address: n1:sa-v0.0.1
           publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
-          url: quic://127.0.0.1:54331#insecure
+          url: https://127.0.0.1:54331
+          tls-insecure: true
         - address: n2:sa-v0.0.1
           publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd:btc-pub-v0.0.1
-          url: quic://127.0.0.1:54332#insecure
+          url: https://127.0.0.1:54341
+          tls-insecure: true
         - address: n3:sa-v0.0.1
           publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
-          url: quic://127.0.0.1:54333#insecure
+          url: https://127.0.0.1:54351
+          tls-insecure: true
 
 digest
 --------
@@ -261,7 +272,6 @@ Specify the mongodb address that stores the data to be provided by the API and t
 .. code-block:: yaml
 
     digest:
-        storage: mongodb://127.0.0.1:27017/mc_digest
         network:
             bind: https://localhost:54320
             url: https://localhost:54320
@@ -273,9 +283,22 @@ tutorial.yml (standalone node config example)
 
 .. code-block:: yaml
 
-    address: n0:sa-v0.0.1
+    address: mc-node:sa-v0.0.1
+    privatekey: Kxt22aSeFzJiDQagrvfXPWbEbrTSPsRxbYm9BhNbNJTsrbPbFnPA:btc-priv-v0.0.1
+    storage:
+        database:
+            uri: mongodb://127.0.0.1:27017/mc
+        blockdata:
+            path: ./mc-blockfs
+    network-id: mitum
+    network:
+        bind: https://0.0.0.0:54321
+        url: https://127.0.0.1:54321
+        cert-key: mitum.key
+        cert: mitum.crt
     genesis-operations:
-        - account-keys:
+        - type: genesis-currencies
+          account-keys:
               keys:
                   - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1
                     weight: 100
@@ -284,28 +307,16 @@ tutorial.yml (standalone node config example)
               - balance: "99999999999999999999"
                 currency: MCC
                 new-account-min-balance: "33"
-          type: genesis-currencies
-    network:
-        bind: quic://0.0.0.0:54330
-        url: quic://127.0.0.1:54330
-        cert-key: mitum.key
-        cert: mitum.crt
-    network-id: mitum
+                feeer:
+                    type: fixed
+                    amount: 1
     policy:
         threshold: 100
-    privatekey: Kxt22aSeFzJiDQagrvfXPWbEbrTSPsRxbYm9BhNbNJTsrbPbFnPA:btc-priv-v0.0.1
-    publickey: skRdC6GGufQ5YLwEipjtdaL2Zsgkxo3YCjp1B6w5V4bD:btc-pub-v0.0.1
-    storage:
-        blockdata:
-            path: ./data/blockfs
-        database:
-            uri: mongodb://127.0.0.1:27017/n0_mc
     suffrage:
         nodes: 
-            - n0:sa-v0.0.1
+            - mc-node:sa-v0.0.1
 
     digest:
-        storage: mongodb://127.0.0.1:27017/mc_digest
         network:
             bind: https://0.0.0.0:54320
             url: https://127.0.0.1:54320

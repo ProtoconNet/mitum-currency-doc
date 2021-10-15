@@ -27,6 +27,7 @@ Welcome to Mitum currency's documentation!
    docs/mitum-currency-node
    docs/configuration
    docs/run-node
+   docs/handover
 
 .. toctree::
    :maxdepth: 1

@@ -12,18 +12,22 @@
 
         * See :ref:`make node run` for a detailed explanation of the ``run`` command.
 
+    * ``start-handover`` : This command replaces the running node with another node.
+
+        * See :ref:`node handover` for a detailed explanation of the ``start-handover`` command.
+
     * ``info`` : It is executed with the url of the remote node and gets the information of the node.
 
     .. code-block::
 
-        $ ./mc node info quic://127.0.0.1:54330 --tls-insecure | jq
+        $ ./mc node info https://127.0.0.1:54321 --tls-insecure | jq
         {
             "_hint": "mitum-currency-node-info-v0.0.1",
             "node": {
                 "_hint": "base-node-v0.0.1",
                 "address": "mc-node:sa-v0.0.1",
                 "publickey": "27P4S2FdDALmg4QzShCDTDne1pe8y1H2bE2uQCVpnqWpu:btc-pub-v0.0.1",
-                "url": "quic://127.0.0.1:54330"
+                "url": "https://127.0.0.1:54321"
             },
             "network_id": "bWl0dW0=",
             "state": "CONSENSUS",
@@ -40,7 +44,7 @@
                 "created_at": "2021-06-10T07:04:31.390856784Z"
             },
             "version": "v0.0.0",
-            "url": "quic://127.0.0.1:54330",
+            "url": "https://127.0.0.1:54321",
             "policy": {
                 "network_connection_timeout": 3000000000,
                 "max_operations_in_seal": 10,
@@ -59,7 +63,7 @@
                     "_hint": "base-node-v0.0.1",
                     "address": "mc-node:sa-v0.0.1",
                     "publickey": "27P4S2FdDALmg4QzShCDTDne1pe8y1H2bE2uQCVpnqWpu:btc-pub-v0.0.1",
-                    "url": "quic://127.0.0.1:54330"
+                    "url": "https://127.0.0.1:54321"
                 }
             ]
         }

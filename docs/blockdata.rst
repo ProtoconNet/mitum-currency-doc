@@ -111,7 +111,7 @@ How to update BlockDataMap for external Storage
 .. code-block::
 
     $ DEPLOY_KEY=d-974702df-89a7-4fd1-a742-2d66c1ead6cd
-    $ NODE=quic://127.0.0.1:54330
+    $ NODE=https://127.0.0.1:54321
     $ ./mc storage download map 10 --tls-insecure --node=$NODE > mapData
     $ cat mapData | jq
     {

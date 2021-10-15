@@ -32,7 +32,7 @@ Update the key of ``ac0``
 .. code-block:: sh
 
     $ NETWORK_ID="mitum"
-    $ NODE=quic://127.0.0.1:54330
+    $ NODE=https://127.0.0.1:54321
     $ AC0_PRV=KzUYFHNzxvUnZfm1ePJJ4gnLcLtMv1Tvod7Fib2sRuFmGwzm1GVb:btc-priv-v0.0.1
     $ AC0_PUB=2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc:btc-pub-v0.0.1
     $ AC0_ADDR=381mXScfnV5mU38woCRn1VqUYqpVAoQf9fg2rXXN6iVv:mca-v0.0.1

@@ -89,7 +89,7 @@ create-account Operation
 .. code-block:: sh
 
     $ NETWORK_ID=mitum
-    $ NODE=quic://127.0.0.1:54330
+    $ NODE=https://127.0.0.1:54321
     $ GENESIS_PRV=L5GTSKkRs9NPsXwYgACZdodNUJqCAWjz2BccuR4cAgxJumEZWjok:btc-priv-v0.0.1
     $ GENESIS_ADDR=GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz:mca-v0.0.1
     $ CURRENCY_ID=MCC
