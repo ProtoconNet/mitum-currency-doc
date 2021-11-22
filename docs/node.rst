@@ -25,8 +25,8 @@
             "_hint": "mitum-currency-node-info-v0.0.1",
             "node": {
                 "_hint": "base-node-v0.0.1",
-                "address": "mc-node:sa-v0.0.1",
-                "publickey": "27P4S2FdDALmg4QzShCDTDne1pe8y1H2bE2uQCVpnqWpu:btc-pub-v0.0.1",
+                "address": "mc-node~sa-v0.0.1",
+                "publickey": "27P4S2FdDALmg4QzShCDTDne1pe8y1H2bE2uQCVpnqWpu~btc-pub-v0.0.1",
                 "url": "https://127.0.0.1:54321"
             },
             "network_id": "bWl0dW0=",
@@ -61,8 +61,8 @@
             "suffrage": [
                 {
                     "_hint": "base-node-v0.0.1",
-                    "address": "mc-node:sa-v0.0.1",
-                    "publickey": "27P4S2FdDALmg4QzShCDTDne1pe8y1H2bE2uQCVpnqWpu:btc-pub-v0.0.1",
+                    "address": "mc-node~sa-v0.0.1",
+                    "publickey": "27P4S2FdDALmg4QzShCDTDne1pe8y1H2bE2uQCVpnqWpu~btc-pub-v0.0.1",
                     "url": "https://127.0.0.1:54321"
                 }
             ]

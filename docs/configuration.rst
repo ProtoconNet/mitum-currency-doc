@@ -12,7 +12,7 @@ address
 
 .. code-block:: yaml
 
-    address: n0:sa-v0.0.1
+    address: n0~sa-v0.0.1
 
 genesis-operations
 ------------------------
@@ -27,7 +27,7 @@ genesis-operations
     genesis-operations:
         - account-keys:
               keys:
-                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1
+                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG~btc-pub-v0.0.1
                     weight: 100
               threshold: 100
           currencies:
@@ -184,17 +184,17 @@ suffrage > nodes
 -----------------
 
 * Set addresses for suffrage nodes participating in consensus.
-* The alias name of the local node is n0:sa-v0.0.1.
+* The alias name of the local node is n0~sa-v0.0.1.
 * If n0, n1, n2, n3 nodes are included in the suffrage nodes, it can be set as follows.
 
 .. code-block:: yaml
 
     suffrage:
         nodes:
-            - n0:sa-v0.0.1
-            - n1:sa-v0.0.1
-            - n2:sa-v0.0.1
-            - n3:sa-v0.0.1
+            - n0~sa-v0.0.1
+            - n1~sa-v0.0.1
+            - n2~sa-v0.0.1
+            - n3~sa-v0.0.1
 
 * If the n0 node, which is a local node, is not included in the suffrage nodes, the local node becomes a None-Suffrage node and serves only as a syncing node.
 * The Syncing node does not participate in consensus and only syncs the generated block data.
@@ -207,9 +207,9 @@ suffrage > nodes
 
     suffrage:
         nodes:
-            - n1:sa-v0.0.1
-            - n2:sa-v0.0.1
-            - n3:sa-v0.0.1
+            - n1~sa-v0.0.1
+            - n2~sa-v0.0.1
+            - n3~sa-v0.0.1
 
 sync-interval
 -----------------
@@ -237,30 +237,30 @@ nodes
 
     (In case of suffrage node)
     nodes:
-        - address: n1:sa-v0.0.1
-          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
+        - address: n1~sa-v0.0.1
+          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM~btc-pub-v0.0.1
           tls-insecure: true
-        - address: n2:sa-v0.0.1
-          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd:btc-pub-v0.0.1
+        - address: n2~sa-v0.0.1
+          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd~btc-pub-v0.0.1
           tls-insecure: true
-        - address: n3:sa-v0.0.1
-          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
+        - address: n3~sa-v0.0.1
+          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb~btc-pub-v0.0.1
           tls-insecure: true
 
 .. code-block:: yaml
 
     (If it is not a suffrage node)
     nodes:
-        - address: n1:sa-v0.0.1
-          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM:btc-pub-v0.0.1
+        - address: n1~sa-v0.0.1
+          publickey: ktJ4Lb6VcmjrbexhDdJBMnXPXfpGWnNijacdxD2SbvRM~btc-pub-v0.0.1
           url: https://127.0.0.1:54331
           tls-insecure: true
-        - address: n2:sa-v0.0.1
-          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd:btc-pub-v0.0.1
+        - address: n2~sa-v0.0.1
+          publickey: wfVsNvKaGbzB18hwix9L3CEyk5VM8GaogdRT4fD3Z6Zd~btc-pub-v0.0.1
           url: https://127.0.0.1:54341
           tls-insecure: true
-        - address: n3:sa-v0.0.1
-          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb:btc-pub-v0.0.1
+        - address: n3~sa-v0.0.1
+          publickey: vAydAnFCHoYV6VDUhgToWaiVEtn5V4SXEFpSJVcTtRxb~btc-pub-v0.0.1
           url: https://127.0.0.1:54351
           tls-insecure: true
 
@@ -283,8 +283,8 @@ tutorial.yml (standalone node config example)
 
 .. code-block:: yaml
 
-    address: mc-node:sa-v0.0.1
-    privatekey: Kxt22aSeFzJiDQagrvfXPWbEbrTSPsRxbYm9BhNbNJTsrbPbFnPA:btc-priv-v0.0.1
+    address: mc-node~sa-v0.0.1
+    privatekey: Kxt22aSeFzJiDQagrvfXPWbEbrTSPsRxbYm9BhNbNJTsrbPbFnPA~btc-priv-v0.0.1
     storage:
         database:
             uri: mongodb://127.0.0.1:27017/mc
@@ -300,7 +300,7 @@ tutorial.yml (standalone node config example)
         - type: genesis-currencies
           account-keys:
               keys:
-                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1
+                  - publickey: rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG~btc-pub-v0.0.1
                     weight: 100
               threshold: 100
           currencies:
@@ -314,7 +314,7 @@ tutorial.yml (standalone node config example)
         threshold: 100
     suffrage:
         nodes: 
-            - mc-node:sa-v0.0.1
+            - mc-node~sa-v0.0.1
 
     digest:
         network:

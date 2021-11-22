@@ -42,7 +42,7 @@ Fact and token
                         {
                             "_hint": "mitum-currency-key-v0.0.1",
                             "weight": 100,
-                            "key": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc:btc-pub-v0.0.1"
+                            "key": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc~btc-pub-v0.0.1"
                         }
                     ],
                     "threshold": 100

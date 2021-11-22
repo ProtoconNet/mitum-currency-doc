@@ -26,21 +26,21 @@ Node A configuration
 
 .. code-block:: yml
 
-    address: A:sa-v0.0.1
+    address: A~sa-v0.0.1
     network-id: mitum
     network:
         url: https://172.17.0.1:54321
-    privatekey: KyfqCLSEyfUhskZ63WtVH3m3pGgnurFHuTgkgu73Pgyjf8sxbp8R:btc-priv-v0.0.1
+    privatekey: KyfqCLSEyfUhskZ63WtVH3m3pGgnurFHuTgkgu73Pgyjf8sxbp8R~btc-priv-v0.0.1
 
 Node A-sub configuration
 
 .. code-block:: yml
 
-    address: A:sa-v0.0.1
+    address: A~sa-v0.0.1
     network-id: mitum
     network:
         url: https://172.17.0.2:54321
-    privatekey: KyfqCLSEyfUhskZ63WtVH3m3pGgnurFHuTgkgu73Pgyjf8sxbp8R:btc-priv-v0.0.1
+    privatekey: KyfqCLSEyfUhskZ63WtVH3m3pGgnurFHuTgkgu73Pgyjf8sxbp8R~btc-priv-v0.0.1
 
 How to run
 ----------------------------------
@@ -53,8 +53,8 @@ How to run
 .. code-block:: sh
 
     $ mitum-currency node start-handover \
-      "A:sa-v0.0.1" \
-      "KyfqCLSEyfUhskZ63WtVH3m3pGgnurFHuTgkgu73Pgyjf8sxbp8R:btc-priv-v0.0.1" \
+      "A~sa-v0.0.1" \
+      "KyfqCLSEyfUhskZ63WtVH3m3pGgnurFHuTgkgu73Pgyjf8sxbp8R~btc-priv-v0.0.1" \
       "mitum" \
       "https://172.17.0.2:54321"
 

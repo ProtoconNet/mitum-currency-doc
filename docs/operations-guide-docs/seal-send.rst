@@ -20,7 +20,7 @@ Seal Send
         "_hint": "seal-v0.0.1",
         "hash": "6nLRWj5hGQ7va9gxpAJCBxNDKvgFnms9jaa913uWgsx1",
         "body_hash": "32ZEf8V9fV41JHVWbbqQdYWtrw5T255XN8fSXhBAhGFD",
-        "signer": "cnMJqt1Q7LXKqFAWprm6FBC7fRbWQeZhrymTavN11PKJ:btc-pub-v0.0.1",
+        "signer": "cnMJqt1Q7LXKqFAWprm6FBC7fRbWQeZhrymTavN11PKJ~btc-pub-v0.0.1",
         "signature": "381yXZ4LFY5HnK211gpG3W22V52vMLqix4SysXEeMnqcXUk5eEYGM1JfFaX5UE86EF6qog5jUScPqZo6UkiaAFocUhwtSsjx",
         "signed_at": "2021-06-10T09:17:51.236729Z",
         "operations": [
@@ -31,7 +31,7 @@ Seal Send
                     "_hint": "mitum-currency-create-accounts-operation-fact-v0.0.1",
                     "hash": "3equMRJAVHk8WdVanffzEWkHfwnBDqF2cFwmmcv8MzDW",
                     "token": "MjAyMS0wNi0xMFQwOToxNzo1MS4yMDgwOTVa",
-                    "sender": "EbVibuKTyPqRVRcCpMRQdP7wBkr33GW2brSQvZQNJDSn:mca-v0.0.1",
+                    "sender": "EbVibuKTyPqRVRcCpMRQdP7wBkr33GW2brSQvZQNJDSn~mca-v0.0.1",
                     "items": [
                         {
                             "_hint": "mitum-currency-create-accounts-single-amount-v0.0.1",
@@ -42,7 +42,7 @@ Seal Send
                                     {
                                         "_hint": "mitum-currency-key-v0.0.1",
                                         "weight": 100,
-                                        "key": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc:btc-pub-v0.0.1"
+                                        "key": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc~btc-pub-v0.0.1"
                                     }
                                 ],
                                 "threshold": 100
@@ -60,7 +60,7 @@ Seal Send
                 "fact_signs": [
                     {
                         "_hint": "base-fact-sign-v0.0.1",
-                        "signer": "cnMJqt1Q7LXKqFAWprm6FBC7fRbWQeZhrymTavN11PKJ:btc-pub-v0.0.1",
+                        "signer": "cnMJqt1Q7LXKqFAWprm6FBC7fRbWQeZhrymTavN11PKJ~btc-pub-v0.0.1",
                         "signature": "AN1rKvtPEX4MRu6kWRYDJ6WtsSnwxwJsYXiVi2Qujx8sF6SJzsZZKj7anCd9cmUZ175FSYLkkWkpDRj3fVgZFDxLFSnos3szz",
                         "signed_at": "2021-06-10T09:17:51.211816Z"
                     }

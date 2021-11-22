@@ -24,7 +24,7 @@ Get operation fact template
             "_hint": "mitum-currency-create-accounts-operation-fact-v0.0.1",
             "hash": "3Zdg5ZVdNFRbwX5WU7Nada3Wnx5VEgkHrDLVLkE8FMs1",
             "token": "cmFpc2VkIGJ5",
-            "sender": "mother:mca-v0.0.1",
+            "sender": "mother~mca-v0.0.1",
             "items": [
                 {
                     "_hint": "mitum-currency-create-accounts-single-amount-v0.0.1",
@@ -35,7 +35,7 @@ Get operation fact template
                             {
                                 _hint": "mitum-currency-key-v0.0.1",
                                 "weight": 100,
-                                "key": "oRHdEPPrgbfNxUp6TWsC35DmWu1zbLCW9rp41Z8npF8H:btc-pub-v0.0.1"
+                                "key": "oRHdEPPrgbfNxUp6TWsC35DmWu1zbLCW9rp41Z8npF8H~btc-pub-v0.0.1"
                             }
                         ],
                         "threshold": 100
@@ -57,11 +57,11 @@ Get operation fact template
         },
         "_extra": {
             "default": {
-                "items.keys.keys.key": "oRHdEPPrgbfNxUp6TWsC35DmWu1zbLCW9rp41Z8npF8H:btc-pub-v0.0.1"
+                "items.keys.keys.key": "oRHdEPPrgbfNxUp6TWsC35DmWu1zbLCW9rp41Z8npF8H~btc-pub-v0.0.1"
                 "items.big": "-333",
                 "currency": "xXx",
                 "token": "cmFpc2VkIGJ5",
-                "sender": "mother:mca-v0.0.1",
+                "sender": "mother~mca-v0.0.1",
             }
         }
     }
@@ -77,7 +77,7 @@ Get operation fact template
         "_hint": "mitum-currency-create-accounts-operation-fact-v0.0.1",
         "hash": "3Zdg5ZVdNFRbwX5WU7Nada3Wnx5VEgkHrDLVLkE8FMs1",
         "token": "cmFpc2VkIGJ5",
-        "sender": "mother:mca-v0.0.1",
+        "sender": "mother~mca-v0.0.1",
         "items": [
             {
                 "_hint": "mitum-currency-create-accounts-single-amount-v0.0.1",
@@ -88,7 +88,7 @@ Get operation fact template
                         {
                             _hint": "mitum-currency-key-v0.0.1",
                             "weight": 100,
-                            "key": "oRHdEPPrgbfNxUp6TWsC35DmWu1zbLCW9rp41Z8npF8H:btc-pub-v0.0.1"
+                            "key": "oRHdEPPrgbfNxUp6TWsC35DmWu1zbLCW9rp41Z8npF8H~btc-pub-v0.0.1"
                         }
                     ],
                     "threshold": 100
@@ -125,7 +125,7 @@ Build operation message
         "_hint": "mitum-currency-create-accounts-operation-fact-v0.0.1",
         "hash": "3Zdg5ZVdNFRbwX5WU7Nada3Wnx5VEgkHrDLVLkE8FMs1",
         "token": "cmFpc2VkIGJ5",
-        "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz:mca-v0.0.1",
+        "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz~mca-v0.0.1",
         "items": [
             {
             "_hint": "mitum-currency-create-accounts-single-amount-v0.0.1",
@@ -136,7 +136,7 @@ Build operation message
                 {
                     "_hint": "mitum-currency-key-v0.0.1",
                     "weight": 100,
-                    "key": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc:btc-pub-v0.0.1"
+                    "key": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc~btc-pub-v0.0.1"
                 }
                 ],
                 "threshold": 100
@@ -169,7 +169,7 @@ Build operation message
                 "_hint": "mitum-currency-create-accounts-operation-fact-v0.0.1",
                 "hash": "9ttqrz1bkFNCySVnrhYrxewcVB6mkZWWvBpSPS2fShip",
                 "token": "MjAyMS0wNi0xNSAwODo0OTozOS45NDggKzAwMDAgVVRD",
-                "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz:mca-v0.0.1",
+                "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz~mca-v0.0.1",
                 "items": [
                     {
                         "_hint": "mitum-currency-create-accounts-single-amount-v0.0.1",
@@ -180,7 +180,7 @@ Build operation message
                                 {
                                     "_hint": "mitum-currency-key-v0.0.1",
                                     "weight": 100,
-                                    "key": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc:btc-pub-v0.0.1"
+                                    "key": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc~btc-pub-v0.0.1"
                                 }
                             ],
                             "threshold": 100
@@ -198,7 +198,7 @@ Build operation message
             "fact_signs": [
                 {
                     "_hint": "base-fact-sign-v0.0.1",
-                    "signer": "oRHdEPPrgbfNxUp6TWsC35DmWu1zbLCW9rp41Z8npF8H:btc-pub-v0.0.1",
+                    "signer": "oRHdEPPrgbfNxUp6TWsC35DmWu1zbLCW9rp41Z8npF8H~btc-pub-v0.0.1",
                     "signature": "22UZo26eN",
                     "signed_at": "2020-10-08T07:53:26Z"
                 }
@@ -213,7 +213,7 @@ Build operation message
         },
         "_extra": {
             "default": {
-                "fact_signs.signer": "oRHdEPPrgbfNxUp6TWsC35DmWu1zbLCW9rp41Z8npF8H:btc-pub-v0.0.1",
+                "fact_signs.signer": "oRHdEPPrgbfNxUp6TWsC35DmWu1zbLCW9rp41Z8npF8H~btc-pub-v0.0.1",
                 "fact_signs.signature": "22UZo26eN"
             },
             "signature_base": "hCi8MFOChFusqKx6v0zrsJ8u3tppYUOewadYjwTvDUFtaXR1bQ=="
@@ -244,7 +244,7 @@ Sign operation message
             "_hint": "mitum-currency-create-accounts-operation-fact-v0.0.1",
             "hash": "CDUkHDJB4aC8552QvVCAPk8ZtohSuow67cPZZxqZG7RE",
             "token": "MjAyMS0wMy0yNCAwMjozNzozNC4xNzQgKzAwMDAgVVRD",
-            "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz:mca-v0.0.1",
+            "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz~mca-v0.0.1",
             "items": [
                 {
                     "_hint": "mitum-currency-create-accounts-single-amount-v0.0.1",
@@ -255,7 +255,7 @@ Sign operation message
                             {
                                 "_hint": "mitum-currency-key-v0.0.1",
                                 "weight": 100,
-                                "key": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc:btc-pub-v0.0.1"
+                                "key": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc~btc-pub-v0.0.1"
                             }
                         ],
                         "threshold": 100
@@ -273,7 +273,7 @@ Sign operation message
         "fact_signs": [
             {
                 "_hint": "base-fact-sign-v0.0.1",
-                "signer": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1",
+                "signer": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG~btc-pub-v0.0.1",
                 "signature": "AN1rKvtVhunuSdS8g3KWQ1PFBEP9bzz4sU4Vb3B4JrYyVUF79XwNUrG6AzoVfq6mHsK8W4S5hu7LKjDARfAQeDWwit1GnKXcN",
                 "signed_at": "2021-06-16T01:56:14.124268Z"
             }
@@ -295,7 +295,7 @@ response example
                 "_hint": "mitum-currency-create-accounts-operation-fact-v0.0.1",
                 "hash": "CDUkHDJB4aC8552QvVCAPk8ZtohSuow67cPZZxqZG7RE",
                 "token": "MjAyMS0wMy0yNCAwMjozNzozNC4xNzQgKzAwMDAgVVRD",
-                "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz:mca-v0.0.1",
+                "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz~mca-v0.0.1",
                 "items": [
                     {
                         "_hint": "mitum-currency-create-accounts-single-amount-v0.0.1",
@@ -306,7 +306,7 @@ response example
                                 {
                                     "_hint": "mitum-currency-key-v0.0.1",
                                     "weight": 100,
-                                    "key": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc:btc-pub-v0.0.1"
+                                    "key": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc~btc-pub-v0.0.1"
                                 }
                             ],
                             "threshold": 100
@@ -324,7 +324,7 @@ response example
             "fact_signs": [
                 {
                     "_hint": "base-fact-sign-v0.0.1",
-                    "signer": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1",
+                    "signer": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG~btc-pub-v0.0.1",
                     "signature": "AN1rKvtVhunuSdS8g3KWQ1PFBEP9bzz4sU4Vb3B4JrYyVUF79XwNUrG6AzoVfq6mHsK8W4S5hu7LKjDARfAQeDWwit1GnKXcN",
                     "signed_at": "2021-06-16T01:56:14.124268Z"
                 }
@@ -359,7 +359,7 @@ Broadcast message to network
             "_hint": "mitum-currency-create-accounts-operation-fact-v0.0.1",
             "hash": "CDUkHDJB4aC8552QvVCAPk8ZtohSuow67cPZZxqZG7RE",
             "token": "MjAyMS0wMy0yNCAwMjozNzozNC4xNzQgKzAwMDAgVVRD",
-            "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz:mca-v0.0.1",
+            "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz~mca-v0.0.1",
             "items": [
                 {
                     "_hint": "mitum-currency-create-accounts-single-amount-v0.0.1",
@@ -370,7 +370,7 @@ Broadcast message to network
                             {
                                 "_hint": "mitum-currency-key-v0.0.1",
                                 "weight": 100,
-                                "key": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc:btc-pub-v0.0.1"
+                                "key": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc~btc-pub-v0.0.1"
                             }
                         ],
                         "threshold": 100
@@ -388,7 +388,7 @@ Broadcast message to network
         "fact_signs": [
             {
                 "_hint": "base-fact-sign-v0.0.1",
-                "signer": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1",
+                "signer": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG~btc-pub-v0.0.1",
                 "signature": "AN1rKvtVhunuSdS8g3KWQ1PFBEP9bzz4sU4Vb3B4JrYyVUF79XwNUrG6AzoVfq6mHsK8W4S5hu7LKjDARfAQeDWwit1GnKXcN",
                 "signed_at": "2021-06-16T01:56:14.124268Z"
             }
@@ -410,7 +410,7 @@ response example
             "_hint": "seal-v0.0.1",
             "hash": "4UvusVw9RYdqxHQz2EzDb6gW6CgoZGPayD1yZBcdSSHW",
             "body_hash": "9AFx2gAqeMveV6ojwUi6HKx19GfbZZggPTGhTS3dDih5",
-            "signer": "uGnKHNfh8EtNVXsL4Qu1a655oQuzibK8Tc41TZUHzHqk:btc-pub-v0.0.1",
+            "signer": "uGnKHNfh8EtNVXsL4Qu1a655oQuzibK8Tc41TZUHzHqk~btc-pub-v0.0.1",
             "signature": "381yXZAzT6LcYUXfTG9Fifc6neDfXDqpjzuGzfqr1LXPMvvtseJKzGSRwdL6jvkHBaVRdGPD4YfrHnp2rbpZEEWRNAePiJBt",
             "signed_at": "2021-06-16T03:06:33.649190888Z",
             "operations": [
@@ -421,7 +421,7 @@ response example
                         "_hint": "mitum-currency-create-accounts-operation-fact-v0.0.1",
                         "hash": "CDUkHDJB4aC8552QvVCAPk8ZtohSuow67cPZZxqZG7RE",
                         "token": "MjAyMS0wMy0yNCAwMjozNzozNC4xNzQgKzAwMDAgVVRD",
-                        "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz:mca-v0.0.1",
+                        "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz~mca-v0.0.1",
                         "items": [
                             {
                                 "_hint": "mitum-currency-create-accounts-single-amount-v0.0.1",
@@ -432,7 +432,7 @@ response example
                                         {
                                             "_hint": "mitum-currency-key-v0.0.1",
                                             "weight": 100,
-                                            "key": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc:btc-pub-v0.0.1"
+                                            "key": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc~btc-pub-v0.0.1"
                                         }
                                     ],
                                     "threshold": 100
@@ -450,7 +450,7 @@ response example
                     "fact_signs": [
                         {
                             "_hint": "base-fact-sign-v0.0.1",
-                            "signer": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1",
+                            "signer": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG~btc-pub-v0.0.1",
                             "signature": "AN1rKvtVhunuSdS8g3KWQ1PFBEP9bzz4sU4Vb3B4JrYyVUF79XwNUrG6AzoVfq6mHsK8W4S5hu7LKjDARfAQeDWwit1GnKXcN",
                             "signed_at": "2021-06-16T01:56:14.124268Z"
                         }
@@ -500,7 +500,7 @@ Confirming the success of the operation
                     "_hint": "mitum-currency-create-accounts-operation-fact-v0.0.1",
                     "hash": "CDUkHDJB4aC8552QvVCAPk8ZtohSuow67cPZZxqZG7RE",
                     "token": "MjAyMS0wMy0yNCAwMjozNzozNC4xNzQgKzAwMDAgVVRD",
-                    "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz:mca-v0.0.1",
+                    "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz~mca-v0.0.1",
                     "items": [
                         {
                             "_hint": "mitum-currency-create-accounts-single-amount-v0.0.1",
@@ -511,7 +511,7 @@ Confirming the success of the operation
                                     {
                                         "_hint": "mitum-currency-key-v0.0.1",
                                         "weight": 100,
-                                        "key": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc:btc-pub-v0.0.1"
+                                        "key": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc~btc-pub-v0.0.1"
                                     }
                                 ],
                                 "threshold": 100
@@ -529,7 +529,7 @@ Confirming the success of the operation
                 "fact_signs": [
                     {
                         "_hint": "base-fact-sign-v0.0.1",
-                        "signer": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1",
+                        "signer": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG~btc-pub-v0.0.1",
                         "signature": "AN1rKvtVhunuSdS8g3KWQ1PFBEP9bzz4sU4Vb3B4JrYyVUF79XwNUrG6AzoVfq6mHsK8W4S5hu7LKjDARfAQeDWwit1GnKXcN",
                         "signed_at": "2021-06-16T01:56:14.124Z"
                     }

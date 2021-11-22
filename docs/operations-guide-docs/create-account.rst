@@ -21,15 +21,15 @@ create-account Operation
 .. code-block:: sh
 
     $ NETWORK_ID="mitum"
-    $ GENESIS_PRV=L5GTSKkRs9NPsXwYgACZdodNUJqCAWjz2BccuR4cAgxJumEZWjok:btc-priv-v0.0.1
-    $ GENESIS_ADDR=GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz:mca-v0.0.1
-    $ AC0_PUB=cnMJqt1Q7LXKqFAWprm6FBC7fRbWQeZhrymTavN11PKJ:btc-pub-v0.0.1
+    $ GENESIS_PRV=L5GTSKkRs9NPsXwYgACZdodNUJqCAWjz2BccuR4cAgxJumEZWjok~btc-priv-v0.0.1
+    $ GENESIS_ADDR=GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz~mca-v0.0.1
+    $ AC0_PUB=cnMJqt1Q7LXKqFAWprm6FBC7fRbWQeZhrymTavN11PKJ~btc-pub-v0.0.1
     $ ./mc seal create-account --network-id="$NETWORK_ID" $GENESIS_PRV $GENESIS_ADDR XXX 50 --key=$AC0_PUB,100 | jq
     {
         "_hint": "seal-v0.0.1",
         "hash": "Xr7HS7rnbfxTrNbr6qRJ64on6KFuMzvJf5Z6BGqVZsX",
         "body_hash": "EJ93htxhUh2edJhBujMCHhpvGGHQoBic8KQ7VzggxKw1",
-        "signer": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1",
+        "signer": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG~btc-pub-v0.0.1",
         "signature": "381yXZUffVp3gmKD2WJA6756SeDy16d3PF6Ym15HBL89rs1YhT1cW4zVnWD17mhBdhfhutu3848GPd9zTMDqUFmkE8rUWmCs",
         "signed_at": "2021-06-10T14:06:17.60152Z",
         "operations": [
@@ -40,7 +40,7 @@ create-account Operation
                     "_hint": "mitum-currency-create-accounts-operation-fact-v0.0.1",
                     "hash": "F1o51xXWnnQYUVV6JA44beJeKKxuJi3Tv8DzvREodHhA",
                     "token": "MjAyMS0wNi0xMFQxNDowNjoxNy41OTczMDNa",
-                    "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz:mca-v0.0.1",
+                    "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz~mca-v0.0.1",
                     "items": [
                         {
                             "_hint": "mitum-currency-create-accounts-single-amount-v0.0.1",
@@ -51,7 +51,7 @@ create-account Operation
                                     {
                                         "_hint": "mitum-currency-key-v0.0.1",
                                         "weight": 100,
-                                        "key": "cnMJqt1Q7LXKqFAWprm6FBC7fRbWQeZhrymTavN11PKJ:btc-pub-v0.0.1"
+                                        "key": "cnMJqt1Q7LXKqFAWprm6FBC7fRbWQeZhrymTavN11PKJ~btc-pub-v0.0.1"
                                     }
                                 ],
                                 "threshold": 100
@@ -69,7 +69,7 @@ create-account Operation
                 "fact_signs": [
                     {
                         "_hint": "base-fact-sign-v0.0.1",
-                        "signer": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1",
+                        "signer": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG~btc-pub-v0.0.1",
                         "signature": "381yXYyRo91cqu5gFp5GtHWCiYmsssbFxx95MaL8gH4koBCZ5AfnRqYEpWMxcxgKmeEWsRPVJ8zWytAMLiA9zQes9qGnbcj8",
                         "signed_at": "2021-06-10T14:06:17.601089Z"
                     }
@@ -90,11 +90,11 @@ create-account Operation
 
     $ NETWORK_ID=mitum
     $ NODE=https://127.0.0.1:54321
-    $ GENESIS_PRV=L5GTSKkRs9NPsXwYgACZdodNUJqCAWjz2BccuR4cAgxJumEZWjok:btc-priv-v0.0.1
-    $ GENESIS_ADDR=GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz:mca-v0.0.1
+    $ GENESIS_PRV=L5GTSKkRs9NPsXwYgACZdodNUJqCAWjz2BccuR4cAgxJumEZWjok~btc-priv-v0.0.1
+    $ GENESIS_ADDR=GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz~mca-v0.0.1
     $ CURRENCY_ID=MCC
-    $ AC0_PUB=cnMJqt1Q7LXKqFAWprm6FBC7fRbWQeZhrymTavN11PKJ:btc-pub-v0.0.1
-    $ AC1_PUB=sdjgo1jJ2kxAxMyBj6qZDb8okZpwzHYE8ZACgePYW4eT:btc-pub-v0.0.1
+    $ AC0_PUB=cnMJqt1Q7LXKqFAWprm6FBC7fRbWQeZhrymTavN11PKJ~btc-pub-v0.0.1
+    $ AC1_PUB=sdjgo1jJ2kxAxMyBj6qZDb8okZpwzHYE8ZACgePYW4eT~btc-pub-v0.0.1
     $ ./mc seal create-account --network-id="$NETWORK_ID" \
       $GENESIS_PRV $GENESIS_ADDR $CURRENCY_ID 50 \
       --key=$AC0_PUB,100 |
@@ -108,7 +108,7 @@ create-account Operation
       "_hint": "seal-v0.0.1",
       "hash": "Fup759XEwxedA16ZNK2Qc3Xpe6c4GcAKJwwyaCnVKFEh",
       "body_hash": "6RP8EXGdY3u6UzqtoNNcsAmpFRRAYr3cUqNUQ42tKSAD",
-      "signer": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1",
+      "signer": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG~btc-pub-v0.0.1",
       "signature": "AN1rKvt5J5QPg22X9oLksveo9413sjhtL9mJ7wxf7kuo5oxPwYtPtVsDZF9tZdB3H99xPCJW6UarReuxYCJKtdiPxxea41da1",
       "signed_at": "2021-06-10T15:01:12.817304Z",
       "operations": [
@@ -119,7 +119,7 @@ create-account Operation
             "_hint": "mitum-currency-create-accounts-operation-fact-v0.0.1",
             "hash": "Dg4Uh7iJQTJE14FhFkR38ctKKedX9CRaURvfCWG4DtvX",
             "token": "MjAyMS0wNi0xMFQxNTowMToxMi44MTI3OVo=",
-            "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz:mca-v0.0.1",
+            "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz~mca-v0.0.1",
             "items": [
               {
                 "_hint": "mitum-currency-create-accounts-single-amount-v0.0.1",
@@ -130,7 +130,7 @@ create-account Operation
                     {
                       "_hint": "mitum-currency-key-v0.0.1",
                       "weight": 100,
-                      "key": "cnMJqt1Q7LXKqFAWprm6FBC7fRbWQeZhrymTavN11PKJ:btc-pub-v0.0.1"
+                      "key": "cnMJqt1Q7LXKqFAWprm6FBC7fRbWQeZhrymTavN11PKJ~btc-pub-v0.0.1"
                     }
                   ],
                   "threshold": 100
@@ -148,7 +148,7 @@ create-account Operation
           "fact_signs": [
             {
               "_hint": "base-fact-sign-v0.0.1",
-              "signer": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1",
+              "signer": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG~btc-pub-v0.0.1",
               "signature": "AN1rKvtT5JfDeuFyCy3kiWwGkaAy9AYeEd2RtxdSr1dpuurSZCc1uAapx9qaRDK5WxdU69RwaSTHXyLUo4rCtEA4UaUfHS91B",
               "signed_at": "2021-06-10T15:01:12.816836Z"
             }
@@ -161,7 +161,7 @@ create-account Operation
       "_hint": "seal-v0.0.1",
       "hash": "HV1tT3D639TiYe6bmamXtesvNjAN8tJ7AmgmeB6STrwz",
       "body_hash": "Gg5KQzzNPAt5PiLrcE5kjMbd4jB7Vk4ooBmN81yWDqYv",
-      "signer": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1",
+      "signer": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG~btc-pub-v0.0.1",
       "signature": "381yXZ1szjaYdxsznCpSvg19yS1tKUw1yPmgXBX6Ehf5ZcKNaMCRkJ8PaNS34rUwLSZ88EPh8vFq1FfRncHiTfo1v9adHCSH",
       "signed_at": "2021-06-10T15:01:13.080144Z",
       "operations": [
@@ -173,7 +173,7 @@ create-account Operation
             "_hint": "mitum-currency-create-accounts-operation-fact-v0.0.1",
             "hash": "3fDBD1i6V5VpGxB1di6JGgMPhyWZeWRML8FX4LnYXqJE",
             "token": "MjAyMS0wNi0xMFQxNTowMToxMy4wNDA0OTZa",
-            "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz:mca-v0.0.1",
+            "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz~mca-v0.0.1",
             "items": [
               {
                 "_hint": "mitum-currency-create-accounts-single-amount-v0.0.1",
@@ -184,7 +184,7 @@ create-account Operation
                     {
                       "_hint": "mitum-currency-key-v0.0.1",
                       "weight": 100,
-                      "key": "cnMJqt1Q7LXKqFAWprm6FBC7fRbWQeZhrymTavN11PKJ:btc-pub-v0.0.1"
+                      "key": "cnMJqt1Q7LXKqFAWprm6FBC7fRbWQeZhrymTavN11PKJ~btc-pub-v0.0.1"
                     }
                   ],
                   "threshold": 100
@@ -206,7 +206,7 @@ create-account Operation
                     {
                       "_hint": "mitum-currency-key-v0.0.1",
                       "weight": 100,
-                      "key": "sdjgo1jJ2kxAxMyBj6qZDb8okZpwzHYE8ZACgePYW4eT:btc-pub-v0.0.1"
+                      "key": "sdjgo1jJ2kxAxMyBj6qZDb8okZpwzHYE8ZACgePYW4eT~btc-pub-v0.0.1"
                     }
                   ],
                   "threshold": 100
@@ -224,7 +224,7 @@ create-account Operation
           "fact_signs": [
             {
               "_hint": "base-fact-sign-v0.0.1",
-              "signer": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1",
+              "signer": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG~btc-pub-v0.0.1",
               "signature": "AN1rKvthtCymTu7gv2fSrMhGwqVuK3o24FrDe6GGLzRU8N5SWF62nPs3iKcEjuzwHya6P9JmrNLRF95ri8QTE4NBc66TxhCHm",
               "signed_at": "2021-06-10T15:01:13.053303Z"
             }
@@ -255,7 +255,7 @@ create-account Operation
             "_hint": "mitum-currency-create-accounts-operation-fact-v0.0.1",
             "hash": "3fDBD1i6V5VpGxB1di6JGgMPhyWZeWRML8FX4LnYXqJE",
             "token": "MjAyMS0wNi0xMFQxNTowMToxMy4wNDA0OTZa",
-            "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz:mca-v0.0.1",
+            "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz~mca-v0.0.1",
             "items": [
               {
                 "_hint": "mitum-currency-create-accounts-single-amount-v0.0.1",
@@ -266,7 +266,7 @@ create-account Operation
                     {
                       "_hint": "mitum-currency-key-v0.0.1",
                       "weight": 100,
-                      "key": "cnMJqt1Q7LXKqFAWprm6FBC7fRbWQeZhrymTavN11PKJ:btc-pub-v0.0.1"
+                      "key": "cnMJqt1Q7LXKqFAWprm6FBC7fRbWQeZhrymTavN11PKJ~btc-pub-v0.0.1"
                     }
                   ],
                   "threshold": 100
@@ -288,7 +288,7 @@ create-account Operation
                     {
                       "_hint": "mitum-currency-key-v0.0.1",
                       "weight": 100,
-                      "key": "sdjgo1jJ2kxAxMyBj6qZDb8okZpwzHYE8ZACgePYW4eT:btc-pub-v0.0.1"
+                      "key": "sdjgo1jJ2kxAxMyBj6qZDb8okZpwzHYE8ZACgePYW4eT~btc-pub-v0.0.1"
                     }
                   ],
                   "threshold": 100
@@ -306,7 +306,7 @@ create-account Operation
           "fact_signs": [
             {
               "_hint": "base-fact-sign-v0.0.1",
-              "signer": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG:btc-pub-v0.0.1",
+              "signer": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG~btc-pub-v0.0.1",
               "signature": "AN1rKvthtCymTu7gv2fSrMhGwqVuK3o24FrDe6GGLzRU8N5SWF62nPs3iKcEjuzwHya6P9JmrNLRF95ri8QTE4NBc66TxhCHm",
               "signed_at": "2021-06-10T15:01:13.053Z"
             }
@@ -327,14 +327,14 @@ create-account Operation
           "href": "/block/13/manifest"
         },
         "new_account:EbVibuKTyPqRVRcCpMRQdP7wBkr33GW2brSQvZQNJDSn": {
-          "href": "/account/EbVibuKTyPqRVRcCpMRQdP7wBkr33GW2brSQvZQNJDSn:mca-v0.0.1",
-          "address": "EbVibuKTyPqRVRcCpMRQdP7wBkr33GW2brSQvZQNJDSn:mca-v0.0.1",
+          "href": "/account/EbVibuKTyPqRVRcCpMRQdP7wBkr33GW2brSQvZQNJDSn~mca-v0.0.1",
+          "address": "EbVibuKTyPqRVRcCpMRQdP7wBkr33GW2brSQvZQNJDSn~mca-v0.0.1",
           "key": "EbVibuKTyPqRVRcCpMRQdP7wBkr33GW2brSQvZQNJDSn"
         },
         "new_account:EuCb6BVafkV1tBLsrMqkxojkanJCM4bvmG6JFUZ4s7XL": {
-          "href": "/account/EuCb6BVafkV1tBLsrMqkxojkanJCM4bvmG6JFUZ4s7XL:mca-v0.0.1",
+          "href": "/account/EuCb6BVafkV1tBLsrMqkxojkanJCM4bvmG6JFUZ4s7XL~mca-v0.0.1",
           "key": "EuCb6BVafkV1tBLsrMqkxojkanJCM4bvmG6JFUZ4s7XL",
-          "address": "EuCb6BVafkV1tBLsrMqkxojkanJCM4bvmG6JFUZ4s7XL:mca-v0.0.1"
+          "address": "EuCb6BVafkV1tBLsrMqkxojkanJCM4bvmG6JFUZ4s7XL~mca-v0.0.1"
         },
         "operation:{hash}": {
           "templated": true,
