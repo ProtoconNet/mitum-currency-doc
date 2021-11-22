@@ -147,11 +147,17 @@
         2021-06-08T10:56:21.210355408Z DBG ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/verify_storage.go:121 > manifests checked heights=[-1,1] module=command-database-verify
         2021-06-08T10:56:21.210456408Z INF ../../../../pkg/mod/github.com/spikeekips/mitum@v0.0.0-20210605063447-f720096b150d/launch/cmds/database_verify.go:105 > database verified module=command-database-verify
 
-    * ``clean`` : Clean storage.
+    * ``clean`` : Clean blockdata and database.
 
     .. code-block:: sh
 
         $ ./mc storage clean node.yml
+
+    * ``clean-by-height`` : Clean blockdata and database above a specific height.
+
+    .. code-block:: sh
+
+        $ ./mc storage clean node.yml <blockheight>
 
     * ``restore`` : Restore the entire database from the downloaded blockdata.
     * Check if the network id in the settings of the yml file is the same as the network id of the downloaded node.
