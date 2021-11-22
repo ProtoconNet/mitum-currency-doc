@@ -47,3 +47,58 @@ currency-register Operation example
       | ./mc seal sign-fact $N2_PRV --network-id="$NETWORK_ID" --seal=- \
       | ./mc seal sign-fact $N3_PRV --network-id="$NETWORK_ID" --seal=- \
       | ./mc seal send --network-id="$NETWORK_ID" $AC1_PRV --seal=-
+
+* Each currency has a zero account for deposit only. The zero account can be used to burn tokens.
+* The zero account is an account that can only deposit token because the public key is not registered.
+* The address of zero account has the same format as <currency id>-X~mca-v0.0.1. For example, the zero account address of PEN currency is PEN-X~mca-v0.0.1.
+
+
+.. code-block:: json
+
+    $ curl --insecure http://localhost:54320/account/PEN-X~mca-v0.0.1 | jq
+    {
+        "_hint": "mitum-currency-hal-v0.0.1",
+        "hint": "mitum-currency-account-value-v0.0.1",
+        "_embedded": {
+            "_hint": "mitum-currency-account-value-v0.0.1",
+            "hash": "EJvkxncxfVQNncdKZtjQTH2XuT5ECRiqSZA7LLE14zqi",
+            "address": "PEN-X~mca-v0.0.1",
+            "keys": {
+                "_hint": "mitum-currency-keys-v0.0.1",
+                "hash": "",
+                "keys": [],
+                "threshold": 0
+            },
+            "balance": [
+                {
+                    "_hint": "mitum-currency-amount-v0.0.1",
+                    "amount": "100000000000000000000000000",
+                    "currency": "PEN"
+                }
+            ],
+            "height": 41,
+            "previous_height": 0
+        },
+        "_links": {
+            "block": {
+                "href": "/block/41"
+            },
+            "previous_block": {
+                "href": "/block/0"
+            },
+            "self": {
+                "href": "/account/PEN-X~mca-v0.0.1"
+            },
+            "operations": {
+                "href": "/account/PEN-X~mca-v0.0.1/operations"
+            },
+            "operations:{offset}": {
+                "href": "/account/PEN-X~mca-v0.0.1/operations?offset={offset}",
+                "templated": true
+            },
+            "operations:{offset,reverse}": {
+                "templated": true,
+                "href": "/account/PEN-X~mca-v0.0.1/operations?offset={offset}&reverse=1"
+            }
+        }
+    }
