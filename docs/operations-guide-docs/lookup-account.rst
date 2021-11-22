@@ -17,12 +17,12 @@ Genesis account lookup
 
 .. code-block:: sh
 
-  $ AC0_ACC_KEY=381mXScfnV5mU38woCRn1VqUYqpVAoQf9fg2rXXN6iVv-mca:account
+  $ AC0_ACC_KEY=GkswusUGC22R5wmrXWB5yqFm8UN22yHLihZMkMb3z623-mca:account
   $ find blockfs -name "*-states-*" -print | xargs -n 1 gzcat | grep '^{' | jq '. | select(.key == "'$AC0_ACC_KEY'") | [ "height: "+(.height|tostring), "state_key: " + .key, "address: " + .value.value.address, .operations, .value.value.keys.keys, .value.value.keys.threshold]'
   [
     "height: 2",
-    "state_key: 381mXScfnV5mU38woCRn1VqUYqpVAoQf9fg2rXXN6iVv-mca:account",
-    "address: 381mXScfnV5mU38woCRn1VqUYqpVAoQf9fg2rXXN6iVv~mca-v0.0.1",
+    "state_key: GkswusUGC22R5wmrXWB5yqFm8UN22yHLihZMkMb3z623-mca:account",
+    "address: GkswusUGC22R5wmrXWB5yqFm8UN22yHLihZMkMb3z623~mca-v0.0.1",
     [
       "9mc8YEFWC27WEF3VVee1wk4ib5kvWBk1iJ41pWf27Mrc"
     ],
@@ -43,15 +43,15 @@ Genesis account lookup
 
 .. code-block:: sh
 
-    $ curl --insecure https://localhost:54320/account/381mXScfnV5mU38woCRn1VqUYqpVAoQf9fg2rXXN6iVv~mca-v0.0.1 | jq '{_embedded}'
+    $ curl --insecure https://localhost:54320/account/GkswusUGC22R5wmrXWB5yqFm8UN22yHLihZMkMb3z623~mca-v0.0.1 | jq '{_embedded}'
     {
         "_embedded": {
             "_hint": "mitum-currency-account-value-v0.0.1",
             "hash": "AHQ4ohzwm7Y9T3f8vH5LTQ2rXKfVg3eazCdyihqsWv8F",
-            "address": "381mXScfnV5mU38woCRn1VqUYqpVAoQf9fg2rXXN6iVv~mca-v0.0.1",
+            "address": "GkswusUGC22R5wmrXWB5yqFm8UN22yHLihZMkMb3z623~mca-v0.0.1",
             "keys": {
                 "_hint": "mitum-currency-keys-v0.0.1",
-                "hash": "381mXScfnV5mU38woCRn1VqUYqpVAoQf9fg2rXXN6iVv",
+                "hash": "GkswusUGC22R5wmrXWB5yqFm8UN22yHLihZMkMb3z623",
                 "keys": [
                     {
                         "_hint": "mitum-currency-key-v0.0.1",
@@ -80,5 +80,5 @@ Genesis account lookup
 
 .. note::
     * When you lookup **state** by *address* from mongodb, remove the part after ``-`` of address and use it as key.
-    * ``381mXScfnV5mU38woCRn1VqUYqpVAoQf9fg2rXXN6iVv~mca-v0.0.1`` → ``381mXScfnV5mU38woCRn1VqUYqpVAoQf9fg2rXXN6iVv-mca``
+    * ``GkswusUGC22R5wmrXWB5yqFm8UN22yHLihZMkMb3z623~mca-v0.0.1`` → ``GkswusUGC22R5wmrXWB5yqFm8UN22yHLihZMkMb3z623-mca``
     

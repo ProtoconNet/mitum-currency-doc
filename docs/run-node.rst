@@ -111,11 +111,11 @@ Lookup genesis account
 
 .. code-block:: sh
 
-    $ find blockfs -name "*-states-*" -print | xargs -n 1 gzcat | grep '^{' | jq '. | select(.key == "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz-mca:account") | [ "height: "+(.height|tostring), "state_key: " + .key, "address: " + .value.value.address, .operations, .value.value.keys.keys, .value.value.keys.threshold]'
+    $ find blockfs -name "*-states-*" -print | xargs -n 1 gzcat | grep '^{' | jq '. | select(.key == "9g4BAB8nZdzWmrsAomwdvNJU2hA2psvkfTQ5XdLn4F4r-mca:account") | [ "height: "+(.height|tostring), "state_key: " + .key, "address: " + .value.value.address, .operations, .value.value.keys.keys, .value.value.keys.threshold]'
     [
       "height: 0",
-      "state_key: GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz-mca:account",
-      "address: GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz~mca-v0.0.1",
+      "state_key: 9g4BAB8nZdzWmrsAomwdvNJU2hA2psvkfTQ5XdLn4F4r-mca:account",
+      "address: 9g4BAB8nZdzWmrsAomwdvNJU2hA2psvkfTQ5XdLn4F4r~mca-v0.0.1",
       [
         "ECSDvWwxcjbEw2F3E6n6pyQXMsZn2uy7msX19XXDCYi8"
       ],
@@ -128,14 +128,14 @@ Lookup genesis account
       ],
       100
     ]
-    $ find blockfs -name "*-states-*" -print | xargs -n 1 gzcat | grep '^{' |jq '. | select(.key == "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz-mca-MCC:balance") | [ "height: "+(.height|tostring), "state_key: " + .key, "balance:" + .value.value.amount]'
+    $ find blockfs -name "*-states-*" -print | xargs -n 1 gzcat | grep '^{' |jq '. | select(.key == "9g4BAB8nZdzWmrsAomwdvNJU2hA2psvkfTQ5XdLn4F4r-mca-MCC:balance") | [ "height: "+(.height|tostring), "state_key: " + .key, "balance:" + .value.value.amount]'
     [
       "height: 0",
-      "state_key: GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz-mca-MCC:balance",
+      "state_key: 9g4BAB8nZdzWmrsAomwdvNJU2hA2psvkfTQ5XdLn4F4r-mca-MCC:balance",
       "balance:99999999999999999999"
     ]
 
-* *height*, *address* of genesis account at ``0``, ``GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz~mca-v0.0.1`` is saved in block.
+* *height*, *address* of genesis account at ``0``, ``9g4BAB8nZdzWmrsAomwdvNJU2hA2psvkfTQ5XdLn4F4r~mca-v0.0.1`` is saved in block.
 * Account information can also be checked through Digest API.
 
 Lookup using the Digest API
@@ -147,15 +147,15 @@ Lookup using the Digest API
 
 .. code-block:: sh
 
-    $ curl --insecure http://localhost:54320/account/GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz~mca-v0.0.1 | jq '{_embedded}'
+    $ curl --insecure http://localhost:54320/account/9g4BAB8nZdzWmrsAomwdvNJU2hA2psvkfTQ5XdLn4F4r~mca-v0.0.1 | jq '{_embedded}'
     {
       "_embedded": {
         "_hint": "mitum-currency-account-value-v0.0.1",
         "hash": "6vCuuiqaYtNGfPbqfDqA234kiDoueWejd7jMs7dwvq5U",
-        "address": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz~mca-v0.0.1",
+        "address": "9g4BAB8nZdzWmrsAomwdvNJU2hA2psvkfTQ5XdLn4F4r~mca-v0.0.1",
         "keys": {
           "_hint": "mitum-currency-keys-v0.0.1",
-          "hash": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz",
+          "hash": "9g4BAB8nZdzWmrsAomwdvNJU2hA2psvkfTQ5XdLn4F4r",
           "keys": [
             {
               "_hint": "mitum-currency-key-v0.0.1",

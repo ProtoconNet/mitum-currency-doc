@@ -23,14 +23,14 @@ currency-policy-updater Operation
                 "amount": "9999999999999",
                 "currency": "MCC2"
             },
-            "genesis_account": "381mXScfnV5mU38woCRn1VqUYqpVAoQf9fg2rXXN6iVv~mca-v0.0.1",
+            "genesis_account": "GkswusUGC22R5wmrXWB5yqFm8UN22yHLihZMkMb3z623~mca-v0.0.1",
             "policy": {
                 "_hint": "mitum-currency-currency-policy-v0.0.1",
                 "new_account_min_balance": "10",
                 "feeer": {
                     "_hint": "mitum-currency-fixed-feeer-v0.0.1",
                     "type": "fixed",
-                    "receiver": "381mXScfnV5mU38woCRn1VqUYqpVAoQf9fg2rXXN6iVv~mca-v0.0.1",
+                    "receiver": "GkswusUGC22R5wmrXWB5yqFm8UN22yHLihZMkMb3z623~mca-v0.0.1",
                     "amount": "3"
                 }
             }
@@ -71,7 +71,7 @@ Currency-policy-updater example
 .. code-block:: sh
 
     $ NETWORK_ID="mitum"
-    $ AC1_ADDR="EuCb6BVafkV1tBLsrMqkxojkanJCM4bvmG6JFUZ4s7XL~mca-v0.0.1"
+    $ AC1_ADDR="4EAmGST4JnpNjD9YUcfgrmstRg1uCuYVsAcj2jJcnrPL~mca-v0.0.1"
     $ AC0_PRV="KzUYFHNzxvUnZfm1ePJJ4gnLcLtMv1Tvod7Fib2sRuFmGwzm1GVb~btc-priv-v0.0.1"
     $ N0_PRV=<n0 private key>
     $ N1_PRV=<n1 private key>
@@ -96,14 +96,14 @@ Currency-policy-updater example
             "amount": "9999999999999",
             "currency": "MCC2"
             },
-            "genesis_account": "381mXScfnV5mU38woCRn1VqUYqpVAoQf9fg2rXXN6iVv~mca-v0.0.1",
+            "genesis_account": "GkswusUGC22R5wmrXWB5yqFm8UN22yHLihZMkMb3z623~mca-v0.0.1",
             "policy": {
             "_hint": "mitum-currency-currency-policy-v0.0.1",
             "new_account_min_balance": "100",
             "feeer": {
                 "_hint": "mitum-currency-ratio-feeer-v0.0.1",
                 "type": "ratio",
-                "receiver": "EuCb6BVafkV1tBLsrMqkxojkanJCM4bvmG6JFUZ4s7XL~mca-v0.0.1",
+                "receiver": "4EAmGST4JnpNjD9YUcfgrmstRg1uCuYVsAcj2jJcnrPL~mca-v0.0.1",
                 "ratio": 0.5,
                 "min": "3",
                 "max": "1000"

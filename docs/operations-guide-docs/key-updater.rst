@@ -24,7 +24,7 @@ Update the key of ``ac0``
     ac0
     privatekey: KzUYFHNzxvUnZfm1ePJJ4gnLcLtMv1Tvod7Fib2sRuFmGwzm1GVb~btc-priv-v0.0.1
      publickey: 2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc~btc-pub-v0.0.1
-       address: 381mXScfnV5mU38woCRn1VqUYqpVAoQf9fg2rXXN6iVv~mca-v0.0.1
+       address: GkswusUGC22R5wmrXWB5yqFm8UN22yHLihZMkMb3z623~mca-v0.0.1
     
     ac1
      publickey: 247KCJyus9NYJii9rkT4R3z6GxengcwYQHwRKA6DySbiU~btc-pub-v0.0.1
@@ -35,9 +35,9 @@ Update the key of ``ac0``
     $ NODE=https://127.0.0.1:54321
     $ AC0_PRV=KzUYFHNzxvUnZfm1ePJJ4gnLcLtMv1Tvod7Fib2sRuFmGwzm1GVb~btc-priv-v0.0.1
     $ AC0_PUB=2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc~btc-pub-v0.0.1
-    $ AC0_ADDR=381mXScfnV5mU38woCRn1VqUYqpVAoQf9fg2rXXN6iVv~mca-v0.0.1
+    $ AC0_ADDR=GkswusUGC22R5wmrXWB5yqFm8UN22yHLihZMkMb3z623~mca-v0.0.1
     $ AC1_PUB=247KCJyus9NYJii9rkT4R3z6GxengcwYQHwRKA6DySbiU~btc-pub-v0.0.1
-    $ AC0_ACC_KEY=381mXScfnV5mU38woCRn1VqUYqpVAoQf9fg2rXXN6iVv-mca:account
+    $ AC0_ACC_KEY=GkswusUGC22R5wmrXWB5yqFm8UN22yHLihZMkMb3z623-mca:account
     $ CURRENCY_ID=MCC
     $ ./mc seal key-updater --network-id="$NETWORK_ID" $AC0_PRV $AC0_ADDR \
         --key $AC1_PUB,100" $CURRENCY_ID | jq
@@ -56,7 +56,7 @@ Update the key of ``ac0``
                         "_hint": "mitum-currency-keyupdater-operation-fact-v0.0.1",
                         "hash": "5yaMz2aSKS5H1wtd4YVcU4q5awbaxu7bhhswX3ss8XCb",
                         "token": "MjAyMS0wNi0xNFQwMzo0NToyMS44MTczNjNa",
-                        "target": "381mXScfnV5mU38woCRn1VqUYqpVAoQf9fg2rXXN6iVv~mca-v0.0.1",
+                        "target": "GkswusUGC22R5wmrXWB5yqFm8UN22yHLihZMkMb3z623~mca-v0.0.1",
                         "keys": {
                             "_hint": "mitum-currency-keys-v0.0.1",
                             "hash": "GmUiuEbsoTVLSirRWMZ2WcxT69enhEXNfskAnRJby8he",
@@ -97,14 +97,14 @@ Check the changed key of ``ac0``
     $ find blockfs -name "*-states-*" -print | sort -g | xargs -n 1 gzcat |  grep '^{' | jq '. | select(.key == "'$AC0_ACC_KEY'") | [ "height: "+(.height|tostring),   "state_key: " + .key, "key.publickey: " + .value.value.keys.keys[0].key, "key.weight: " + (.value.value.keys.keys[0].weight|tostring), "threshold: " + (.value.value.keys.threshold|tostring)]'
     [
       "height: 3",
-      "state_key: 381mXScfnV5mU38woCRn1VqUYqpVAoQf9fg2rXXN6iVv-mca:account",
+      "state_key: GkswusUGC22R5wmrXWB5yqFm8UN22yHLihZMkMb3z623-mca:account",
       "key.publickey: 2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc~btc-pub-v0.0.1",
       "key.weight: 100",
       "threshold: 100"
     ]
     [
       "height: 104",
-      "state_key: 381mXScfnV5mU38woCRn1VqUYqpVAoQf9fg2rXXN6iVv-mca:account",
+      "state_key: GkswusUGC22R5wmrXWB5yqFm8UN22yHLihZMkMb3z623-mca:account",
       "key.publickey: 247KCJyus9NYJii9rkT4R3z6GxengcwYQHwRKA6DySbiU~btc-pub-v0.0.1",
       "key.weight: 100",
       "threshold: 100"

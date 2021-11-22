@@ -24,6 +24,10 @@
 
         * See :ref:`currency policy update` for a detailed explanation of the ``currency-policy-updater`` command.
 
+    * ``suffrage-inflation`` : Make inflation a existed currency token.
+
+        * See :ref:`suffrage inflation` for a detailed explanation of the ``suffrage-inflation`` command.
+
 * ``seal`` command also creates a signature and sends a seal.
 
 
@@ -54,7 +58,7 @@
                         "_hint": "mitum-currency-create-accounts-operation-fact-v0.0.1",
                         "hash": "3CpL1MgD1TPejUmVxPKSgiUu6LCR7FhFrDehSjSogavZ",
                         "token": "MjAyMS0wNi0xMFQwNjo1MDoyNi44NzQyNzVa",
-                        "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz~mca-v0.0.1",
+                        "sender": "9g4BAB8nZdzWmrsAomwdvNJU2hA2psvkfTQ5XdLn4F4r~mca-v0.0.1",
                         "items": [
                             {
                                 "_hint": "mitum-currency-create-accounts-single-amount-v0.0.1",
@@ -112,7 +116,7 @@
                         "_hint": "mitum-currency-create-accounts-operation-fact-v0.0.1",
                         "hash": "3CpL1MgD1TPejUmVxPKSgiUu6LCR7FhFrDehSjSogavZ",
                         "token": "MjAyMS0wNi0xMFQwNjo1MDoyNi44NzQyNzVa",
-                        "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz~mca-v0.0.1",
+                        "sender": "9g4BAB8nZdzWmrsAomwdvNJU2hA2psvkfTQ5XdLn4F4r~mca-v0.0.1",
                         "items": [
                             {
                                 "_hint": "mitum-currency-create-accounts-single-amount-v0.0.1",
@@ -180,7 +184,7 @@
                         "items": [
                             {
                                 "_hint": "mitum-currency-transfers-item-single-amount-v0.0.1",
-                                "receiver": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz~mca-v0.0.1",
+                                "receiver": "9g4BAB8nZdzWmrsAomwdvNJU2hA2psvkfTQ5XdLn4F4r~mca-v0.0.1",
                                 "amounts": [
                                     {
                                     "_hint": "mitum-currency-amount-v0.0.1",
@@ -234,7 +238,7 @@
                         "items": [
                             {
                                 "_hint": "mitum-currency-transfers-item-single-amount-v0.0.1",
-                                "receiver": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz~mca-v0.0.1",
+                                "receiver": "9g4BAB8nZdzWmrsAomwdvNJU2hA2psvkfTQ5XdLn4F4r~mca-v0.0.1",
                                 "amounts": [
                                     {
                                         "_hint": "mitum-currency-amount-v0.0.1",

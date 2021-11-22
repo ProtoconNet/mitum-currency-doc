@@ -37,7 +37,7 @@ Seal Send
                             "_hint": "mitum-currency-create-accounts-single-amount-v0.0.1",
                             "keys": {
                                 "_hint": "mitum-currency-keys-v0.0.1",
-                                "hash": "381mXScfnV5mU38woCRn1VqUYqpVAoQf9fg2rXXN6iVv",
+                                "hash": "GkswusUGC22R5wmrXWB5yqFm8UN22yHLihZMkMb3z623",
                                 "keys": [
                                     {
                                         "_hint": "mitum-currency-key-v0.0.1",

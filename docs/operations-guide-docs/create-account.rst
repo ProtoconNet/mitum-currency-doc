@@ -22,7 +22,7 @@ create-account Operation
 
     $ NETWORK_ID="mitum"
     $ GENESIS_PRV=L5GTSKkRs9NPsXwYgACZdodNUJqCAWjz2BccuR4cAgxJumEZWjok~btc-priv-v0.0.1
-    $ GENESIS_ADDR=GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz~mca-v0.0.1
+    $ GENESIS_ADDR=9g4BAB8nZdzWmrsAomwdvNJU2hA2psvkfTQ5XdLn4F4r~mca-v0.0.1
     $ AC0_PUB=cnMJqt1Q7LXKqFAWprm6FBC7fRbWQeZhrymTavN11PKJ~btc-pub-v0.0.1
     $ ./mc seal create-account --network-id="$NETWORK_ID" $GENESIS_PRV $GENESIS_ADDR XXX 50 --key=$AC0_PUB,100 | jq
     {
@@ -40,7 +40,7 @@ create-account Operation
                     "_hint": "mitum-currency-create-accounts-operation-fact-v0.0.1",
                     "hash": "F1o51xXWnnQYUVV6JA44beJeKKxuJi3Tv8DzvREodHhA",
                     "token": "MjAyMS0wNi0xMFQxNDowNjoxNy41OTczMDNa",
-                    "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz~mca-v0.0.1",
+                    "sender": "9g4BAB8nZdzWmrsAomwdvNJU2hA2psvkfTQ5XdLn4F4r~mca-v0.0.1",
                     "items": [
                         {
                             "_hint": "mitum-currency-create-accounts-single-amount-v0.0.1",
@@ -91,7 +91,7 @@ create-account Operation
     $ NETWORK_ID=mitum
     $ NODE=https://127.0.0.1:54321
     $ GENESIS_PRV=L5GTSKkRs9NPsXwYgACZdodNUJqCAWjz2BccuR4cAgxJumEZWjok~btc-priv-v0.0.1
-    $ GENESIS_ADDR=GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz~mca-v0.0.1
+    $ GENESIS_ADDR=9g4BAB8nZdzWmrsAomwdvNJU2hA2psvkfTQ5XdLn4F4r~mca-v0.0.1
     $ CURRENCY_ID=MCC
     $ AC0_PUB=cnMJqt1Q7LXKqFAWprm6FBC7fRbWQeZhrymTavN11PKJ~btc-pub-v0.0.1
     $ AC1_PUB=sdjgo1jJ2kxAxMyBj6qZDb8okZpwzHYE8ZACgePYW4eT~btc-pub-v0.0.1
@@ -119,7 +119,7 @@ create-account Operation
             "_hint": "mitum-currency-create-accounts-operation-fact-v0.0.1",
             "hash": "Dg4Uh7iJQTJE14FhFkR38ctKKedX9CRaURvfCWG4DtvX",
             "token": "MjAyMS0wNi0xMFQxNTowMToxMi44MTI3OVo=",
-            "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz~mca-v0.0.1",
+            "sender": "9g4BAB8nZdzWmrsAomwdvNJU2hA2psvkfTQ5XdLn4F4r~mca-v0.0.1",
             "items": [
               {
                 "_hint": "mitum-currency-create-accounts-single-amount-v0.0.1",
@@ -173,7 +173,7 @@ create-account Operation
             "_hint": "mitum-currency-create-accounts-operation-fact-v0.0.1",
             "hash": "3fDBD1i6V5VpGxB1di6JGgMPhyWZeWRML8FX4LnYXqJE",
             "token": "MjAyMS0wNi0xMFQxNTowMToxMy4wNDA0OTZa",
-            "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz~mca-v0.0.1",
+            "sender": "9g4BAB8nZdzWmrsAomwdvNJU2hA2psvkfTQ5XdLn4F4r~mca-v0.0.1",
             "items": [
               {
                 "_hint": "mitum-currency-create-accounts-single-amount-v0.0.1",
@@ -255,7 +255,7 @@ create-account Operation
             "_hint": "mitum-currency-create-accounts-operation-fact-v0.0.1",
             "hash": "3fDBD1i6V5VpGxB1di6JGgMPhyWZeWRML8FX4LnYXqJE",
             "token": "MjAyMS0wNi0xMFQxNTowMToxMy4wNDA0OTZa",
-            "sender": "GbymDFuVmJwP4bjjyYu4L6xgBfUmdceufrMDdn4x1oz~mca-v0.0.1",
+            "sender": "9g4BAB8nZdzWmrsAomwdvNJU2hA2psvkfTQ5XdLn4F4r~mca-v0.0.1",
             "items": [
               {
                 "_hint": "mitum-currency-create-accounts-single-amount-v0.0.1",
@@ -332,9 +332,9 @@ create-account Operation
           "key": "EbVibuKTyPqRVRcCpMRQdP7wBkr33GW2brSQvZQNJDSn"
         },
         "new_account:EuCb6BVafkV1tBLsrMqkxojkanJCM4bvmG6JFUZ4s7XL": {
-          "href": "/account/EuCb6BVafkV1tBLsrMqkxojkanJCM4bvmG6JFUZ4s7XL~mca-v0.0.1",
+          "href": "/account/4EAmGST4JnpNjD9YUcfgrmstRg1uCuYVsAcj2jJcnrPL~mca-v0.0.1",
           "key": "EuCb6BVafkV1tBLsrMqkxojkanJCM4bvmG6JFUZ4s7XL",
-          "address": "EuCb6BVafkV1tBLsrMqkxojkanJCM4bvmG6JFUZ4s7XL~mca-v0.0.1"
+          "address": "4EAmGST4JnpNjD9YUcfgrmstRg1uCuYVsAcj2jJcnrPL~mca-v0.0.1"
         },
         "operation:{hash}": {
           "templated": true,
