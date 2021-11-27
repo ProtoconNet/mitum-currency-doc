@@ -16,7 +16,6 @@ What is deploy key
 ------------------
 
 * Execute the `deploy key` command to create and manage the node's deploy key.
-* deploy key는 
 * The subcommands related to ``deploy key`` command are as follows.
   
     * ``new`` : Create and register new deploy key to the node.

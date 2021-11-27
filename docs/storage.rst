@@ -157,7 +157,7 @@
 
     .. code-block:: sh
 
-        $ ./mc storage clean node.yml <blockheight>
+        $ ./mc storage clean-by-height node.yml <blockheight>
 
     * ``restore`` : Restore the entire database from the downloaded blockdata.
     * Check if the network id in the settings of the yml file is the same as the network id of the downloaded node.
