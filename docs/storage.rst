@@ -160,11 +160,16 @@
         $ ./mc storage clean-by-height node.yml <blockheight>
 
     * ``restore`` : Restore the entire database from the downloaded blockdata.
+    * When you use the restore command, not only data for blockdata but also data used for digest API are created.
     * Check if the network id in the settings of the yml file is the same as the network id of the downloaded node.
+    * Multiple blockdata can be recovered simultaneously with the --concurrency option.
+    * If you want to delete and restore the existing mongodb data, use --clean.
+    * Use --dryrun to only check blockdata without actually recovering it.
+    * If you specify a specific blockdata directory with the --one option, you can recover them one by one.
 
     .. code-block:: sh
 
-        $ ./mc storage restore node.yml
+        $ ./mc storage restore node.yml --concurrency 10
 
         2021-06-08T11:00:34.304594Z INF prepare to run module=command-restore
         2021-06-08T11:00:34.304656Z INF prepared module=command-restore
