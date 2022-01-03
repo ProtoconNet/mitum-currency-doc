@@ -50,19 +50,19 @@ currency-register Operation example
 
 * Each currency has a zero account for deposit only. The zero account can be used to burn tokens.
 * The zero account is an account that can only deposit token because the public key is not registered.
-* The address of zero account has the same format as <currency id>-X~mca-v0.0.1. For example, the zero account address of PEN currency is PEN-X~mca-v0.0.1.
+* The address of zero account has the same format as <currency id>-Xmca. For example, the zero account address of PEN currency is PEN-Xmca.
 
 
 .. code-block:: json
 
-    $ curl --insecure http://localhost:54320/account/PEN-X~mca-v0.0.1 | jq
+    $ curl --insecure http://localhost:54320/account/PEN-Xmca | jq
     {
         "_hint": "mitum-currency-hal-v0.0.1",
         "hint": "mitum-currency-account-value-v0.0.1",
         "_embedded": {
             "_hint": "mitum-currency-account-value-v0.0.1",
             "hash": "EJvkxncxfVQNncdKZtjQTH2XuT5ECRiqSZA7LLE14zqi",
-            "address": "PEN-X~mca-v0.0.1",
+            "address": "PEN-Xmca",
             "keys": {
                 "_hint": "mitum-currency-keys-v0.0.1",
                 "hash": "",
@@ -87,18 +87,18 @@ currency-register Operation example
                 "href": "/block/0"
             },
             "self": {
-                "href": "/account/PEN-X~mca-v0.0.1"
+                "href": "/account/PEN-Xmca"
             },
             "operations": {
-                "href": "/account/PEN-X~mca-v0.0.1/operations"
+                "href": "/account/PEN-Xmca/operations"
             },
             "operations:{offset}": {
-                "href": "/account/PEN-X~mca-v0.0.1/operations?offset={offset}",
+                "href": "/account/PEN-Xmca/operations?offset={offset}",
                 "templated": true
             },
             "operations:{offset,reverse}": {
                 "templated": true,
-                "href": "/account/PEN-X~mca-v0.0.1/operations?offset={offset}&reverse=1"
+                "href": "/account/PEN-Xmca/operations?offset={offset}&reverse=1"
             }
         }
     }

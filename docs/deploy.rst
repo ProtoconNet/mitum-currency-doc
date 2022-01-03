@@ -22,7 +22,7 @@ What is deploy key
 
     .. code-block::
 
-        $ NODE_PRV_KEY=KxaTHDAQnmFeWWik5MqWXBYkhvp5EpWbsZzXeHDdTDb5NE1dVw8w~btc-priv-v0.0.1
+        $ NODE_PRV_KEY=KxaTHDAQnmFeWWik5MqWXBYkhvp5EpWbsZzXeHDdTDb5NE1dVw8wmpr
         $ NODE=https://127.0.0.1:54321
         $ NETWORK_ID=mitum
         $ ./mc deploy key new $NODE_PRV_KEY $NETWORK_ID $NODE --tls-insecure
@@ -33,7 +33,7 @@ What is deploy key
 
     .. code-block::
 
-        $ NODE_PRV_KEY=KxaTHDAQnmFeWWik5MqWXBYkhvp5EpWbsZzXeHDdTDb5NE1dVw8w~btc-priv-v0.0.1
+        $ NODE_PRV_KEY=KxaTHDAQnmFeWWik5MqWXBYkhvp5EpWbsZzXeHDdTDb5NE1dVw8wmpr
         $ NODE=https://127.0.0.1:54321
         $ NETWORK_ID=mitum
         $ ./mc deploy key keys $NODE_PRV_KEY $NETWORK_ID $NODE --tls-insecure
@@ -43,7 +43,7 @@ What is deploy key
 
     .. code-block::
 
-        $ NODE_PRV_KEY=KxaTHDAQnmFeWWik5MqWXBYkhvp5EpWbsZzXeHDdTDb5NE1dVw8w~btc-priv-v0.0.1
+        $ NODE_PRV_KEY=KxaTHDAQnmFeWWik5MqWXBYkhvp5EpWbsZzXeHDdTDb5NE1dVw8wmpr
         $ NODE=https://127.0.0.1:54321
         $ NETWORK_ID=mitum
         $ DEPLOY_KEY=d-974702df-89a7-4fd1-a742-2d66c1ead6cd
@@ -54,7 +54,7 @@ What is deploy key
 
     .. code-block::
 
-        $ NODE_PRV_KEY=KxaTHDAQnmFeWWik5MqWXBYkhvp5EpWbsZzXeHDdTDb5NE1dVw8w~btc-priv-v0.0.1
+        $ NODE_PRV_KEY=KxaTHDAQnmFeWWik5MqWXBYkhvp5EpWbsZzXeHDdTDb5NE1dVw8wmpr
         $ NODE=https://127.0.0.1:54321
         $ NETWORK_ID=mitum
         $ DEPLOY_KEY=d-974702df-89a7-4fd1-a742-2d66c1ead6cd

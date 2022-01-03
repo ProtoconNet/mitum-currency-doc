@@ -13,17 +13,19 @@ Create Keypair
 
 .. code-block:: sh
 
-      $ ./mc key new --type=<key type>
+      $ ./mc key new
+      hint: mpr
+      privatekey: L2kcF9mkai2BahAjRj1cghjtMnyEFvadXNVSMzLNSxCbMZyMJyR1mpr
+      publickey: 22C9QQ2UUYaUccGvGZPrFZb2PM347sT56xHB5tyNNkTNgmpu
 
-* In Mitum, you can use bitcoin, ethereum, and stellar keypairs.
-* You can select btc, ether, or stellar for the key type. (default: btc)
+* You can also use the seed to create a new keypair.
 
 .. code-block:: sh
 
-      $ ./mc key new --type btc
-            hint: btc-priv-v0.0.1
-      privatekey: L2kcF9mkai2BahAjRj1cghjtMnyEFvadXNVSMzLNSxCbMZyMJyR1~btc-priv-v0.0.1
-      publickey: 22C9QQ2UUYaUccGvGZPrFZb2PM347sT56xHB5tyNNkTNg~btc-pub-v0.0.1
+      $ ./mc key new --seed abcdefghijklmnopqrstuvwxyzABCDEFGHIJ
+      hint: mpr
+      privatekey: KySup78QSWRKU7Y6e2rsPzELfJPq7XuhwfunEmQLPmKaDi6o5Laumpr
+      publickey: qQF4jdw4N2wLf86DC6evZrD57VwzuH8sY4a6wAEf42hqmpu
 
 Multi Sig Account
 ------------------------
@@ -36,7 +38,7 @@ Multi Sig Account
 .. csv-table::
    :widths: 30, 150
 
-   "address", "9qzxhePTDH2g1SLWryAbyUijQPoEpF73hjKMYG9DDYSz~mca-v0.0.1"
+   "address", "HjyXhhuHAZBGaEw2S5cKZhDwqVc1StbkJMtdgGm3F1dnmca"
    "threshold", "100"
    "keys", "{key: rd89Gx..., weight: 50}, {key: skRdC6..., weight: 50}"
    "balance", "{currency: MCC, amount: 10000}, {currency: MCC2, amount: 20000}"
@@ -83,8 +85,8 @@ Check Address
 
 .. code-block:: sh
      
-      $ ACC_PUB=22C9QQ2UUYaUccGvGZPrFZb2PM347sT56xHB5tyNNkTNg~btc-pub-v0.0.1
+      $ ACC_PUB=22C9QQ2UUYaUccGvGZPrFZb2PM347sT56xHB5tyNNkTNgmpu
       $ THRESHOLD=100
       $ WEIGHT=100
       $ ./mc key address $THRESHOLD $ACC_PUB,$WEIGHT
-      4UW3MX6FjXnsquCZPzGNGGPoTf2ENsVPxKHpcus8AG6w~mca-v0.0.1
+      D15QgLXgpKFQDLT3hkTdLsqHQAj2tqj7Dj68wRgtwEscmca

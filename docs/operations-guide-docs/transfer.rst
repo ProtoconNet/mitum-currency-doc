@@ -16,9 +16,9 @@ transfers Operation
 
 .. code-block:: sh
 
-    $ AC0_PRV=KzUYFHNzxvUnZfm1ePJJ4gnLcLtMv1Tvod7Fib2sRuFmGwzm1GVb~btc-priv-v0.0.1
-    $ AC0_ADDR=GkswusUGC22R5wmrXWB5yqFm8UN22yHLihZMkMb3z623~mca-v0.0.1
-    $ AC1_ADDR=4EAmGST4JnpNjD9YUcfgrmstRg1uCuYVsAcj2jJcnrPL~mca-v0.0.1
+    $ AC0_PRV=KzUYFHNzxvUnZfm1ePJJ4gnLcLtMv1Tvod7Fib2sRuFmGwzm1GVbmpr
+    $ AC0_ADDR=FnuHC5HkFMpr4QABukchEeT63612gGKus3cRK3KAqK7Bmca
+    $ AC1_ADDR=HjyXhhuHAZBGaEw2S5cKZhDwqVc1StbkJMtdgGm3F1dnmca
     $ CURRENCY_ID=MCC
     $ NETWORK_ID="mitum"
     $ ./mc seal transfer --network-id="$NETWORK_ID" $AC0_PRV $AC0_ADDR $AC1_ADDR $CURRENCY_ID 3 | jq
@@ -27,7 +27,7 @@ transfers Operation
         "_hint": "seal-v0.0.1",
         "hash": "EJDzHbusvvcknN9NWaK1wjuvSTav2TVfnDmtRnqVjEVn",
         "body_hash": "FWLTyQePguo6CFxH8SgEHesoLL8ab3FofEw9nXHDDLMp",
-        "signer": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc~btc-pub-v0.0.1",
+        "signer": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGcmpu",
         "signature": "381yXZMbRqwMgfWwJNk4rWNuaJenJMHZU3HBufz7Uo4Yj3zo944oeJeGoKjUDyCJXuL4pZLt49gqW2FHV3YuB5zBR24h96ZH",
         "signed_at": "2021-06-14T03:42:11.969679Z",
         "operations": [
@@ -38,11 +38,11 @@ transfers Operation
                     "_hint": "mitum-currency-transfers-operation-fact-v0.0.1",
                     "hash": "7xzioXfnkKU1qrFvgeWK1KrhR71RMHMSBZdpWRVK3MUD",
                     "token": "MjAyMS0wNi0xNFQwMzo0MjoxMS45NjUyNjNa",
-                    "sender": "GkswusUGC22R5wmrXWB5yqFm8UN22yHLihZMkMb3z623~mca-v0.0.1",
+                    "sender": "FnuHC5HkFMpr4QABukchEeT63612gGKus3cRK3KAqK7Bmca",
                     "items": [
                         {
                             "_hint": "mitum-currency-transfers-item-single-amount-v0.0.1",
-                            "receiver": "4EAmGST4JnpNjD9YUcfgrmstRg1uCuYVsAcj2jJcnrPL~mca-v0.0.1",
+                            "receiver": "HjyXhhuHAZBGaEw2S5cKZhDwqVc1StbkJMtdgGm3F1dnmca",
                             "amounts": [
                                 {
                                     "_hint": "mitum-currency-amount-v0.0.1",
@@ -56,7 +56,7 @@ transfers Operation
                 "fact_signs": [
                     {
                         "_hint": "base-fact-sign-v0.0.1",
-                        "signer": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGc~btc-pub-v0.0.1",
+                        "signer": "2Aopgs1nSzNCWLvQx5fkBJCi2uxjYBfN8TqneqFd9DzGcmpu",
                         "signature": "AN1rKvtRQeMWcFQ9oPLqgakgW33fed4mCcxxfQwi3icWLyn19AKJ3XpYehA8njvAi7qzgGSVpv23JXBDcXbwiZvQkHBj6T8jw",
                         "signed_at": "2021-06-14T03:42:11.96891Z"
                     }

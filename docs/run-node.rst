@@ -115,7 +115,7 @@ Lookup genesis account
     [
       "height: 0",
       "state_key: 9g4BAB8nZdzWmrsAomwdvNJU2hA2psvkfTQ5XdLn4F4r-mca:account",
-      "address: 9g4BAB8nZdzWmrsAomwdvNJU2hA2psvkfTQ5XdLn4F4r~mca-v0.0.1",
+      "address: CoXPgSxcad3fRAbp2JBEeGcYGEQ7dQhdZGWXLbTHpwuGmca",
       [
         "ECSDvWwxcjbEw2F3E6n6pyQXMsZn2uy7msX19XXDCYi8"
       ],
@@ -123,7 +123,7 @@ Lookup genesis account
         {
           "_hint": "mitum-currency-key-v0.0.1",
           "weight": 100,
-          "key": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG~btc-pub-v0.0.1"
+          "key": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvGmpu"
         }
       ],
       100
@@ -135,7 +135,7 @@ Lookup genesis account
       "balance:99999999999999999999"
     ]
 
-* *height*, *address* of genesis account at ``0``, ``9g4BAB8nZdzWmrsAomwdvNJU2hA2psvkfTQ5XdLn4F4r~mca-v0.0.1`` is saved in block.
+* *height*, *address* of genesis account at ``0``, ``CoXPgSxcad3fRAbp2JBEeGcYGEQ7dQhdZGWXLbTHpwuGmca`` is saved in block.
 * Account information can also be checked through Digest API.
 
 Lookup using the Digest API
@@ -147,12 +147,12 @@ Lookup using the Digest API
 
 .. code-block:: sh
 
-    $ curl --insecure http://localhost:54320/account/9g4BAB8nZdzWmrsAomwdvNJU2hA2psvkfTQ5XdLn4F4r~mca-v0.0.1 | jq '{_embedded}'
+    $ curl --insecure http://localhost:54320/account/CoXPgSxcad3fRAbp2JBEeGcYGEQ7dQhdZGWXLbTHpwuGmca | jq '{_embedded}'
     {
       "_embedded": {
         "_hint": "mitum-currency-account-value-v0.0.1",
         "hash": "6vCuuiqaYtNGfPbqfDqA234kiDoueWejd7jMs7dwvq5U",
-        "address": "9g4BAB8nZdzWmrsAomwdvNJU2hA2psvkfTQ5XdLn4F4r~mca-v0.0.1",
+        "address": "CoXPgSxcad3fRAbp2JBEeGcYGEQ7dQhdZGWXLbTHpwuGmca",
         "keys": {
           "_hint": "mitum-currency-keys-v0.0.1",
           "hash": "9g4BAB8nZdzWmrsAomwdvNJU2hA2psvkfTQ5XdLn4F4r",
@@ -160,7 +160,7 @@ Lookup using the Digest API
             {
               "_hint": "mitum-currency-key-v0.0.1",
               "weight": 100,
-              "key": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvG~btc-pub-v0.0.1"
+              "key": "rcrd3KA2wWNhKdAP8rHRzfRmgp91oR9mqopckyXRmCvGmpu"
             }
           ],
           "threshold": 100

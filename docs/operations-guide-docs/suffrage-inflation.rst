@@ -30,8 +30,8 @@ suffrage-inflation Operation example
 .. code-block:: sh
 
     $ NETWORK_ID="mitum"
-    $ AC1_PRV="792c971c801a8e45745938946a85b1089e61c1cdc310cf61370568bf260a29be~ether-priv-v0.0.1"
-    $ AC2_ADDR="DDew9vGTbLgavByTM6G28XuUdxKSAPLr8r4kw6e9YT3y~mca-v0.0.1"
+    $ AC1_PRV="L2Q4PqxrhgS39jgGoXsV92LaCHRF2SqTLRwMhCC6Q6in9Vb19aDLmpr"
+    $ AC2_ADDR="HjyXhhuHAZBGaEw2S5cKZhDwqVc1StbkJMtdgGm3F1dnmca"
     $ N0_PRV=<n0 private key>
     $ N1_PRV=<n1 private key>
     $ N2_PRV=<n2 private key>
